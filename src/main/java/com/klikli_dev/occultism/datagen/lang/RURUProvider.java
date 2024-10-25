@@ -28,7 +28,7 @@ import com.klikli_dev.modonomicon.api.datagen.BookContextHelper;
 import com.klikli_dev.occultism.Occultism;
 import com.klikli_dev.occultism.TranslationKeys;
 import com.klikli_dev.occultism.common.ritual.RitualFactory;
-import com.klikli_dev.occultism.datagen.OccultismAdvancementSubProvider;
+import com.klikli_dev.occultism.datagen.OccultismAdvancementProvider;
 import com.klikli_dev.occultism.integration.modonomicon.OccultismModonomiconConstants.I18n;
 import com.klikli_dev.occultism.registry.*;
 import net.minecraft.ChatFormatting;
@@ -41,8 +41,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.dimension.BuiltinDimensionTypes;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
 
 public class RURUProvider extends AbstractModonomiconLanguageProvider {
 
@@ -130,12 +128,9 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add(OccultismItems.MINER_DEBUG_UNSPECIALIZED.get().getDescriptionId() + ".tooltip", "Отладочный рудокоп добывает разные блоки в шахтёрском измерении.");
         this.lang("ru_ru").add(OccultismItems.MINER_AFRIT_DEEPS.get().getDescriptionId() + ".tooltip", "%s добывает разные и глубинносланцевые руды в шахтёрском измерении.");
         this.lang("ru_ru").add(OccultismItems.MINER_MARID_MASTER.get().getDescriptionId() + ".tooltip", "%s добывает разные, глубинносланцевые и редкие руды в шахтёрском измерении.");
-		this.lang("ru_ru").add(OccultismItems.MINER_ANCIENT_ELDRITCH.get().getDescriptionId() + ".tooltip", "Нечто будет добывать разные рудные блоки, редкие руды и самоцветные блоки в шахтёрском измерении.");
         this.lang("ru_ru").add(OccultismItems.SOUL_GEM_ITEM.get().getDescriptionId() + ".tooltip_filled", "Содержит пойманного %s.");
         this.lang("ru_ru").add(OccultismItems.SOUL_GEM_ITEM.get().getDescriptionId() + ".tooltip_empty", "Используйте по существу для поимки.");
         this.lang("ru_ru").add(OccultismItems.SATCHEL.get().getDescriptionId() + ".tooltip", "%s связан с этой сумкой.");
-		this.lang("ru_ru").add(OccultismItems.RITUAL_SATCHEL_T1.get().getDescriptionId() + ".tooltip", "%s связан с этой сумкой.");
-        this.lang("ru_ru").add(OccultismItems.RITUAL_SATCHEL_T2.get().getDescriptionId() + ".tooltip", "%s связан с этой сумкой.");
 
         this.lang("ru_ru").add(OccultismItems.SOUL_SHARD_ITEM.get().getDescriptionId() + ".tooltip_filled", "Содержит душу %s.\nМожет использоваться для воскресения.");
         this.lang("ru_ru").add(OccultismItems.SOUL_SHARD_ITEM.get().getDescriptionId() + ".tooltip_empty", "Выпадает с Фамильяра после его преждевременной смерти. Может использоваться для его воскресения.");
@@ -148,12 +143,6 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
 
         this.lang("ru_ru").add("itemGroup.occultism", "Occultism");
 
-        this.addItem(OccultismItems.PENTACLE_SUMMON, "Пентакль для вызова");
-		this.addItem(OccultismItems.PENTACLE_INVOKE, "Пентакль для одержимости");
-        this.addItem(OccultismItems.PENTACLE_CRAFT, "Создание пентакля");
-        this.addItem(OccultismItems.PENTACLE_MISC, "Пентакль для разного");
-        this.addItem(OccultismItems.REPAIR_ICON, "Иконка починки");
-        this.addItem(OccultismItems.RESURRECT_ICON, "Иконка воскресения");
         this.addItem(OccultismItems.DEBUG_WAND, "Жезл отладки");
         this.addItem(OccultismItems.DEBUG_FOLIOT_LUMBERJACK, "Вызов отладочного Дровосека-Фолиота");
         this.addItem(OccultismItems.DEBUG_FOLIOT_TRANSPORT_ITEMS, "Вызов отладочного Транспортировщика-Фолиота");
@@ -162,60 +151,14 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addItem(OccultismItems.DEBUG_DJINNI_MANAGE_MACHINE, "Вызов отладочного Машиниста-Джинна");
         this.addItem(OccultismItems.DEBUG_DJINNI_TEST, "Вызов отладочного тестового Джинна");
 
-        this.addItem(OccultismItems.RITUAL_SATCHEL_T1, "Ритуальная наплечная сумка подмастерья");
-        this.addAutoTooltip(OccultismItems.RITUAL_SATCHEL_T1.get(),
-                """
-                        Простая ритуальная наплечная сумка, способная поблочно помещать ритуальные круги.
-                        Нажатие ПКМ по предосмотренному блоку, чтобы поместить его из наплечной сумки.
-                        Нажатие Shift + ПКМ — открыть наплечную сумку и добавить ингредиенты для ритуала.
-                        """
-        );
-        this.addItem(OccultismItems.RITUAL_SATCHEL_T2, "Ремесленная ритуальная наплечная сумка");
-        this.addAutoTooltip(OccultismItems.RITUAL_SATCHEL_T2.get(),
-                """
-                        Улучшенная ритуальная наплечная сумка, способная сразу помещать целые ритуальные круги.
-                        Нажатие ПКМ по любому предосмотренному блоку, чтобы поместить все блоки из наплечной сумки.
-                        Нажатие Shift + ПКМ — открыть наплечную сумку и добавить ингредиенты для ритуала.
-                        Нажатие ПКМ по золотой жертвенной миске — убрать ритуальный круг и собрать ингредиенты.
-                        """
-        );
-
-        this.add(TranslationKeys.RITUAL_SATCHEL_NO_PREVIEW_IN_WORLD, "Вам нужно предварительно просмотреть пентакль с помощью Справочника душ.");
-        this.add(TranslationKeys.RITUAL_SATCHEL_NO_PREVIEW_BLOCK_TARGETED, "Вам нужно нацелиться ритуальной наплечной сумкой по предосмотренному блоку.");
-        this.add(TranslationKeys.RITUAL_SATCHEL_NO_VALID_ITEM_IN_SATCHEL, "В наплечной сумке нет допустимого предмета для этого предосмотренного блока.");
-
-        this.addItem(OccultismItems.CHALK_YELLOW, "Жёлтый мел");
+        this.addItem(OccultismItems.CHALK_GOLD, "Жёлтый мел");
         this.addItem(OccultismItems.CHALK_PURPLE, "Пурпурный мел");
         this.addItem(OccultismItems.CHALK_RED, "Красный мел");
         this.addItem(OccultismItems.CHALK_WHITE, "Белый мел");
-		this.addItem(OccultismItems.CHALK_LIGHT_GRAY, "Светло-серый мел");
-        this.addItem(OccultismItems.CHALK_GRAY, "Серый мел");
-        this.addItem(OccultismItems.CHALK_BLACK, "Чёрный мел");
-        this.addItem(OccultismItems.CHALK_BROWN, "Коричневый мел");
-        this.addItem(OccultismItems.CHALK_ORANGE, "Оранжевый мел");
-        this.addItem(OccultismItems.CHALK_LIME, "Лаймовый мел");
-        this.addItem(OccultismItems.CHALK_GREEN, "Зелёный мел");
-        this.addItem(OccultismItems.CHALK_CYAN, "Бирюзовый мел");
-        this.addItem(OccultismItems.CHALK_LIGHT_BLUE, "Голубой мел");
-        this.addItem(OccultismItems.CHALK_BLUE, "Синий мел");
-        this.addItem(OccultismItems.CHALK_MAGENTA, "Фиолетовый мел");
-        this.addItem(OccultismItems.CHALK_PINK, "Розовый мел");
-        this.addItem(OccultismItems.CHALK_YELLOW_IMPURE, "Осквернённый жёлтый мел");
+        this.addItem(OccultismItems.CHALK_GOLD_IMPURE, "Осквернённый жёлтый мел");
         this.addItem(OccultismItems.CHALK_PURPLE_IMPURE, "Осквернённый пурпурный мел");
         this.addItem(OccultismItems.CHALK_RED_IMPURE, "Осквернённый красный мел");
         this.addItem(OccultismItems.CHALK_WHITE_IMPURE, "Осквернённый белый мел");
-		this.addItem(OccultismItems.CHALK_LIGHT_GRAY_IMPURE, "Осквернённый светло-серый мел");
-        this.addItem(OccultismItems.CHALK_GRAY_IMPURE, "Осквернённый серый мел");
-        this.addItem(OccultismItems.CHALK_BLACK_IMPURE, "Осквернённый чёрный мел");
-        this.addItem(OccultismItems.CHALK_BROWN_IMPURE, "Осквернённый коричневый мел");
-        this.addItem(OccultismItems.CHALK_ORANGE_IMPURE, "Осквернённый оранжевый мел");
-        this.addItem(OccultismItems.CHALK_LIME_IMPURE, "Осквернённый лаймовый мел");
-        this.addItem(OccultismItems.CHALK_GREEN_IMPURE, "Осквернённый зелёный мел");
-        this.addItem(OccultismItems.CHALK_CYAN_IMPURE, "Осквернённый бирюзовый мел");
-        this.addItem(OccultismItems.CHALK_LIGHT_BLUE_IMPURE, "Осквернённый голубой мел");
-        this.addItem(OccultismItems.CHALK_BLUE_IMPURE, "Осквернённый синий мел");
-        this.addItem(OccultismItems.CHALK_MAGENTA_IMPURE, "Осквернённый фиолетовый мел");
-        this.addItem(OccultismItems.CHALK_PINK_IMPURE, "Осквернённый розовый мел");
         this.addItem(OccultismItems.BRUSH, "Щётка для мела");
         this.addItem(OccultismItems.AFRIT_ESSENCE, "Сущность Африта");
         this.addItem(OccultismItems.PURIFIED_INK, "Очищенные чернила");
@@ -283,8 +226,6 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addItem(OccultismItems.MINER_DEBUG_UNSPECIALIZED, "Отладочный рудокоп");
         this.addItem(OccultismItems.MINER_AFRIT_DEEPS, "Рудокоп-Африт для глубинносланцевой руды");
         this.addItem(OccultismItems.MINER_MARID_MASTER, "Мастер Рудокоп-Марид");
-		this.addItem(OccultismItems.MINER_ANCIENT_ELDRITCH, "Сверхъестественный древний рудокоп");
-        this.addItem(OccultismItems.MINING_DIMENSION_CORE_PIECE, "Часть ядра шахтёрского измерения");
         this.addItem(OccultismItems.SOUL_GEM_ITEM, "Камень души");
         this.lang("ru_ru").add(OccultismItems.SOUL_GEM_ITEM.get().getDescriptionId() + "_empty", "Пустой камень души");
         this.addItem(OccultismItems.SOUL_SHARD_ITEM, "Осколок души");
@@ -293,9 +234,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addItem(OccultismItems.SPAWN_EGG_FOLIOT, "Яйцо призыва Фолиота");
         this.addItem(OccultismItems.SPAWN_EGG_DJINNI, "Яйцо призыва Джинна");
         this.addItem(OccultismItems.SPAWN_EGG_AFRIT, "Яйцо призыва Африта");
-        this.addItem(OccultismItems.SPAWN_EGG_AFRIT_UNBOUND, "Яйцо призыва несвязанного Африта");
         this.addItem(OccultismItems.SPAWN_EGG_MARID, "Яйцо призыва Марида");
-		this.addItem(OccultismItems.SPAWN_EGG_MARID_UNBOUND, "Яйцо призыва несвязанного Марида");
         this.addItem(OccultismItems.SPAWN_EGG_POSSESSED_ENDERMITE, "Яйцо призыва одержимого эндермита");
         this.addItem(OccultismItems.SPAWN_EGG_POSSESSED_SKELETON, "Яйцо призыва одержимого скелета");
         this.addItem(OccultismItems.SPAWN_EGG_POSSESSED_ENDERMAN, "Яйцо призыва одержимого эндермена");
@@ -306,10 +245,6 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addItem(OccultismItems.SPAWN_EGG_POSSESSED_ELDER_GUARDIAN, "Яйцо призыва одержимого древнего стража");
         this.addItem(OccultismItems.SPAWN_EGG_POSSESSED_WARDEN, "Яйцо призыва одержимого хранителя");
         this.addItem(OccultismItems.SPAWN_EGG_POSSESSED_HOGLIN, "Яйцо призыва одержимого хоглина");
-		this.addItem(OccultismItems.SPAWN_EGG_POSSESSED_WITCH, "Яйцо призыва Одержимой ведьмы");
-        this.addItem(OccultismItems.SPAWN_EGG_POSSESSED_ZOMBIE_PIGLIN, "Яйцо призыва Одержимого зомбированного пиглина");
-        this.addItem(OccultismItems.SPAWN_EGG_POSSESSED_BEE, "Яйцо призыва Одержимой пчелы");
-		this.addItem(OccultismItems.SPAWN_EGG_GOAT_OF_MERCY, "Яйцо призыва Козла милосердия");
         this.addItem(OccultismItems.SPAWN_EGG_WILD_HUNT_SKELETON, "Яйцо призыва скелета Дикой Охоты");
         this.addItem(OccultismItems.SPAWN_EGG_WILD_HUNT_WITHER_SKELETON, "Яйцо призыва визер скелета Дикой Охоты");
         this.addItem(OccultismItems.SPAWN_EGG_OTHERWORLD_BIRD, "Яйцо призыва Дрикрыла");
@@ -332,35 +267,6 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addItem(OccultismItems.SPAWN_EGG_PARROT_FAMILIAR, "Яйцо призыва Попугая-фамильяра");
         this.addItem(OccultismItems.SPAWN_EGG_DEMONIC_WIFE, "Яйцо призыва Демонической жены");
         this.addItem(OccultismItems.SPAWN_EGG_DEMONIC_HUSBAND, "Яйцо призыва Демонического мужа");
-		this.addItem(OccultismItems.SPAWN_EGG_WILD_HORDE_HUSK, "Яйцо призыва Орды диких кадавров");
-        this.addItem(OccultismItems.SPAWN_EGG_WILD_HORDE_DROWNED, "Яйцо призыва Орды диких утопленников");
-        this.addItem(OccultismItems.SPAWN_EGG_WILD_HORDE_CREEPER, "Яйцо призыва Орды диких криперов");
-        this.addItem(OccultismItems.SPAWN_EGG_WILD_HORDE_SILVERFISH, "Яйцо призыва Орды диких чешуйниц");
-        this.addItem(OccultismItems.SPAWN_EGG_WILD_WEAK_BREEZE, "Яйцо призыва Одержимого слабого вихря");
-        this.addItem(OccultismItems.SPAWN_EGG_WILD_BREEZE, "Яйцо призыва Одержимого вихря");
-        this.addItem(OccultismItems.SPAWN_EGG_WILD_STRONG_BREEZE, "Яйцо призыва Одержимого сильного вихря");
-        this.addItem(OccultismItems.SPAWN_EGG_WILD_EVOKER, "Яйцо призыва Одержимого заклинателя");
-		//Обновление: Переработка пентаклей
-        this.addItem(OccultismItems.AMETHYST_DUST, "Аметистовая пыль");
-        this.addItem(OccultismItems.CRUELTY_ESSENCE, "Сущность бессердечия");
-        this.addItem(OccultismItems.CRUSHED_BLACKSTONE, "Измельчённый чернит");
-        this.addItem(OccultismItems.CRUSHED_BLUE_ICE, "Измельчённый синий лёд");
-		this.addItem(OccultismItems.CRUSHED_CALCITE, "Измельчённый кальцит");
-        this.addItem(OccultismItems.CRUSHED_ICE, "Измельчённый лёд");
-        this.addItem(OccultismItems.CRUSHED_PACKED_ICE, "Измельчённый плотный лёд");
-        this.addItem(OccultismItems.CURSED_HONEY, "Проклятый мёд");
-        this.addItem(OccultismItems.DEMONIC_MEAT, "Демоническое мясо");
-        this.addItem(OccultismItems.DRAGONYST_DUST, "Драконистовая пыль");
-        this.addItem(OccultismItems.ECHO_DUST, "Пыль эхо");
-        this.addItem(OccultismItems.EMERALD_DUST, "Изумрудная пыль");
-        this.addItem(OccultismItems.GRAY_PASTE, "Серая паста");
-        this.addItem(OccultismItems.LAPIS_DUST, "Лазуритовая пыль");
-        this.addItem(OccultismItems.MARID_ESSENCE, "Сущность Марида");
-        this.addItem(OccultismItems.NATURE_PASTE, "Природная паста");
-        this.addItem(OccultismItems.NETHERITE_DUST, "Незеритовая пыль");
-        this.addItem(OccultismItems.NETHERITE_SCRAP_DUST, "Пыль из незеритового обломка");
-        this.addItem(OccultismItems.RESEARCH_FRAGMENT_DUST, "Пыль фрагмента исследования");
-        this.addItem(OccultismItems.WITHERITE_DUST, "Визеритовая пыль");
     }
 
     private void addBlocks() {
@@ -368,44 +274,13 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         //this.addBlock\(OccultismItems.\U\1\E, "\2"\);
 
         this.addBlock(OccultismBlocks.OTHERSTONE, "Потусторонний камень");
-		this.addBlock(OccultismBlocks.OTHERSTONE_STAIRS, "Ступеньки из потустороннего камня");
         this.addBlock(OccultismBlocks.OTHERSTONE_SLAB, "Плита из потустороннего камня");
-		this.addBlock(OccultismBlocks.OTHERSTONE_PRESSURE_PLATE, "Нажимная плита из потустороннего камня");
-        this.addBlock(OccultismBlocks.OTHERSTONE_BUTTON, "Кнопка из потустороннего камня");
-        this.addBlock(OccultismBlocks.OTHERSTONE_WALL, "Ограда из потустороннего камня");
-        this.addBlock(OccultismBlocks.OTHERCOBBLESTONE, "Потусторонний булыжник");
-        this.addBlock(OccultismBlocks.OTHERCOBBLESTONE_STAIRS, "Ступеньки из потустороннего булыжника");
-        this.addBlock(OccultismBlocks.OTHERCOBBLESTONE_SLAB, "Плита из потустороннего булыжника");
-        this.addBlock(OccultismBlocks.OTHERCOBBLESTONE_WALL, "Ограда из потустороннего булыжника");
-        this.addBlock(OccultismBlocks.POLISHED_OTHERSTONE, "Полированный потусторонний камень");
-        this.addBlock(OccultismBlocks.POLISHED_OTHERSTONE_STAIRS, "Полированные ступеньки из потустороннего камня");
-        this.addBlock(OccultismBlocks.POLISHED_OTHERSTONE_SLAB, "Полированная плита из потустороннего камня");
-        this.addBlock(OccultismBlocks.POLISHED_OTHERSTONE_WALL, "Полированная ограда из потустороннего камня");
-        this.addBlock(OccultismBlocks.OTHERSTONE_BRICKS, "Кирпичи из потустороннего камня");
-        this.addBlock(OccultismBlocks.OTHERSTONE_BRICKS_STAIRS, "Кирпичные ступеньки из потустороннего камня");
-        this.addBlock(OccultismBlocks.OTHERSTONE_BRICKS_SLAB, "Кирпичная плита из потустороннего камня");
-        this.addBlock(OccultismBlocks.OTHERSTONE_BRICKS_WALL, "Кирпичная ограда из потустороннего камня");
-        this.addBlock(OccultismBlocks.CHISELED_OTHERSTONE_BRICKS, "Резные кирпичи из потустороннего камня");
-        this.addBlock(OccultismBlocks.CRACKED_OTHERSTONE_BRICKS, "Потрескавшиеся кирпичи из потустороннего камня");
         this.addBlock(OccultismBlocks.OTHERSTONE_PEDESTAL, "Потусторонний пьедестал");
         this.addBlock(OccultismBlocks.SACRIFICIAL_BOWL, "Жертвенная миска");
         this.addBlock(OccultismBlocks.GOLDEN_SACRIFICIAL_BOWL, "Золотая жертвенная миска");
         this.addBlock(OccultismBlocks.CHALK_GLYPH_WHITE, "Белый меловой глиф");
-        this.addBlock(OccultismBlocks.CHALK_GLYPH_YELLOW, "Жёлтый меловой глиф");
         this.addBlock(OccultismBlocks.CHALK_GLYPH_PURPLE, "Пурпурный меловой глиф");
         this.addBlock(OccultismBlocks.CHALK_GLYPH_RED, "Красный меловой глиф");
-		this.addBlock(OccultismBlocks.CHALK_GLYPH_LIGHT_GRAY, "Светло-серый меловой глиф");
-        this.addBlock(OccultismBlocks.CHALK_GLYPH_GRAY, "Серый меловой глиф");
-        this.addBlock(OccultismBlocks.CHALK_GLYPH_BLACK, "Чёрный меловой глиф");
-        this.addBlock(OccultismBlocks.CHALK_GLYPH_BROWN, "Коричневый меловой глиф");
-        this.addBlock(OccultismBlocks.CHALK_GLYPH_ORANGE, "Оранжевый меловой глиф");
-        this.addBlock(OccultismBlocks.CHALK_GLYPH_LIME, "Лаймовый меловой глиф");
-        this.addBlock(OccultismBlocks.CHALK_GLYPH_GREEN, "Зелёный меловой глиф");
-        this.addBlock(OccultismBlocks.CHALK_GLYPH_CYAN, "Бирюзовый меловой глиф");
-        this.addBlock(OccultismBlocks.CHALK_GLYPH_LIGHT_BLUE, "Голубой меловой глиф");
-        this.addBlock(OccultismBlocks.CHALK_GLYPH_BLUE, "Синий меловой глиф");
-        this.addBlock(OccultismBlocks.CHALK_GLYPH_MAGENTA, "Фиолетовый меловой глиф");
-        this.addBlock(OccultismBlocks.CHALK_GLYPH_PINK, "Розовый меловой глиф");
         this.addBlock(OccultismBlocks.STORAGE_CONTROLLER, "Актуатор пространственного хранилища");
         this.addBlock(OccultismBlocks.STORAGE_CONTROLLER_BASE, "Основа актуатора хранилища");
         this.addBlock(OccultismBlocks.STORAGE_STABILIZER_TIER1, "Стабилизатор пространственного хранилища 1-го уровня");
@@ -435,23 +310,6 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
 
         this.addBlock(OccultismBlocks.SPIRIT_FIRE, "Духовный огонь");
         this.addBlock(OccultismBlocks.SPIRIT_ATTUNED_CRYSTAL, "Кристалл, настроенный на духа");
-		this.addBlock(OccultismBlocks.LARGE_CANDLE, "Большая свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_WHITE, "Большая белая свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_LIGHT_GRAY, "Большая светло-серая свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_GRAY, "Большая серая свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_BLACK, "Большая чёрная свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_BROWN, "Большая коричневая свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_RED, "Большая красная свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_ORANGE, "Большая оранжевая свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_YELLOW, "Большая жёлтая свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_LIME, "Большая лаймовая свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_GREEN, "Большая зелёная свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_CYAN, "Большая бирюзовая свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_BLUE, "Большая синяя свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_LIGHT_BLUE, "Большая голубая свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_PINK, "Большая розовая свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_MAGENTA, "Большая фиолетовая свеча");
-        this.addBlock(OccultismBlocks.LARGE_CANDLE_PURPLE, "Большая пурпурная свеча");
         this.addBlock(OccultismBlocks.SILVER_ORE, "Серебряная руда");
         this.addBlock(OccultismBlocks.SILVER_ORE_DEEPSLATE, "Сереброносная глубинносланцевая руда");
         this.addBlock(OccultismBlocks.IESNIUM_ORE, "Руда айзния");
@@ -477,7 +335,6 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addEntityType(OccultismEntities.AFRIT, "Африт");
         this.addEntityType(OccultismEntities.AFRIT_WILD, "Несвязанный Африт");
         this.addEntityType(OccultismEntities.MARID, "Марид");
-        this.addEntityType(OccultismEntities.MARID_UNBOUND, "Несвязанный Марид");
         this.addEntityType(OccultismEntities.POSSESSED_ENDERMITE, "Одержимый эндермит");
         this.addEntityType(OccultismEntities.POSSESSED_SKELETON, "Одержимый скелет");
         this.addEntityType(OccultismEntities.POSSESSED_ENDERMAN, "Одержимый эндермен");
@@ -488,10 +345,6 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addEntityType(OccultismEntities.POSSESSED_ELDER_GUARDIAN, "Одержимый древний страж");
         this.addEntityType(OccultismEntities.POSSESSED_WARDEN, "Одержимый хранитель");
         this.addEntityType(OccultismEntities.POSSESSED_HOGLIN, "Одержимый хоглин");
-		this.addEntityType(OccultismEntities.POSSESSED_WITCH, "Одержимая ведьма");
-        this.addEntityType(OccultismEntities.POSSESSED_ZOMBIE_PIGLIN, "Одержимый зомбированный пиглин");
-        this.addEntityType(OccultismEntities.POSSESSED_BEE, "Одержимая пчела");
-		this.addEntityType(OccultismEntities.GOAT_OF_MERCY, "Козёл милосердия");
         this.addEntityType(OccultismEntities.WILD_HUNT_SKELETON, "Скелет Дикой Охоты");
         this.addEntityType(OccultismEntities.WILD_HUNT_WITHER_SKELETON, "Визер-скелет Дикой Охоты");
         this.addEntityType(OccultismEntities.OTHERWORLD_BIRD, "Дрикрыл");
@@ -515,32 +368,12 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addEntityType(OccultismEntities.THROWN_SWORD, "Брошенный меч");
         this.addEntityType(OccultismEntities.DEMONIC_WIFE, "Демоническая жена");
         this.addEntityType(OccultismEntities.DEMONIC_HUSBAND, "Демонический муж");
-        this.addEntityType(OccultismEntities.WILD_HORDE_HUSK, "Орда диких кадавров");
-        this.addEntityType(OccultismEntities.WILD_HORDE_DROWNED, "Орда диких утопленников");
-        this.addEntityType(OccultismEntities.WILD_HORDE_CREEPER, "Орда диких криперов");
-        this.addEntityType(OccultismEntities.WILD_HORDE_SILVERFISH, "Орда диких чешуйниц");
-        this.addEntityType(OccultismEntities.POSSESSED_WEAK_BREEZE, "Одержимый слабый вихрь");
-        this.addEntityType(OccultismEntities.POSSESSED_BREEZE, "Одержимый вихрь");
-        this.addEntityType(OccultismEntities.POSSESSED_STRONG_BREEZE, "Одержимый сильный вихрь");
-        this.addEntityType(OccultismEntities.WILD_ZOMBIE, "Дикий зомби");
-        this.addEntityType(OccultismEntities.WILD_SKELETON, "Дикий скелет");
-        this.addEntityType(OccultismEntities.WILD_SILVERFISH, "Дикая чешуйница");
-        this.addEntityType(OccultismEntities.WILD_SPIDER, "Дикий паук");
-        this.addEntityType(OccultismEntities.WILD_BOGGED, "Дикий болотник");
-        this.addEntityType(OccultismEntities.WILD_SLIME, "Дикий слизень");
-        this.addEntityType(OccultismEntities.WILD_HUSK, "Дикий кадавр");
-        this.addEntityType(OccultismEntities.WILD_STRAY, "Дикий зимогор");
-        this.addEntityType(OccultismEntities.WILD_CAVE_SPIDER, "Дикий пещерный паук");
-        this.addEntityType(OccultismEntities.POSSESSED_EVOKER, "Одержимый заклинатель");
     }
 
     private void addMiscTranslations() {
 
         //"(.*?)": "(.*)",
         //this.lang("ru_ru").add\("\1", "\2"\);
-
-        this.lang("ru_ru").add(TranslationKeys.HUD_NO_PENTACLE_FOUND, "Допустимый пентакль не найден.");
-        this.lang("ru_ru").add(TranslationKeys.HUD_PENTACLE_FOUND, "Текущий пентакль: %s");
 
         this.lang("ru_ru").add(TranslationKeys.MESSAGE_CONTAINER_ALREADY_OPEN, "Этот контейнер уже открыт другим игроком, ждите пока он его не закроет.");
 
@@ -657,7 +490,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("gui.occultism.spirit.transporter.filter_mode", "Режим фильтра");
         this.lang("ru_ru").add("gui.occultism.spirit.transporter.filter_mode.blacklist", "Чёрный список");
         this.lang("ru_ru").add("gui.occultism.spirit.transporter.filter_mode.whitelist", "Белый список");
-        this.lang("ru_ru").add("gui.occultism.spirit.transporter.tag_filter": "Введите теги для фильтрации по символам разделения \";\".\nНапр.: \"forge:ores;*брёвна*\".\nИспользуйте \"*\" для соответствия любого символа, напр.: \"*руда*\" для соответствия тегов руд из любого мода. Для фильтрации предметов, префикс с идентификатором предмета \"item:\", напр.: \"item:minecraft:chest\".");
+        this.lang("ru_ru").add("gui.occultism.spirit.transporter.tag_filter", "Введите теги для фильтрации по символам разделения \";\".\nНапр.: \"forge:ores;*брёвна*\".\nИспользуйте \"*\" для соответствия любого символа, напр.: \"*руда*\" для соответствия тегов руд из любого мода. Для фильтрации предметов, префикс с идентификатором предмета \"item:\", напр.: \"item:minecraft:chest\".");
 
         // Storage Controller GUI
         this.lang("ru_ru").add("gui.occultism.storage_controller.space_info_label", "%d/%d");
@@ -1072,41 +905,6 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("ritual.occultism.repair_miners.finished", "Рудокоп успешно восстановлен.");
         this.lang("ru_ru").add("ritual.occultism.repair_miners.interrupted", "Восстановление рудокопа прервано.");
 
-        this.addRitualMessage(OccultismRituals.RESURRECT_FAMILIAR, "conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.addRitualMessage(OccultismRituals.RESURRECT_FAMILIAR, "started", "Началось воскресение фамильяра.");
-        this.addRitualMessage(OccultismRituals.RESURRECT_FAMILIAR, "finished", "Фамильяр успешно воскрешён.");
-        this.addRitualMessage(OccultismRituals.RESURRECT_FAMILIAR, "interrupted", "Воскресение прервано.");
-
-		//item.occultism.ritual_dummy.summon_horde_illager
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T1, "conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T1, "started", "Началось заточение Джинна в наплечную сумку.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T1, "finished", "Успешно заточил Джинна в наплечную сумку.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T1, "interrupted", "Заточение Джинна прервано.");
-
-		this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T2, "conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T2, "started", "Началось заточение Африта в наплечную сумку.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T2, "finished", "Успешно заточил Африта в наплечную сумку.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T2, "interrupted", "Заточение Африта прервано.");
-
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_BUDDING_AMETHYST, "conditions", "Удовлетворены не все требования для этого ритуала..");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_BUDDING_AMETHYST, "started", "Началась ковка цветущего аметиста.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_BUDDING_AMETHYST, "finished", "Успешно сковал цветущий аметист.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_BUDDING_AMETHYST, "interrupted", "Ковка цветущего аметиста прервана.");
-
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_REINFORCED_DEEPSLATE, "conditions", "Удовлетворены не все требования для этого ритуала..");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_REINFORCED_DEEPSLATE, "started", "Началась ковка укреплённого глубинного сланца.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_REINFORCED_DEEPSLATE, "finished", "Успешно сковал укреплённый глубинный сланец.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_REINFORCED_DEEPSLATE, "interrupted", "Ковка укреплённого глубинного сланца прервана.");
-    }
-
-    public void addRitualMessage(DeferredHolder<RitualFactory, RitualFactory> ritual, String key, String message) {
-        this.add("ritual.%s.%s".formatted(ritual.getId().getNamespace(), ritual.getId().getPath()) + "." + key, message);
-    }
-
-
-    public void addRitualMessage(DeferredItem<Item> ritualDummy, String key, String message) {
-        var ritualName = ritualDummy.getId().getPath().replace("ritual_dummy/", "");
-        this.add("ritual.%s.%s".formatted(ritualDummy.getId().getNamespace(), ritualName) + "." + key, message);
     }
 
     private void addBook() {
@@ -2791,7 +2589,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
     }
 
     private void addPentacle(String id, String name) {
-        this.add(Util.makeDescriptionId("multiblock", ResourceLocation.fromNamespaceAndPath(Occultism.MODID, id)), name);
+        this.add(Util.makeDescriptionId("multiblock", new ResourceLocation(Occultism.MODID, id)), name);
     }
 
     private void addRitualDummies() {
@@ -2986,29 +2784,10 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.occultism.ritual_dummy.repair_miners.tooltip", "Африт продлит срок Вашего договора с рудокопом.");
 
         this.lang("ru_ru").add(OccultismItems.RITUAL_DUMMY_SUMMON_DEMONIC_WIFE.get(), "Ритуал: Вызов демонической жены");
-        this.lang("ru_ru").addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_DEMONIC_WIFE.get(), "Вызывает демоническую жену для поддержки: она будет защищать Вас, помогать с готовкой, и продлит продолжительность зелья.");
 
         this.lang("ru_ru").add(OccultismItems.RITUAL_DUMMY_SUMMON_DEMONIC_HUSBAND.get(), "Ритуал: Вызов демонического мужа");
-        this.lang("ru_ru").addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_DEMONIC_HUSBAND.get(), "Вызывает демонического мужа для поддержки: он будет защищать Вас, помогать с готовкой, и продлит продолжительность зелья.");
 
         this.lang("ru_ru").add(OccultismItems.RITUAL_RESURRECT_FAMILIAR.get(), "Ритуал: Воскресение фамильяра");
-        this.lang("ru_ru").addTooltip(OccultismItems.RITUAL_RESURRECT_FAMILIAR.get(), "Воскрешает фамильяра из Осколка души.");
-
-        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_RANDOM_ANIMAL.get(), "Ритуал: Вызов случайного животного");
-        this.lang("ru_ru").addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_RANDOM_ANIMAL.get(), "Вызывает случайного пассивного животного.");
-
-        this.add(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T1.get(), "Ритуал: Создать ритуальную наплечную сумку подмастерья");
-        this.lang("ru_ru").addTooltip(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T1.get(), "Связывает Джинна в сумку для пошаговой постройки пентаклей в пользу вызывателя.");
-
-        this.add(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T2.get(), "Ритуал: Создать ритуальную наплечную сумку ручной работы");
-        this.lang("ru_ru").addTooltip(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T2.get(), "Связывает Африта в сумку для мгновенной постройки пентаклей в пользу вызывателя.");
-
-		this.add(OccultismItems.RITUAL_DUMMY_CRAFT_BUDDING_AMETHYST.get(), "Ритуал: Ковка цветущего аметиста");
-        this.addTooltip(OccultismItems.RITUAL_DUMMY_CRAFT_BUDDING_AMETHYST.get(), "Дикие духи скуют цветущий аметист.");
-
-        this.add(OccultismItems.RITUAL_DUMMY_CRAFT_REINFORCED_DEEPSLATE.get(), "Ритуал: Ковка укреплённого глубинного сланца");
-        this.addTooltip(OccultismItems.RITUAL_DUMMY_CRAFT_REINFORCED_DEEPSLATE.get(), "Древние духи скуют укреплённый глубинный сланец.");
-
     }
 
     public void addTooltip(ItemLike key, String value) {
@@ -3035,17 +2814,16 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
     }
 
     private void advancementTitle(String name, String s) {
-        this.add(((TranslatableContents) OccultismAdvancementSubProvider.title(name).getContents()).getKey(), s);
+        this.add(((TranslatableContents) OccultismAdvancementProvider.title(name).getContents()).getKey(), s);
     }
 
     private void advancementDescr(String name, String s) {
-        this.add(((TranslatableContents) OccultismAdvancementSubProvider.descr(name).getContents()).getKey(), s);
+        this.add(((TranslatableContents) OccultismAdvancementProvider.descr(name).getContents()).getKey(), s);
     }
 
     private void addTags() {
         // Теги блока
         this.addBlockTag(OccultismTags.Blocks.OTHERWORLD_SAPLINGS, "Потусторонние саженцы");
-		this.addBlockTag(OccultismTags.Blocks.OTHERWORLD_SAPLINGS_NATURAL, "Саженцы потустороннего мира_NATURAL");
         this.addBlockTag(OccultismTags.Blocks.CANDLES, "Свечи");
         this.addBlockTag(OccultismTags.Blocks.CAVE_WALL_BLOCKS, "Пещерная ограда");
         this.addBlockTag(OccultismTags.Blocks.NETHERRACK, "Незерак");
@@ -3062,14 +2840,12 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
 
         // Теги предмета
         this.addItemTag(OccultismTags.Items.OTHERWORLD_SAPLINGS, "Потусторонние саженцы");
-		this.addItemTag(OccultismTags.Items.OTHERWORLD_SAPLINGS_NATURAL, "Природные потусторонние саженцы");
         this.addItemTag(OccultismTags.Items.BOOK_OF_CALLING_DJINNI, "Книга вызова Джинна");
         this.addItemTag(OccultismTags.Items.BOOK_OF_CALLING_FOLIOT, "Книга вызова Фолиота");
 		this.addItemTag(OccultismTags.Items.BOOKS_OF_BINDING, "Книги привязки");
         this.addItemTag(OccultismTags.Items.Miners.BASIC_RESOURCES, "Рудокопы базовых ресурсов");
         this.addItemTag(OccultismTags.Items.Miners.DEEPS, "Рудокопы глубинносланца");
         this.addItemTag(OccultismTags.Items.Miners.MASTER, "Рудокопы редких ресурсов");
-		this.addItemTag(OccultismTags.Items.Miners.ELDRITCH, "Сверхъестественные рудокопы");
         this.addItemTag(OccultismTags.Items.Miners.ORES, "Основные рудокопы");
         this.addItemTag(OccultismTags.Items.ELYTRA, "Элитры");
         this.addItemTag(OccultismTags.Items.OTHERWORLD_GOGGLES, "Потусторонние очки");
@@ -3099,38 +2875,8 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addItemTag(OccultismTags.Items.MAGMA, "Магма");
         this.addItemTag(OccultismTags.Items.BOOKS, "Книги");
         this.addItemTag(OccultismTags.Items.FRUITS, "Фрукты");
-		this.addItemTag(OccultismTags.Items.AMETHYST_DUST, "Аметистовая пыль");
-        this.addItemTag(OccultismTags.Items.BLACKSTONE_DUST, "Чернитная пыль");
-        this.addItemTag(OccultismTags.Items.BLUE_ICE_DUST, "Пыль из синего льда");
-        this.addItemTag(OccultismTags.Items.CALCITE_DUST, "Кальцитовая пыль");
-        this.addItemTag(OccultismTags.Items.ICE_DUST, "Пыль из синего льда");
-        this.addItemTag(OccultismTags.Items.PACKED_ICE_DUST, "Пыль из плотного льда");
-        this.addItemTag(OccultismTags.Items.DRAGONYST_DUST, "Драконистовая пыль");
-        this.addItemTag(OccultismTags.Items.ECHO_DUST, "Пыль эхо");
-        this.addItemTag(OccultismTags.Items.EMERALD_DUST, "Изумрудная пыль");
-        this.addItemTag(OccultismTags.Items.LAPIS_DUST, "Лазуритовая пыль");
-        this.addItemTag(OccultismTags.Items.NETHERITE_DUST, "Незеритовая пыль");
-        this.addItemTag(OccultismTags.Items.NETHERITE_SCRAP_DUST, "Пыль из незеритового осколка");
-        this.addItemTag(OccultismTags.Items.RESEARCH_DUST, "Пыль исследования");
-        this.addItemTag(OccultismTags.Items.WITHERITE_DUST, "Визеритовая пыль");
-        this.addItemTag(OccultismTags.Items.OTHERSTONE_DUST, "Пыль из потустороннего камня");
-        this.addItemTag(OccultismTags.Items.OTHERWORLD_WOOD_DUST, "Потусторонняя древесная пыль");
-        this.addItemTag(OccultismTags.Items.OCCULTISM_CANDLES, "Occultism-свечи");
-        this.addItemTag(OccultismTags.Items.Miners.MINERS, "Рудокопы в пространствах");
-		this.addItemTag(OccultismTags.Items.SCUTESHELL, "Щиток или Панцирь");
 		this.addItemTag(OccultismTags.Items.BLAZE_DUST, "Пылающая пыль");
         this.addItemTag(OccultismTags.Items.MANUALS, "Руководства");
-		this.addItemTag(OccultismTags.Items.TOOLS_KNIFE, "Ножи");
-		this.addItemTag(ResourceLocation.fromNamespaceAndPath("curios", "belt"), "Пояса");
-        this.addItemTag(ResourceLocation.fromNamespaceAndPath("curios", "hands"), "Руки");
-        this.addItemTag(ResourceLocation.fromNamespaceAndPath("curios", "heads"), "Головы");
-        this.addItemTag(ResourceLocation.fromNamespaceAndPath("curios", "ring"), "Кольцо");
-        this.addItemTag(OccultismTags.Items.DEMONIC_PARTNER_FOOD, "Пища для демонического партнёра");
-        this.addItemTag(OccultismTags.Items.OTHERCOBBLESTONE, "Потусторонний булыжник");
-        this.addItemTag(OccultismTags.Items.OTHERSTONE, "Потусторонний камень");
-        this.addItemTag(OccultismTags.Items.OTHERWORLD_LOGS, "Потусторонние брёвна");
-        this.addItemTag(OccultismTags.Items.PENTACLE_MATERIALS, "Материалы для пентакля");
-        this.addItemTag(OccultismTags.Items.TOOLS_CHALK, "Мелки");
     }
 
     private void addItemTag(ResourceLocation resourceLocation, String string) {
@@ -3158,41 +2904,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
     }
 
 	private void addConditionMessages() {
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_TYPE_NOT_FULFILLED, "Выполните ритуал в измерении «%s»! Он был выполнен в %s.");
-		this.lang("ru_ru").add("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_TYPE_DESCRIPTION, "Должен выполняться в измерении «%s».");
-		
-		this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_NOT_FULFILLED, "Выполните ритуал в измерении «%s»! Он был выполнен в %s.");
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_DESCRIPTION, "Должен выполняться в измерении «%s».");
-
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_BIOME_NOT_FULFILLED, "Выполните ритуал в биоме «%s»! Он был выполнен в %s.");
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_BIOME_DESCRIPTION, "Должен выполняться в биоме «%s».");
-
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_BIOME_WITH_TAG_NOT_FULFILLED, "Выполните ритуал в биоме с тегом «%s»! Он был выполнен в биоме «%s», у которого отсутствует тег.");
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_BIOME_WITH_TAG_DESCRIPTION, "Должен выполняться в биоме с тегом %s.");
-
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.AND_NOT_FULFILLED, "Один или несколько из требуемых условий не были удовлетворены (всё должно быть удовлетворено): %s");
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.AND_DESCRIPTION, "Нужно удовлетворить все нижеследующие условия: %s");
-
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.OR_NOT_FULFILLED, "Ни один из требуемых условий не были удовлетворены (должно быть удовлетворено минимум одно): %s");
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.OR_DESCRIPTION, "Нужно выполнить минимум один из следующих условий: %s");
-
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.TRUE_NOT_FULFILLED, "Постоянное Выполняемое условие по тем или иным причина не выполняется. Такого никогда не должно происходить.");
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.TRUE_DESCRIPTION, "Это условие всегда выполняется.");
-
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.FALSE_NOT_FULFILLED, "Это Условие никогда не выполняется. Используйте другое условие в рецепте, чтобы сделать ритуал рабочим.");
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.FALSE_DESCRIPTION, "Это условие никогда не выполняется.");
-
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.NOT_NOT_FULFILLED, "Условие было удовлетворено, но не должно удовлетворяться: %s");
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.NOT_DESCRIPTION, "Следующее условие не должно удовлетворяться: %s");
-
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.ITEM_EXISTS_NOT_FULFILLED, "Предмет «%s» не существует.");
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.ITEM_EXISTS_DESCRIPTION, "Должен существовать предмет «%s».");
-
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.MOD_LOADED_NOT_FULFILLED, "Мод «%s» не загружен.");
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.MOD_LOADED_DESCRIPTION, "Мод «%s» должен быть загружен.");
-
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.TAG_EMPTY_NOT_FULFILLED, "Тег %s не пустой.");
-        this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.TAG_EMPTY_DESCRIPTION, "Тег %s должен быть пустым.");
+     
     }
 
     private void addConfigurationTranslations() {
