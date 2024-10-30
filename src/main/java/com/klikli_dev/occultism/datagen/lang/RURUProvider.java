@@ -54,7 +54,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         super(gen, Occultism.MODID, "ru_ru");
     }
 
-    public AbstractModonomiconLanguageProvider lang(String lang) {
+    public RURUProvider lang(String lang) {
         return this;
     }
 
@@ -149,7 +149,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("itemGroup.occultism", "Occultism");
 
         this.addItem(OccultismItems.PENTACLE_SUMMON, "Пентакль для вызова");
-		this.addItem(OccultismItems.PENTACLE_INVOKE, "Пентакль для одержимости");
+		this.addItem(OccultismItems.PENTACLE_POSSESS, "Пентакль для одержимости");
         this.addItem(OccultismItems.PENTACLE_CRAFT, "Создание пентакля");
         this.addItem(OccultismItems.PENTACLE_MISC, "Пентакль для разного");
         this.addItem(OccultismItems.REPAIR_ICON, "Иконка починки");
@@ -657,7 +657,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("gui.occultism.spirit.transporter.filter_mode", "Режим фильтра");
         this.lang("ru_ru").add("gui.occultism.spirit.transporter.filter_mode.blacklist", "Чёрный список");
         this.lang("ru_ru").add("gui.occultism.spirit.transporter.filter_mode.whitelist", "Белый список");
-        this.lang("ru_ru").add("gui.occultism.spirit.transporter.tag_filter": "Введите теги для фильтрации по символам разделения \";\".\nНапр.: \"forge:ores;*брёвна*\".\nИспользуйте \"*\" для соответствия любого символа, напр.: \"*руда*\" для соответствия тегов руд из любого мода. Для фильтрации предметов, префикс с идентификатором предмета \"item:\", напр.: \"item:minecraft:chest\".");
+        this.lang("ru_ru").add("gui.occultism.spirit.transporter.tag_filter", "Введите теги для фильтрации по символам разделения \";\".\nНапр.: \"forge:ores;*брёвна*\".\nИспользуйте \"*\" для соответствия любого символа, напр.: \"*руда*\" для соответствия тегов руд из любого мода. Для фильтрации предметов, префикс с идентификатором предмета \"item:\", напр.: \"item:minecraft:chest\".");
 
         // Storage Controller GUI
         this.lang("ru_ru").add("gui.occultism.storage_controller.space_info_label", "%d/%d");
@@ -2991,12 +2991,6 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add(OccultismItems.RITUAL_DUMMY_SUMMON_DEMONIC_HUSBAND.get(), "Ритуал: Вызов демонического мужа");
         this.lang("ru_ru").addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_DEMONIC_HUSBAND.get(), "Вызывает демонического мужа для поддержки: он будет защищать Вас, помогать с готовкой, и продлит продолжительность зелья.");
 
-        this.lang("ru_ru").add(OccultismItems.RITUAL_RESURRECT_FAMILIAR.get(), "Ритуал: Воскресение фамильяра");
-        this.lang("ru_ru").addTooltip(OccultismItems.RITUAL_RESURRECT_FAMILIAR.get(), "Воскрешает фамильяра из Осколка души.");
-
-        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_RANDOM_ANIMAL.get(), "Ритуал: Вызов случайного животного");
-        this.lang("ru_ru").addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_RANDOM_ANIMAL.get(), "Вызывает случайного пассивного животного.");
-
         this.add(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T1.get(), "Ритуал: Создать ритуальную наплечную сумку подмастерья");
         this.lang("ru_ru").addTooltip(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T1.get(), "Связывает Джинна в сумку для пошаговой постройки пентаклей в пользу вызывателя.");
 
@@ -3159,7 +3153,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
 
 	private void addConditionMessages() {
         this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_TYPE_NOT_FULFILLED, "Выполните ритуал в измерении «%s»! Он был выполнен в %s.");
-		this.lang("ru_ru").add("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_TYPE_DESCRIPTION, "Должен выполняться в измерении «%s».");
+		this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_TYPE_DESCRIPTION, "Должен выполняться в измерении «%s».");
 		
 		this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_NOT_FULFILLED, "Выполните ритуал в измерении «%s»! Он был выполнен в %s.");
         this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_DESCRIPTION, "Должен выполняться в измерении «%s».");
