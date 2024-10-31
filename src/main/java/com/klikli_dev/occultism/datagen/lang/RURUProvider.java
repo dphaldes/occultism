@@ -859,93 +859,93 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("ritual.occultism.misc_wild_trim.finished", "Успешно выковал Кузнечный шаблон.");
         this.lang("ru_ru").add("ritual.occultism.misc_wild_trim.interrupted", "Заточение Джинна прервано.");
         this.lang("ru_ru").add("ritual.occultism.possess_endermite.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_endermite.started", "Начался вызов одержимого эндермита.");
+        this.lang("ru_ru").add("ritual.occultism.possess_endermite.started", "Начался вызов Одержимого эндермита.");
         this.lang("ru_ru").add("ritual.occultism.possess_endermite.finished", "Одержимый эндермит успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.possess_endermite.interrupted", "Вызов одержимого эндермита прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_endermite.interrupted", "Вызов Одержимого эндермита прерван.");
         this.lang("ru_ru").add("ritual.occultism.possess_skeleton.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_skeleton.started", "Начался вызов одержимого скелета.");
+        this.lang("ru_ru").add("ritual.occultism.possess_skeleton.started", "Начался вызов Одержимого скелета.");
         this.lang("ru_ru").add("ritual.occultism.possess_skeleton.finished", "Одержимый скелет успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.possess_skeleton.interrupted", "Вызов одержимого скелета прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_skeleton.interrupted", "Вызов Одержимого скелета прерван.");
         this.lang("ru_ru").add("ritual.occultism.possess_enderman.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_enderman.started", "Начался вызов одержимого эндермена.");
+        this.lang("ru_ru").add("ritual.occultism.possess_enderman.started", "Начался вызов Одержимого эндермена.");
         this.lang("ru_ru").add("ritual.occultism.possess_enderman.finished", "Одержимый эндермен успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.possess_enderman.interrupted", "Вызов одержимого эндермена прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_enderman.interrupted", "Вызов Одержимого эндермена прерван.");
         this.lang("ru_ru").add("ritual.occultism.possess_ghast.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_ghast.started", "Начался вызов одержимого гаста.");
+        this.lang("ru_ru").add("ritual.occultism.possess_ghast.started", "Начался вызов Одержимого гаста.");
         this.lang("ru_ru").add("ritual.occultism.possess_ghast.finished", "Одержимый гаст успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.possess_ghast.interrupted", "Вызов одержимого гаста прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_ghast.interrupted", "Вызов Одержимого гаста прерван.");
         this.lang("ru_ru").add("ritual.occultism.possess_phantom.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_phantom.started", "Начался вызов одержимого фантома.");
+        this.lang("ru_ru").add("ritual.occultism.possess_phantom.started", "Начался вызов Одержимого фантома.");
         this.lang("ru_ru").add("ritual.occultism.possess_phantom.finished", "Одержимый фантом успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.possess_phantom.interrupted", "Вызов одержимого фантома прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_phantom.interrupted", "Вызов Одержимого фантома прерван.");
         this.lang("ru_ru").add("ritual.occultism.possess_weak_shulker.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_weak_shulker.started", "Начался вызов одержимого слабого шалкера.");
+        this.lang("ru_ru").add("ritual.occultism.possess_weak_shulker.started", "Начался вызов Одержимого слабого шалкера.");
         this.lang("ru_ru").add("ritual.occultism.possess_weak_shulker.finished", "Одержимый слабый шалкер успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.possess_weak_shulker.interrupted", "Вызов одержимого слабого шалкера прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_weak_shulker.interrupted", "Вызов Одержимого слабого шалкера прерван.");
         this.lang("ru_ru").add("ritual.occultism.possess_shulker.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_shulker.started", "Начался вызов одержимого шалкера.");
+        this.lang("ru_ru").add("ritual.occultism.possess_shulker.started", "Начался вызов Одержимого шалкера.");
         this.lang("ru_ru").add("ritual.occultism.possess_shulker.finished", "Одержимый шалкер успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.possess_shulker.interrupted", "Вызов одержимого шалкера прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_shulker.interrupted", "Вызов Одержимого шалкера прерван.");
         this.lang("ru_ru").add("ritual.occultism.possess_elder_guardian.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_elder_guardian.started", "Начался вызов одержимого древнего стража.");
+        this.lang("ru_ru").add("ritual.occultism.possess_elder_guardian.started", "Начался вызов Одержимого древнего стража.");
         this.lang("ru_ru").add("ritual.occultism.possess_elder_guardian.finished", "Одержимый древний страж успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.possess_elder_guardian.interrupted", "Вызов одержимого древнего стража прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_elder_guardian.interrupted", "Вызов Одержимого древнего стража прерван.");
         this.lang("ru_ru").add("ritual.occultism.possess_warden.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_warden.started", "Начался вызов одержимого хранителя.");
+        this.lang("ru_ru").add("ritual.occultism.possess_warden.started", "Начался вызов Одержимого хранителя.");
         this.lang("ru_ru").add("ritual.occultism.possess_warden.finished", "Одержимый хранитель успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.possess_warden.interrupted", "Вызов одержимого хранителя прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_warden.interrupted", "Вызов Одержимого хранителя прерван.");
         this.lang("ru_ru").add("ritual.occultism.possess_hoglin.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_hoglin.started", "Начался вызов одержимого хоглина.");
+        this.lang("ru_ru").add("ritual.occultism.possess_hoglin.started", "Начался вызов Одержимого хоглина.");
         this.lang("ru_ru").add("ritual.occultism.possess_hoglin.finished", "Одержимый хоглин успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.possess_hoglin.interrupted", "Вызов одержимого хоглина прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_hoglin.interrupted", "Вызов Одержимого хоглина прерван.");
 		this.lang("ru_ru").add("ritual.occultism.possess_witch.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_witch.started", "Начался вызон одержимой ведьмы.");
+        this.lang("ru_ru").add("ritual.occultism.possess_witch.started", "Начался вызон Одержимой ведьмы.");
         this.lang("ru_ru").add("ritual.occultism.possess_witch.finished", "Одержимая ведьма успешно вызвана.");
-        this.lang("ru_ru").add("ritual.occultism.possess_witch.interrupted", "Вызов одержимой ведьмы прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_witch.interrupted", "Вызов Одержимой ведьмы прерван.");
         this.lang("ru_ru").add("ritual.occultism.possess_zombie_piglin.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_zombie_piglin.started", "Начался вызов одержимого зомби-пиглина.");
-        this.lang("ru_ru").add("ritual.occultism.possess_zombie_piglin.finished", "Одержимый зомби-пиглин успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.possess_zombie_piglin.interrupted", "Вызов одержимого зомби-пиглина прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_zombie_piglin.started", "Начался вызов Одержимого зомбифицированного пиглина.");
+        this.lang("ru_ru").add("ritual.occultism.possess_zombie_piglin.finished", "Одержимый зомбифицированный пиглин успешно вызван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_zombie_piglin.interrupted", "Вызов Одержимого зомбифицированного пиглина прерван.");
         this.lang("ru_ru").add("ritual.occultism.possess_bee.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_bee.started", "Начался вызов одержимой пчелы.");
+        this.lang("ru_ru").add("ritual.occultism.possess_bee.started", "Начался вызов Одержимой пчелы.");
         this.lang("ru_ru").add("ritual.occultism.possess_bee.finished", "Одержимая пчела успешно вызвана.");
-        this.lang("ru_ru").add("ritual.occultism.possess_bee.interrupted", "Вызов одержимой пчелы прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_bee.interrupted", "Вызов Одержимой пчелы прерван.");
         this.lang("ru_ru").add("ritual.occultism.possess_goat.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_goat.started", "Начался вызов козла милосердияmercy.");
+        this.lang("ru_ru").add("ritual.occultism.possess_goat.started", "Начался вызов Козла милосердия.");
         this.lang("ru_ru").add("ritual.occultism.possess_goat.finished", "Козёл милосердия успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.possess_goat.interrupted", "Вызов козы милосердия прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_goat.interrupted", "Вызов Козла милосердия прерван.");
         this.lang("ru_ru").add("ritual.occultism.familiar_otherworld_bird.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_otherworld_bird.started", "Начался вызов дрикрыла-фамильяр.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_otherworld_bird.started", "Начался вызов Дрикрыла-фамильяр.");
         this.lang("ru_ru").add("ritual.occultism.familiar_otherworld_bird.finished", "Дрикрыл-фамильяр успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_otherworld_bird.interrupted", "Вызов дриклыра-фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_otherworld_bird.interrupted", "Вызов Дриклыра-фамильяра прерван.");
         this.lang("ru_ru").add("ritual.occultism.familiar_cthulhu.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_cthulhu.started", "Начался вызов ктулху-фамильяра.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_cthulhu.started", "Начался вызов Ктулху-фамильяра.");
         this.lang("ru_ru").add("ritual.occultism.familiar_cthulhu.finished", "Ктулху-фамильяр успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_cthulhu.interrupted", "Вызов ктулху-фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_cthulhu.interrupted", "Вызов Ктулху-фамильяра прерван.");
         this.lang("ru_ru").add("ritual.occultism.familiar_devil.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_devil.started", "Начался вызов дьявола-фамильяра.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_devil.started", "Начался вызов Дьявола-фамильяра.");
         this.lang("ru_ru").add("ritual.occultism.familiar_devil.finished", "Дьявол-фамильяр успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_devil.interrupted", "Вызов дьявола-фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_devil.interrupted", "Вызов Дьявола-фамильяра прерван.");
         this.lang("ru_ru").add("ritual.occultism.familiar_dragon.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_dragon.started", "Начался вызов дракона-фамильяра.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_dragon.started", "Начался вызов Дракона-фамильяра.");
         this.lang("ru_ru").add("ritual.occultism.familiar_dragon.finished", "Дракон-фамильяр успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_dragon.interrupted", "Вызов дракона-фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_dragon.interrupted", "Вызов Дракона-фамильяра прерван.");
         this.lang("ru_ru").add("ritual.occultism.familiar_blacksmith.conditions", "Удовлетворены не все требования для этого ритуала.");
         this.lang("ru_ru").add("ritual.occultism.familiar_blacksmith.started", "Начался вызов кузнеца-фамильяра.");
         this.lang("ru_ru").add("ritual.occultism.familiar_blacksmith.finished", "Кузнец-фамильяр успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_blacksmith.interrupted", "Вызов кузнеца-фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_blacksmith.interrupted", "Вызов Кузнеца-фамильяра прерван.");
         this.lang("ru_ru").add("ritual.occultism.familiar_guardian.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_guardian.started", "Начался вызов стража-фамильяр.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_guardian.started", "Начался вызов Стража-фамильяр.");
         this.lang("ru_ru").add("ritual.occultism.familiar_guardian.finished", "Страж-фамильяр успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_guardian.interrupted", "Вызов стража-фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_guardian.interrupted", "Вызов Стража-фамильяра прерван.");
         this.lang("ru_ru").add("ritual.occultism.possess_unbound_otherworld_bird.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_unbound_otherworld_bird.started", "Начался вызов дикого дрикрыла.");
+        this.lang("ru_ru").add("ritual.occultism.possess_unbound_otherworld_bird.started", "Начался вызов Дикого дрикрыла.");
         this.lang("ru_ru").add("ritual.occultism.possess_unbound_otherworld_bird.finished", "Дикий дрикрыл успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.possess_unbound_otherworld_bird.interrupted", "Вызов дикого дрикрыла прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_unbound_otherworld_bird.interrupted", "Вызов Дикого дрикрыла прерван.");
         this.lang("ru_ru").add("ritual.occultism.possess_unbound_parrot.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.possess_unbound_parrot.started", "Начался вызов дикого попугая.");
+        this.lang("ru_ru").add("ritual.occultism.possess_unbound_parrot.started", "Начался вызов Дикого попугая.");
         this.lang("ru_ru").add("ritual.occultism.possess_unbound_parrot.finished", "Дикий попугай успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.possess_unbound_parrot.interrupted", "Вызов дикого попугая прерван.");
+        this.lang("ru_ru").add("ritual.occultism.possess_unbound_parrot.interrupted", "Вызов Дикого попугая прерван.");
 
         this.add("ritual.occultism.summon_random_animal.conditions", "Удовлетворены не все требования для этого ритуала.");
         this.add("ritual.occultism.summon_random_animal.started", "Начался вызов случайного животного.");
@@ -953,49 +953,49 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.add("ritual.occultism.summon_random_animal.interrupted", "Вызов случайного животного прерван.");
 
         this.lang("ru_ru").add("ritual.occultism.familiar_parrot.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_parrot.started", "Начался вызов попугая-фамильяра.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_parrot.started", "Начался вызов Попугая-фамильяра.");
         this.lang("ru_ru").add("ritual.occultism.familiar_parrot.finished", "Попугай-фамильяр успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_parrot.interrupted", "Вызов попугая-фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_parrot.interrupted", "Вызов Попугая-фамильяра прерван.");
         this.lang("ru_ru").add("ritual.occultism.resurrect_allay.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.resurrect_allay.started", "Началось очищение Вредины до Тихони.");
-        this.lang("ru_ru").add("ritual.occultism.resurrect_allay.finished", "Вредина успешно очищена до Тихони.");
-        this.lang("ru_ru").add("ritual.occultism.resurrect_allay.interrupted", "Очищение Вредины до Тихони прервано.");
+        this.lang("ru_ru").add("ritual.occultism.resurrect_allay.started", "Началась очистка Вредины в Тихоню.");
+        this.lang("ru_ru").add("ritual.occultism.resurrect_allay.finished", "Вредина успешно очищена в Тихоню.");
+        this.lang("ru_ru").add("ritual.occultism.resurrect_allay.interrupted", "Очистка Вредины в Тихоню прервано.");
         this.lang("ru_ru").add("ritual.occultism.familiar_greedy.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_greedy.started", "Начался вызов алчного фамильяра.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_greedy.started", "Начался вызов Алчного фамильяра.");
         this.lang("ru_ru").add("ritual.occultism.familiar_greedy.finished", "Алчный фамильяр успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_greedy.interrupted", "Вызов алчного фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_greedy.interrupted", "Вызов Алчного фамильяра прерван.");
         this.lang("ru_ru").add("ritual.occultism.familiar_bat.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_bat.started", "Начался вызов летучей мыши-фамильяра.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_bat.started", "Начался вызов Летучей мыши-фамильяра.");
         this.lang("ru_ru").add("ritual.occultism.familiar_bat.finished", "Летучая мышь-фамильяр успешно вызвана.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_bat.interrupted", "Вызов летучей мыши-фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_bat.interrupted", "Вызов Летучей мыши-фамильяра прерван.");
         this.lang("ru_ru").add("ritual.occultism.familiar_deer.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_deer.started", "Начался вызов оленя-фамильяра.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_deer.started", "Начался вызов Оленя-фамильяра.");
         this.lang("ru_ru").add("ritual.occultism.familiar_deer.finished", "Олень-фамильяр успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_deer.interrupted", "Вызов оленя-фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_deer.interrupted", "Вызов Оленя-фамильяра прерван.");
         this.lang("ru_ru").add("ritual.occultism.familiar_headless.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_headless.started", "Начался вызов безголового человека-крысы-фамильяра.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_headless.started", "Начался вызов Безголового человека-крысы-фамильяра.");
         this.lang("ru_ru").add("ritual.occultism.familiar_headless.finished", "Безголовый человек-крыса-фамильяр успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_headless.interrupted", "Вызов безголового человека-крысы-фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_headless.interrupted", "Вызов Безголового человека-крысы-фамильяра прерван.");
         this.lang("ru_ru").add("ritual.occultism.familiar_chimera.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_chimera.started", "Начался вызов химеры-фамильяра.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_chimera.started", "Начался вызов Химеры-фамильяра.");
         this.lang("ru_ru").add("ritual.occultism.familiar_chimera.finished", "Химера-фамильяр успешно вызвана.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_chimera.interrupted", "Вызов химеры-фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_chimera.interrupted", "Вызов Химеры-фамильяра прерван.");
         this.lang("ru_ru").add("ritual.occultism.familiar_beholder.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_beholder.started", "Начался вызов созерцателя-фамильяра.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_beholder.started", "Начался вызов Созерцателя-фамильяра.");
         this.lang("ru_ru").add("ritual.occultism.familiar_beholder.finished", "Созерцатель-фамильяр успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_beholder.interrupted", "Вызов созерцателя-фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_beholder.interrupted", "Вызов Созерцателя-фамильяра прерван.");
         this.lang("ru_ru").add("ritual.occultism.familiar_fairy.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_fairy.started", "Начался вызов феи-фамильяра.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_fairy.started", "Начался вызов Феи-фамильяра.");
         this.lang("ru_ru").add("ritual.occultism.familiar_fairy.finished", "Фея-фамильяр успешно вызвана.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_fairy.interrupted", "Вызов феи-фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_fairy.interrupted", "Вызов Феи-фамильяра прерван.");
         this.lang("ru_ru").add("ritual.occultism.familiar_mummy.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_mummy.started", "Начался вызов мумии-фамильяр.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_mummy.started", "Начался вызов Мумии-фамильяр.");
         this.lang("ru_ru").add("ritual.occultism.familiar_mummy.finished", "Мумия-фамильяр успешно вызвана.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_mummy.interrupted", "Вызов мумии-фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_mummy.interrupted", "Вызов Мумии-фамильяра прерван.");
         this.lang("ru_ru").add("ritual.occultism.familiar_beaver.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_beaver.started", "Начался вызов бобра-фамильяра.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_beaver.started", "Начался вызов Бобра-фамильяра.");
         this.lang("ru_ru").add("ritual.occultism.familiar_beaver.finished", "Бобёр-фамильяр успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.familiar_beaver.interrupted", "Вызов бобра-фамильяра прерван.");
+        this.lang("ru_ru").add("ritual.occultism.familiar_beaver.interrupted", "Вызов Бобра-фамильяра прерван.");
 
         this.lang("ru_ru").add("ritual.occultism.summon_demonic_wife.conditions", "Удовлетворены не все требования для этого ритуала.");
         this.lang("ru_ru").add("ritual.occultism.summon_demonic_wife.started", "Начался вызов.");
@@ -1007,54 +1007,54 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("ritual.occultism.summon_demonic_husband.interrupted", "Вызов прерван.");
 
         this.lang("ru_ru").add("ritual.occultism.wild_husk.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.wild_husk.started", "Начался вызов орды диких кадавров.");
+        this.lang("ru_ru").add("ritual.occultism.wild_husk.started", "Начался вызов Орды диких кадавров.");
         this.lang("ru_ru").add("ritual.occultism.wild_husk.finished", "Орда диких кадавров успешна вызвана.");
-        this.lang("ru_ru").add("ritual.occultism.wild_husk.interrupted", "Вызов орды диких кадавров прерван.");
+        this.lang("ru_ru").add("ritual.occultism.wild_husk.interrupted", "Вызов Орды диких кадавров прерван.");
         this.lang("ru_ru").add("ritual.occultism.wild_drowned.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.wild_drowned.started", "Начался вызов орды диких утопленников.");
+        this.lang("ru_ru").add("ritual.occultism.wild_drowned.started", "Начался вызов Орды диких утопленников.");
         this.lang("ru_ru").add("ritual.occultism.wild_drowned.finished", "Орда диких утопленников успешна вызвана.");
-        this.lang("ru_ru").add("ritual.occultism.wild_drowned.interrupted", "Вызов орды диких утопленников прерван.");
+        this.lang("ru_ru").add("ritual.occultism.wild_drowned.interrupted", "Вызов Орды диких утопленников прерван.");
         this.lang("ru_ru").add("ritual.occultism.wild_creeper.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.wild_creeper.started", "Начался вызов орды диких криперов.");
+        this.lang("ru_ru").add("ritual.occultism.wild_creeper.started", "Начался вызов Орды диких криперов.");
         this.lang("ru_ru").add("ritual.occultism.wild_creeper.finished", "Орда диких криперов успешна вызвана.");
-        this.lang("ru_ru").add("ritual.occultism.wild_creeper.interrupted", "Вызов орды диких криперов прерван.");
+        this.lang("ru_ru").add("ritual.occultism.wild_creeper.interrupted", "Вызов Орды диких криперов прерван.");
         this.lang("ru_ru").add("ritual.occultism.wild_silverfish.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.wild_silverfish.started", "Начался вызов орды диких чешуйниц.");
+        this.lang("ru_ru").add("ritual.occultism.wild_silverfish.started", "Начался вызов Орды диких чешуйниц.");
         this.lang("ru_ru").add("ritual.occultism.wild_silverfish.finished", "Орда диких чешуйниц успешно вызвана.");
-        this.lang("ru_ru").add("ritual.occultism.wild_silverfish.interrupted", "Вызов орды диких чешуйниц прерван.");
+        this.lang("ru_ru").add("ritual.occultism.wild_silverfish.interrupted", "Вызов Орды диких чешуйниц прерван.");
         this.lang("ru_ru").add("ritual.occultism.wild_weak_breeze.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.wild_weak_breeze.started", "Начался вызов одержимого слабого вихря.");
+        this.lang("ru_ru").add("ritual.occultism.wild_weak_breeze.started", "Начался вызов Одержимого слабого вихря.");
         this.lang("ru_ru").add("ritual.occultism.wild_weak_breeze.finished", "Одержимый слабый вихрь успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.wild_weak_breeze.interrupted", "Вызов одержимого слабого вихря прерван.");
+        this.lang("ru_ru").add("ritual.occultism.wild_weak_breeze.interrupted", "Вызов Одержимого слабого вихря прерван.");
         this.lang("ru_ru").add("ritual.occultism.wild_breeze.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.wild_breeze.started", "Начался вызов одержимого вихря.");
+        this.lang("ru_ru").add("ritual.occultism.wild_breeze.started", "Начался вызов Одержимого вихря.");
         this.lang("ru_ru").add("ritual.occultism.wild_breeze.finished", "Одержимый вихрь успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.wild_breeze.interrupted", "Вызов одержимого вихря прерван.");
+        this.lang("ru_ru").add("ritual.occultism.wild_breeze.interrupted", "Вызов Одержимого вихря прерван.");
         this.lang("ru_ru").add("ritual.occultism.wild_strong_breeze.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.wild_strong_breeze.started", "Начался вызов одержимого сильного вихря.");
+        this.lang("ru_ru").add("ritual.occultism.wild_strong_breeze.started", "Начался вызов Одержимого сильного вихря.");
         this.lang("ru_ru").add("ritual.occultism.wild_strong_breeze.finished", "Одержимый сильный вихрь успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.wild_strong_breeze.interrupted", "Вызов одержимого сильного вихря прерван.");
+        this.lang("ru_ru").add("ritual.occultism.wild_strong_breeze.interrupted", "Вызов Одержимого сильного вихря прерван.");
         this.lang("ru_ru").add("ritual.occultism.summon_horde_illager.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.summon_horde_illager.started", "Начался вызов небольшого нашествия обитателей.");
-        this.lang("ru_ru").add("ritual.occultism.summon_horde_illager.finished", "Небольшое нашествие обитателей успешно вызвано.");
-        this.lang("ru_ru").add("ritual.occultism.summon_horde_illager.interrupted", "Вызов небольшого нашествия обитателей прервано.");
+        this.lang("ru_ru").add("ritual.occultism.summon_horde_illager.started", "Начался вызов Нашествия диких обитателей.");
+        this.lang("ru_ru").add("ritual.occultism.summon_horde_illager.finished", "Нашествие диких обитателей успешно вызвано.");
+        this.lang("ru_ru").add("ritual.occultism.summon_horde_illager.interrupted", "Вызов Нашествия диких обитателей прервано.");
 
         this.lang("ru_ru").add("ritual.occultism.craft_nature_paste.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.craft_nature_paste.started", "Началось наполнение природной пасты.");
-        this.lang("ru_ru").add("ritual.occultism.craft_nature_paste.finished", "Успешно наполнил природную пасту.");
-        this.lang("ru_ru").add("ritual.occultism.craft_nature_paste.interrupted", "Создание природной пасты прервано.");
+        this.lang("ru_ru").add("ritual.occultism.craft_nature_paste.started", "Началось наполнение Природной пасты.");
+        this.lang("ru_ru").add("ritual.occultism.craft_nature_paste.finished", "Успешно наполнил Природную пасту.");
+        this.lang("ru_ru").add("ritual.occultism.craft_nature_paste.interrupted", "Создание Природной пасты прервано.");
         this.lang("ru_ru").add("ritual.occultism.craft_gray_paste.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.craft_gray_paste.started", "Началось наполнение серой пасты.");
-        this.lang("ru_ru").add("ritual.occultism.craft_gray_paste.finished", "Успешно наполнил серую пасту.");
-        this.lang("ru_ru").add("ritual.occultism.craft_gray_paste.interrupted", "Создание серой пасты прервано.");
+        this.lang("ru_ru").add("ritual.occultism.craft_gray_paste.started", "Началось наполнение Серой пасты.");
+        this.lang("ru_ru").add("ritual.occultism.craft_gray_paste.finished", "Успешно наполнил Серую пасту.");
+        this.lang("ru_ru").add("ritual.occultism.craft_gray_paste.interrupted", "Создание Серой пасты прервано.");
         this.lang("ru_ru").add("ritual.occultism.craft_research_fragment_dust.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.craft_research_fragment_dust.started", "Началось наполнение пыли фрагмента исследования.");
-        this.lang("ru_ru").add("ritual.occultism.craft_research_fragment_dust.finished", "Успешно наполнил пыль фрагмента исследования.");
-        this.lang("ru_ru").add("ritual.occultism.craft_research_fragment_dust.interrupted", "Создание пыли фрагмента исследования прервано.");
+        this.lang("ru_ru").add("ritual.occultism.craft_research_fragment_dust.started", "Началось наполнение Пыли фрагмента исследования.");
+        this.lang("ru_ru").add("ritual.occultism.craft_research_fragment_dust.finished", "Успешно наполнил Пыль фрагмента исследования.");
+        this.lang("ru_ru").add("ritual.occultism.craft_research_fragment_dust.interrupted", "Создание Пыли фрагмента исследования прервано.");
         this.lang("ru_ru").add("ritual.occultism.craft_witherite_dust.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.craft_witherite_dust.started", "Началось наполнение визерита.");
-        this.lang("ru_ru").add("ritual.occultism.craft_witherite_dust.finished", "Успешно наполнил визерит.");
-        this.lang("ru_ru").add("ritual.occultism.craft_witherite_dust.interrupted", "Создание визерита прервано.");
+        this.lang("ru_ru").add("ritual.occultism.craft_witherite_dust.started", "Началось наполнение Визерита.");
+        this.lang("ru_ru").add("ritual.occultism.craft_witherite_dust.finished", "Успешно наполнил Визерит.");
+        this.lang("ru_ru").add("ritual.occultism.craft_witherite_dust.interrupted", "Создание Визерита прервано.");
 	    this.lang("ru_ru").add("ritual.occultism.repair_chalks.conditions", "Удовлетворены не все требования для этого ритуала.");
         this.lang("ru_ru").add("ritual.occultism.repair_chalks.started", "Началась починка мела.");
         this.lang("ru_ru").add("ritual.occultism.repair_chalks.finished", "Мел успешно починен.");
@@ -1202,7 +1202,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add(helper.pageTitle(), "Ритуалы вызова");
         this.lang("ru_ru").add(helper.pageText(),
                 """
-                        Ритуалы вызова вынуждают духов входить в этот мир в своём выбранном облике, что приводит к небольшим ограничениям на их силе; но подвергает их распаду сущности. Вызванные духи классифицируются, начиная с Духов-Торговцев, торгующих и преобразующих предметы, заканчивая рабами-помощниками для физического труда.
+                        Ритуалы вызова вынуждают духов входить в этот мир в своём выбранном облике, что приводит к небольшим ограничениям на их силе. Вызванные духи классифицируются, начиная с Духов-Торговцев, торгующих и преобразующих предметы, заканчивая рабами-помощниками для физического труда.
                          """);
 
         helper.entry("return_to_rituals");
@@ -1218,10 +1218,10 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add(helper.pageTitle(), "Дробильщик-Джинн");
         this.lang("ru_ru").add(helper.pageText(),
                 """
-                        Дробильщик-Джинн устойчив к распаду сущности и быстрее, а также эффективнее Дробильщика-Фолиота.
+                        Дробильщик-Джинн быстрее, эффективнее и весьма искуснее Дробильщика-Фолиота.
+                        Способен дробить лёд без переплавки.
                         \\
-                        \\
-                        Он дробит **1** руду на **3** соответствующие пыли.
+                        Дробит **1** руду на **3** соответствующие пыли.
                          """);
 
         helper.page("ritual");
@@ -1234,10 +1234,9 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add(helper.pageTitle(), "Дробильщик-Африт");
         this.lang("ru_ru").add(helper.pageText(),
                 """
-                        Дробильщик-Африт устойчив к распаду сущности и быстрее, а также эффективнее Дробильщика-Джинна.
+                        Дробильщик-Африт быстрее и эффективнее Дробильщика-Джинна.
                         \\
-                        \\
-                        Он дробит **1** руду на **4** соответствующие пыли.
+                        Дробит **1** руду на **4** соответствующие пыли.
                           """);
 
         helper.page("ritual");
@@ -1250,10 +1249,10 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add(helper.pageTitle(), "Дробильщик-Марид");
         this.lang("ru_ru").add(helper.pageText(),
                 """
-                        Дробильщик-Марид устойчив к распаду сущности и быстрее, а также эффективнее Дробильщика-Африта.
+                        Дробильщик-Марид быстрее, эффективнее и весьма искуснее Дробильщика-Африта.
+                        Способен дробить Осколок Эха при сохранении его свойств.
                         \\
-                        \\
-                        Он дробит **1** руду на **6** соответствующие пыли.
+                        Дробит **1** руду на **6** соответствующие пыли.
                           """);
 
         helper.page("ritual");
@@ -1510,7 +1509,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
                                 """.formatted(COLOR_PURPLE));
 
         helper.entry("wither_skull");
-        this.add(helper.entryName(), "Череп визер-скелета");
+        this.add(helper.entryName(), "Дикая Охота");
 
         helper.page("intro");
         this.add(helper.pageTitle(), "Череп визер-скелета");
@@ -1619,6 +1618,13 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
                         Пространственная шахта будет отбрасывать любые предметы, неспособные к хранению, в связи с этим важно регулярно опустошать шахту либо вручную при помощи воронок, либо при помощи Духа-Транспортировщика. Духи в лампе могут быть **размещены** сверху, все прочие стороны можно использовать для **извлечения** предметов.
                            """.formatted(COLOR_PURPLE));
 
+        helper.page("config");
+        this.add(helper.pageTitle(), "Конфигурация");
+        this.add(helper.pageText(),
+                """
+                        Если хотите сохранить своих рудокопов до их разрушения, проверьте "Конфигурация сервера > Предметы". Установив параметр "Сохранить рудокопов до разрушения" на "вкл.", — рудокоп переместится в выходной слот пространственной шахты, когда он достигнет 1 ед. прочности.
+                """.formatted(COLOR_PURPLE));
+
 
         helper.entry("craft_infused_pickaxe");
         this.lang("ru_ru").add(helper.entryName(), "Наполненная кирка");
@@ -1626,7 +1632,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         helper.page("spotlight");
         this.lang("ru_ru").add(helper.pageText(),
                 """
-                        Потусторонние руды, как правило, можно добыть только с помощью инструментов из потустороннего металла [](item://occultism:infused_pickaxe) является временным решением этой классической дилеммы. Хрупкий кристалл, настроенный на духа, содержит [#](%1$s)Джинна[#](), который позволяет собирать руды, однако прочность кирки крайне низкая. Наиболее прочной является [кирка из айзния](entry://getting_started/iesnium_pickaxe).
+                        Потусторонние руды, как правило, можно добыть только с помощью инструментов из потустороннего металла [](item://occultism:infused_pickaxe) является временным решением этой классической дилеммы. Хрупкий кристалл, настроенный на духа, содержит [#](%1$s)Джинна[#](), что позволяет собирать руды, однако прочность кирки крайне низкая. Наиболее прочной является [кирка из айзния](entry://getting_started/iesnium_pickaxe).
                            """.formatted(COLOR_PURPLE));
 
         helper.page("ritual");
@@ -1690,7 +1696,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         helper.page("spotlight");
         this.lang("ru_ru").add(helper.pageText(),
                 """
-                        Этот простой стабилизатор хранилища, заселённый [#](%1$s)Фолиотом[#](), который поддерживает стойкость Пространственной матрицы во время стабильного состояния пространственного хранилища, что таким образом позволяет хранить больше предметов.
+                        Этот простой стабилизатор хранилища, заселённый [#](%1$s)Фолиотом[#](), что поддерживает стойкость Пространственной матрицы во время стабильного состояния пространственного хранилища, что таким образом позволяет хранить больше предметов.
                         \\
                         \\
                         По умолчанию каждый Стабилизатор 1-го уровня добавляет **64** типа предметов и 512.000 ед. вместимости.
@@ -1705,7 +1711,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         helper.page("spotlight");
         this.lang("ru_ru").add(helper.pageText(),
                 """
-                        Этот улучшенный стабилизатор, заселённый [#](%1$s)Джинном[#](), который поддерживает стойкость Пространственной матрицы во время стабильного состояния пространственного хранилища, что таким образом позволяет хранить ещё больше предметов.
+                        Этот улучшенный стабилизатор, заселённый [#](%1$s)Джинном[#](), что поддерживает стойкость Пространственной матрицы во время стабильного состояния пространственного хранилища, что таким образом позволяет хранить ещё больше предметов.
                         \\
                         \\
                         По умолчанию каждый Стабилизатор 2-го уровня добавляет **128** типов предметов и 1.024.000 ед. вместимости.
@@ -1720,7 +1726,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         helper.page("spotlight");
         this.lang("ru_ru").add(helper.pageText(),
                 """
-                        Этот продвинутый стабилизатор, заселённый [#](%1$s)Афритом[#](), который поддерживает стойкость Пространственной матрицы во время стабильного состояния пространственного хранилища, что таким образом позволяет хранить ещё больше предметов.
+                        Этот продвинутый стабилизатор, заселённый [#](%1$s)Афритом[#](), что поддерживает стойкость Пространственной матрицы во время стабильного состояния пространственного хранилища, что таким образом позволяет хранить ещё больше предметов.
                         \\
                         \\
                         По умолчанию каждый Стабилизатор 3-го уровня добавляет **256** типов предметов и 2.048.000 ед. вместимости.
@@ -1735,7 +1741,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         helper.page("spotlight");
         this.lang("ru_ru").add(helper.pageText(),
                 """
-                        Этот весьма продвинутый стабилизатор, заселённый [#](%1$s)Маридом[#](), который поддерживает стойкость Пространственной матрицы во время стабильного состояния пространственного хранилища, что таким образом позволяет хранить ещё больше предметов.
+                        Этот весьма продвинутый стабилизатор, заселённый [#](%1$s)Маридом[#](), что поддерживает стойкость Пространственной матрицы во время стабильного состояния пространственного хранилища, что таким образом позволяет хранить ещё больше предметов.
                         \\
                         \\
                         По умолчанию каждый Стабилизатор 4-го уровня добавляет **512** типа предметов и 4.098.000 ед. вместимости.
@@ -2431,7 +2437,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add(helper.pageTitle(), "Описание");
         this.lang("ru_ru").add(helper.pageText(),
                 """
-                         Очищение Вредины до Тихони, во время процесса воскресения, раскроет её истинное имя.
+                         Очистка Вредины в Тихоню, во время процесса воскресения, раскроет её истинное имя.
                            """.formatted(COLOR_PURPLE));
 
     }
@@ -2899,8 +2905,8 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("item.occultism.ritual_dummy.possess_hoglin.tooltip", "При убийстве у Одержимого хоглина есть шанс сбросить Незеритовое улучшение.");
 		this.lang("ru_ru").add("item.occultism.ritual_dummy.possess_witch", "Ритуал: Вызов одержимой ведьмы");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.possess_witch.tooltip", "Одержимая ведьма будет сбрасывать наполненную бутылочку");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.possess_zombie_piglin", "Ритуал: Вызов одержимого зомби-пиглина");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.possess_zombie_piglin.tooltip", "Одержимый зомби-пиглин будет сбрасывать демоническое мясо.");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.possess_zombie_piglin", "Ритуал: Вызов одержимого зомбифицированного пиглина");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.possess_zombie_piglin.tooltip", "Одержимый зомбифицированный пиглин будет сбрасывать демоническое мясо.");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.possess_bee", "Ритуал: Вызов одержимой пчелы");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.possess_bee.tooltip", "Одержимая пчела будет сбрасывать проклятый мёд.");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.possess_goat", "Ритуал: Вызов козла милосердия");
@@ -2920,11 +2926,11 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_foliot_crusher", "Ритуал: Вызов Дробильщика-Фолиота");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_foliot_crusher.tooltip", "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно удваивая металлопродукцию.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_djinni_crusher", "Ритуал: Вызов Дробильщика-Джинна");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_djinni_crusher.tooltip", "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно (гораздо), удваивая металлопродукцию. Этот дробильщик распадается (гораздо) медленнее низкоуровневых дробильщиков.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_djinni_crusher.tooltip", "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно (гораздо), удваивая металлопродукцию.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_afrit_crusher", "Ритуал: Вызов Дробильщика-Африта");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_afrit_crusher.tooltip", "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно (гораздо), удваивая металлопродукцию. Этот дробильщик распадается (гораздо) медленнее низкоуровневых дробильщиков.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_afrit_crusher.tooltip", "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно (гораздо), удваивая металлопродукцию.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_marid_crusher", "Ритуал: Вызов Дробильщика-Марида");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_marid_crusher.tooltip", "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно (гораздо), удваивая металлопродукцию. Этот дробильщик распадается (гораздо) медленнее низкоуровневых дробильщиков.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_marid_crusher.tooltip", "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно (гораздо), удваивая металлопродукцию.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_foliot_lumberjack", "Ритуал: Вызов Дровосека-Фолиота");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_foliot_lumberjack.tooltip", "Дровосек занимается заготовкой древесины на своём рабочем месте и кладёт выпавшие предметы в указанный сундук.");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_foliot_otherstone_trader", "Ритуал: Вызов потустороннего торговца");
@@ -2945,8 +2951,8 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("item.occultism.ritual_dummy.possess_unbound_otherworld_bird.tooltip", "Овладевает Дрикрылом-фамильяром, который может быть приручен кем-угодно, не только вызывателем.");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.possess_unbound_parrot", "Ритуал: Овладение несвязанным попугаем");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.possess_unbound_parrot.tooltip", "Овладевает попугаем, который может быть приручен кем-угодно, не только вызывателем.");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.resurrect_allay", "Ритуал: Очищение Вредины до Тихони");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.resurrect_allay.tooltip", "Очищение Вредины до Тихони в ходе процесса воскресения.");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.resurrect_allay", "Ритуал: Очистка Вредины в Тихоню");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.resurrect_allay.tooltip", "Очищает Вредину в Тихоню.");
 
         this.lang("ru_ru").add("item.occultism.ritual_dummy.wild_husk", "Ритуал: Вызов орды диких кадавров");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.wild_husk.tooltip", "В состав орды диких кадавров входит несколько Кадавров, с которых выпадают предметы, что связаны с испытаниями пустыни.");
@@ -2956,14 +2962,14 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("item.occultism.ritual_dummy.wild_creeper.tooltip", "В состав орды диких криперов входят несколько заряженных Криперов, с которых выпадают много пластинок.");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.wild_silverfish", "Ритуал: Вызов орды диких чешуйниц");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.wild_silverfish.tooltip", "В состав орды диких чешуйниц входит несколько чешуйниц, с которых выпадают предметы, связанные с испытаниями руин.");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.weak_breeze", "Ритуал: Вызов одержимого слабого вихря");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.wild_weak_breeze", "Ритуал: Вызов дикого слабого вихря");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.weak_breeze.tooltip", "С Одержимого слабого вихря выпадает Ключ испытаний и предметы, что связаны с камерой испытаний.");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.breeze", "Ритуал: Вызов одержимого вихря");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.breeze.tooltip", "С одержимого вихря выпадает Зловещий ключ испытаний и предметы, что связаны с камерой испытаний.");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.strong_breeze", "Ритуал: Вызов одержимого сильного вихря");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.strong_breeze.tooltip", "С Одержимого сильного вихря выпадает Навершие булавы и предметы, что связаны с камерой испытаний.");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.horde_illager", "Ритуал: Вызов одержимого заклинателя");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.horde_illager.tooltip", "Вызывает одержимого Заклинателя и его приспешника.");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.wild_breeze", "Ритуал: Вызов дикого вихря");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.wild_breeze.tooltip", "С одержимого вихря выпадает Зловещий ключ испытаний и предметы, что связаны с камерой испытаний.");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.wild_strong_breeze", "Ритуал: Вызов дикого сильного вихря");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.wild_strong_breeze.tooltip", "С Одержимого сильного вихря выпадает Навершие булавы и предметы, что связаны с камерой испытаний.");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.wild_horde_illager", "Ритуал: Вызов диких разбойников");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.wild_horde_illager.tooltip", "Вызывает дикого Заклинателя и его приспешника.");
 
         this.add("item.occultism.ritual_dummy.craft_nature_paste", "Ритуал: Создание природной пасты");
         this.add("item.occultism.ritual_dummy.craft_nature_paste.tooltip", "Смешав ингредиенты, Фолиот создаст природную пасту.");
@@ -2972,18 +2978,18 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.occultism.ritual_dummy.craft_research_fragment_dust", "Ритуал: Создать пыль фрагмента исследования");
         this.add("item.occultism.ritual_dummy.craft_research_fragment_dust.tooltip", "Фолиот наполнит опыт в изумрудную пыль.");
         this.add("item.occultism.ritual_dummy.craft_witherite_dust", "Ритуал: Создать визеритовую пыль");
-        this.add("item.occultism.ritual_dummy.craft_witherite_dust.tooltip", "Африт наполнит Сущность визера в незеритовую пыль.");
+        this.add("item.occultism.ritual_dummy.craft_witherite_dust.tooltip", "Африт наполнит незеритовую пыль со сущностью визера.");
         this.add("item.occultism.ritual_dummy.craft_dragonyst_dust", "Ритуал: Создать драконистовую пыль");
         this.add("item.occultism.ritual_dummy.craft_dragonyst_dust.tooltip", "Марид наполнит Сущность Эндер-Дракона в аметистовую пыль.");
 
         this.add("item.occultism.ritual_dummy.repair_chalks", "Ритуал: Починка мела");
-        this.add("item.occultism.ritual_dummy.repair_chalks.tooltip", "Джинн починит Ваш мел.");
+        this.add("item.occultism.ritual_dummy.repair_chalks.tooltip", "Полностью починит мел, вселив в него Джинна.");
         this.add("item.occultism.ritual_dummy.repair_tools", "Ритуал: Починка инструмента");
-        this.add("item.occultism.ritual_dummy.repair_tools.tooltip", "Африт починит Ваш инструмент.");
+        this.add("item.occultism.ritual_dummy.repair_tools.tooltip", "Полностью починит инструмент, вселив в него Африта.");
         this.add("item.occultism.ritual_dummy.repair_armors", "Ритуал: Починка брони");
-        this.add("item.occultism.ritual_dummy.repair_armors.tooltip", "Африт починит Вашу броню.");
+        this.add("item.occultism.ritual_dummy.repair_armors.tooltip", "Полностью починит броню, вселив в неё Африта.");
         this.add("item.occultism.ritual_dummy.repair_miners", "Ритуал: Восстановление рудокопа");
-        this.add("item.occultism.ritual_dummy.repair_miners.tooltip", "Африт продлит срок Вашего договора с рудокопом.");
+        this.add("item.occultism.ritual_dummy.repair_miners.tooltip", "Продлит договор, заключив сделку с Афритом.");
 
         this.lang("ru_ru").add(OccultismItems.RITUAL_DUMMY_SUMMON_DEMONIC_WIFE.get(), "Ритуал: Вызов демонической жены");
         this.lang("ru_ru").addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_DEMONIC_WIFE.get(), "Вызывает демоническую жену для поддержки: она будет защищать Вас, помогать с готовкой, и продлит продолжительность зелья.");
@@ -3270,7 +3276,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
 		this.addConfig("miner_ancient_eldritch", "Сверхъестественный древний рудокоп");
 
         this.addConfig("maxMiningTime", "Макс. время добычи");
-        this.addConfig("rollsPerOperation", "Циклов за операцию");
+        this.addConfig("rollsPerOperation", "Rolls Per Operation");
         this.addConfig("durability", "Прочность");
 		
 		this.addConfig("items", "Предметы");
