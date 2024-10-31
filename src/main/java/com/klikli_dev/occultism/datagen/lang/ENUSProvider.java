@@ -900,9 +900,9 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
         this.add("ritual.occultism.possess_witch.finished", "Summoned possessed witch successfully.");
         this.add("ritual.occultism.possess_witch.interrupted", "Summoning of possessed witch interrupted.");
         this.add("ritual.occultism.possess_zombie_piglin.conditions", "Not all requirements for this ritual are met.");
-        this.add("ritual.occultism.possess_zombie_piglin.started", "Started summoning possessed zombie piglin.");
-        this.add("ritual.occultism.possess_zombie_piglin.finished", "Summoned possessed zombie piglin successfully.");
-        this.add("ritual.occultism.possess_zombie_piglin.interrupted", "Summoning of possessed zombie piglin interrupted.");
+        this.add("ritual.occultism.possess_zombie_piglin.started", "Started summoning possessed zombified piglin.");
+        this.add("ritual.occultism.possess_zombie_piglin.finished", "Summoned possessed zombified piglin successfully.");
+        this.add("ritual.occultism.possess_zombie_piglin.interrupted", "Summoning of possessed zombified piglin interrupted.");
         this.add("ritual.occultism.possess_bee.conditions", "Not all requirements for this ritual are met.");
         this.add("ritual.occultism.possess_bee.started", "Started summoning possessed bee.");
         this.add("ritual.occultism.possess_bee.finished", "Summoned possessed bee successfully.");
@@ -1033,9 +1033,9 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
         this.add("ritual.occultism.wild_strong_breeze.finished", "Summoned wild strong breeze successfully.");
         this.add("ritual.occultism.wild_strong_breeze.interrupted", "Summoning of wild strong breeze interrupted.");
         this.add("ritual.occultism.summon_horde_illager.conditions", "Not all requirements for this ritual are met.");
-        this.add("ritual.occultism.summon_horde_illager.started", "Started summoning the small illager invasion.");
-        this.add("ritual.occultism.summon_horde_illager.finished", "Summoned the small illager invasion successfully.");
-        this.add("ritual.occultism.summon_horde_illager.interrupted", "Summoning of the small illager invasion interrupted.");
+        this.add("ritual.occultism.summon_horde_illager.started", "Started summoning the wild illager invasion.");
+        this.add("ritual.occultism.summon_horde_illager.finished", "Summoned the wild illager invasion successfully.");
+        this.add("ritual.occultism.summon_horde_illager.interrupted", "Summoning of the wild illager invasion interrupted.");
 
         this.add("ritual.occultism.craft_nature_paste.conditions", "Not all requirements for this ritual are met.");
         this.add("ritual.occultism.craft_nature_paste.started", "Started infusing Nature Paste.");
@@ -1075,7 +1075,6 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
         this.addRitualMessage(OccultismRituals.RESURRECT_FAMILIAR, "finished", "Successfully resurrected familiar.");
         this.addRitualMessage(OccultismRituals.RESURRECT_FAMILIAR, "interrupted", "Resurrection interrupted.");
 
-        //item.occultism.ritual_dummy.summon_horde_illager
         this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T1, "conditions", "Not all requirements for this ritual are met.");
         this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T1, "started", "Started binding a djinni into a satchel.");
         this.addRitualMessage(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T1, "finished", "Successfully bound a djinni into a satchel.");
@@ -1200,7 +1199,7 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
         this.add(helper.pageTitle(), "Summoning Rituals");
         this.add(helper.pageText(),
                 """
-                        Summon rituals force spirits to enter this world in their chosen shape, leading to little restrictions on their power, but expose them to essence decay. Summoned spirits range from trade spirits that trade and convert items, to slave-like helpers for manual labour.
+                        Summon rituals force spirits to enter this world in their chosen shape, leading to little restrictions on their power. Summoned spirits range from trade spirits that trade and convert items, to slave-like helpers for manual labour.
                          """);
 
         helper.entry("return_to_rituals");
@@ -1216,8 +1215,8 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
         this.add(helper.pageTitle(), "Djinni Crusher");
         this.add(helper.pageText(),
                 """
-                        The djinni crusher is resistant essence decay and faster and more efficient than the foliot crusher.
-                        \\
+                        The djinni crusher is faster, more efficient and proficient than the foliot crusher.
+                        Allowing ice to be crushed without melting.
                         \\
                         It will crush **one** ore into **three** corresponding dusts.
                          """);
@@ -1232,7 +1231,7 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
         this.add(helper.pageTitle(), "Afrit Crusher");
         this.add(helper.pageText(),
                 """
-                        The afrit crusher is resistant to essence decay and faster and more efficient than the djinni crusher.
+                        The afrit crusher is faster and more efficient than the djinni crusher.
                         \\
                         \\
                         It will crush **one** ore into **four** corresponding dusts.
@@ -1248,8 +1247,8 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
         this.add(helper.pageTitle(), "Marid Crusher");
         this.add(helper.pageText(),
                 """
-                        The marid crusher is resistant to essence decay and faster and more efficient than the afrit crusher.
-                        \\
+                        The marid crusher is faster, more efficient and proficient than the afrit crusher.
+                        Allowing crushing the echo shard while maintaining its properties.
                         \\
                         It will crush **one** ore into **six** corresponding dusts.
                           """);
@@ -1463,7 +1462,7 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
                                 """.formatted(COLOR_PURPLE));
 
         helper.entry("wither_skull");
-        this.add(helper.entryName(), "Wither Skeleton Skull");
+        this.add(helper.entryName(), "Wild Hunt");
 
         helper.page("intro");
         this.add(helper.pageTitle(), "Wither Skeleton Skull");
@@ -1617,6 +1616,12 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
                         The dimensional mineshaft will discard any items it cannot store, so it is important to regularly empty the mineshaft, either manually, with hoppers or using a transporter spirit. Spirits in lamps can be **inserted** from the top, all other sides can be used to **extract** items.
                            """.formatted(COLOR_PURPLE));
 
+        helper.page("config");
+        this.add(helper.pageTitle(), "Config");
+        this.add(helper.pageText(),
+                """
+                        If you want to save your miners before they break, check "Server Configuration > Items". By setting the "Save miners before breaking" option to "on", a miner will go to the output of the dimensional mineshaft when it reaches 1 durability.
+                """.formatted(COLOR_PURPLE));
 
         helper.entry("craft_infused_pickaxe");
         this.add(helper.entryName(), "Infused Pickaxe");
@@ -2877,37 +2882,37 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.occultism.ritual_dummy.familiar_beaver", "Ritual: Summon Beaver Familiar");
         this.add("item.occultism.ritual_dummy.familiar_beaver.tooltip", "The Beaver familiar provides increased woodcutting speed to their masters and harvests nearby trees when they grow from a sapling.");
         this.add("item.occultism.ritual_dummy.possess_enderman", "Ritual: Summon Possessed Enderman");
-        this.add("item.occultism.ritual_dummy.possess_enderman.tooltip", "The possessed Enderman will always drop at least one ender pearl when killed.");
+        this.add("item.occultism.ritual_dummy.possess_enderman.tooltip", "The Possessed Enderman will always drop at least one ender pearl when killed.");
         this.add("item.occultism.ritual_dummy.possess_endermite", "Ritual: Summon Possessed Endermite");
-        this.add("item.occultism.ritual_dummy.possess_endermite.tooltip", "The possessed Endermite drops End Stone.");
+        this.add("item.occultism.ritual_dummy.possess_endermite.tooltip", "The Possessed Endermite drops End Stone.");
         this.add("item.occultism.ritual_dummy.possess_skeleton", "Ritual: Summon Possessed Skeleton");
-        this.add("item.occultism.ritual_dummy.possess_skeleton.tooltip", " The possessed Skeleton is immune to daylight and always drop at least one Skeleton Skull when killed.");
+        this.add("item.occultism.ritual_dummy.possess_skeleton.tooltip", " The Possessed Skeleton is immune to daylight and always drop at least one Skeleton Skull when killed.");
         this.add("item.occultism.ritual_dummy.possess_ghast", "Ritual: Summon Possessed Ghast");
-        this.add("item.occultism.ritual_dummy.possess_ghast.tooltip", "The possessed Ghast will always drop at least one ghast tear when killed.");
+        this.add("item.occultism.ritual_dummy.possess_ghast.tooltip", "The Possessed Ghast will always drop at least one ghast tear when killed.");
         this.add("item.occultism.ritual_dummy.possess_phantom", "Ritual: Summon Possessed Phantom");
-        this.add("item.occultism.ritual_dummy.possess_phantom.tooltip", "The possessed Phantom will always drop at least one phantom membrane when killed and is easy to trap.");
+        this.add("item.occultism.ritual_dummy.possess_phantom.tooltip", "The Possessed Phantom will always drop at least one phantom membrane when killed and is easy to trap.");
         this.add("item.occultism.ritual_dummy.possess_weak_shulker", "Ritual: Summon Possessed Weak Shulker");
-        this.add("item.occultism.ritual_dummy.possess_weak_shulker.tooltip", "The possessed Weak Shulker will drop at least one chorus fruit when killed and can drop shulker shell.");
+        this.add("item.occultism.ritual_dummy.possess_weak_shulker.tooltip", "The Possessed Weak Shulker will drop at least one chorus fruit when killed and can drop shulker shell.");
         this.add("item.occultism.ritual_dummy.possess_shulker", "Ritual: Summon Possessed Shulker");
-        this.add("item.occultism.ritual_dummy.possess_shulker.tooltip", "The possessed Shulker will always drop at least one shulker shell when killed.");
+        this.add("item.occultism.ritual_dummy.possess_shulker.tooltip", "The Possessed Shulker will always drop at least one shulker shell when killed.");
         this.add("item.occultism.ritual_dummy.possess_elder_guardian", "Ritual: Summon Possessed Elder Guardian");
-        this.add("item.occultism.ritual_dummy.possess_elder_guardian.tooltip", "The possessed elder guardian will drop at least one nautilus shell when killed, also can drop heart of the sea and the commom drops.");
+        this.add("item.occultism.ritual_dummy.possess_elder_guardian.tooltip", "The Possessed Elder Guardian will drop at least one nautilus shell when killed, also can drop heart of the sea and the commom drops.");
         this.add("item.occultism.ritual_dummy.possess_warden", "Ritual: Summon Possessed Warden");
-        this.add("item.occultism.ritual_dummy.possess_warden.tooltip", "The possessed Warden will always drop at least six echo shard and can drop anothers ancient stuff (smithing templates and discs) when killed.");
+        this.add("item.occultism.ritual_dummy.possess_warden.tooltip", "The Possessed Warden will always drop at least six echo shard and can drop anothers ancient stuff (smithing templates and discs) when killed.");
         this.add("item.occultism.ritual_dummy.possess_hoglin", "Ritual: Summon Possessed Hoglin");
-        this.add("item.occultism.ritual_dummy.possess_hoglin.tooltip", "The possessed Hoglin has a chance to drop smithing template of netherite upgrade when killed.");
+        this.add("item.occultism.ritual_dummy.possess_hoglin.tooltip", "The Possessed Hoglin has a chance to drop smithing template of netherite upgrade when killed.");
         this.add("item.occultism.ritual_dummy.possess_witch", "Ritual: Summon Possessed Witch");
-        this.add("item.occultism.ritual_dummy.possess_witch.tooltip", "The possessed Witch will drop a special filled bottle.");
-        this.add("item.occultism.ritual_dummy.possess_zombie_piglin", "Ritual: Summon Possessed Zombie Piglin");
-        this.add("item.occultism.ritual_dummy.possess_zombie_piglin.tooltip", "The possessed Zombie Piglin will drop demonic meat.");
+        this.add("item.occultism.ritual_dummy.possess_witch.tooltip", "The Possessed Witch will drop a special filled bottle.");
+        this.add("item.occultism.ritual_dummy.possess_zombie_piglin", "Ritual: Summon Possessed Zombified Piglin");
+        this.add("item.occultism.ritual_dummy.possess_zombie_piglin.tooltip", "The Possessed Zombified Piglin will drop demonic meat.");
         this.add("item.occultism.ritual_dummy.possess_bee", "Ritual: Summon Possessed Bee");
-        this.add("item.occultism.ritual_dummy.possess_bee.tooltip", "The possessed Bee will drop cursed honey.");
+        this.add("item.occultism.ritual_dummy.possess_bee.tooltip", "The Possessed Bee will drop cursed honey.");
         this.add("item.occultism.ritual_dummy.possess_goat", "Ritual: Summon Goat of Mercy");
         this.add("item.occultism.ritual_dummy.possess_goat.tooltip", "The Goat of Mercy will drop the Cruelty Essence.");
         this.add("item.occultism.ritual_dummy.summon_afrit_rain_weather", "Ritual: Rainy Weather");
-        this.add("item.occultism.ritual_dummy.summon_afrit_rain_weather.tooltip", "Summons an bound Afrit that creates rain.");
+        this.add("item.occultism.ritual_dummy.summon_afrit_rain_weather.tooltip", "Summons an Afrit that creates rain.");
         this.add("item.occultism.ritual_dummy.summon_afrit_thunder_weather", "Ritual: Thunderstorm");
-        this.add("item.occultism.ritual_dummy.summon_afrit_thunder_weather.tooltip", "Summons an bound Afrit that creates a thunderstorm.");
+        this.add("item.occultism.ritual_dummy.summon_afrit_thunder_weather.tooltip", "Summons an Afrit that creates a thunderstorm.");
         this.add("item.occultism.ritual_dummy.summon_djinni_clear_weather", "Ritual: Clear Weather");
         this.add("item.occultism.ritual_dummy.summon_djinni_clear_weather.tooltip", "Summons a Djinni that clears the weather.");
         this.add("item.occultism.ritual_dummy.summon_djinni_day_time", "Ritual: Summoning of Dawn");
@@ -2919,11 +2924,11 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.occultism.ritual_dummy.summon_foliot_crusher", "Ritual: Summon Foliot Crusher");
         this.add("item.occultism.ritual_dummy.summon_foliot_crusher.tooltip", "The crusher is a spirit summoned to crush ores into dusts, effectively doubling the metal output.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Note: Some recipes may require higher or lower tier crushers.");
         this.add("item.occultism.ritual_dummy.summon_djinni_crusher", "Ritual: Summon Djinni Crusher");
-        this.add("item.occultism.ritual_dummy.summon_djinni_crusher.tooltip", "The crusher is a spirit summoned to crush ores into dusts, effectively (more than) doubling the metal output. This crusher decays (much) slower than lower tier crushers.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Note: Some recipes may require higher or lower tier crushers.");
+        this.add("item.occultism.ritual_dummy.summon_djinni_crusher.tooltip", "The crusher is a spirit summoned to crush ores into dusts, effectively (more than) doubling the metal output.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Note: Some recipes may require higher or lower tier crushers.");
         this.add("item.occultism.ritual_dummy.summon_afrit_crusher", "Ritual: Summon Afrit Crusher");
-        this.add("item.occultism.ritual_dummy.summon_afrit_crusher.tooltip", "The crusher is a spirit summoned to crush ores into dusts, effectively (more than) doubling the metal output. This crusher decays (much) slower than lower tier crushers.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Note: Some recipes may require higher or lower tier crushers.");
+        this.add("item.occultism.ritual_dummy.summon_afrit_crusher.tooltip", "The crusher is a spirit summoned to crush ores into dusts, effectively (more than) doubling the metal output.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Note: Some recipes may require higher or lower tier crushers.");
         this.add("item.occultism.ritual_dummy.summon_marid_crusher", "Ritual: Summon Marid Crusher");
-        this.add("item.occultism.ritual_dummy.summon_marid_crusher.tooltip", "The crusher is a spirit summoned to crush ores into dusts, effectively (more than) doubling the metal output. This crusher decays (much) slower than lower tier crushers.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Note: Some recipes may require higher or lower tier crushers.");
+        this.add("item.occultism.ritual_dummy.summon_marid_crusher.tooltip", "The crusher is a spirit summoned to crush ores into dusts, effectively (more than) doubling the metal output.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Note: Some recipes may require higher or lower tier crushers.");
         this.add("item.occultism.ritual_dummy.summon_foliot_lumberjack", "Ritual: Summon Foliot Lumberjack");
         this.add("item.occultism.ritual_dummy.summon_foliot_lumberjack.tooltip", "The lumberjack will harvest trees in it's working area and deposit the dropped items into the specified chest.");
         this.add("item.occultism.ritual_dummy.summon_foliot_otherstone_trader", "Ritual: Summon Otherstone Trader");
@@ -2945,7 +2950,7 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.occultism.ritual_dummy.possess_unbound_parrot", "Ritual: Possess Unbound Parrot");
         this.add("item.occultism.ritual_dummy.possess_unbound_parrot.tooltip", "Possess a Parrot that can be tamed by anyone, not just the summoner.");
         this.add("item.occultism.ritual_dummy.resurrect_allay", "Ritual: Purify Vex to Allay");
-        this.add("item.occultism.ritual_dummy.resurrect_allay.tooltip", "Purify a Vex to a Allay on a resurrection process.");
+        this.add("item.occultism.ritual_dummy.resurrect_allay.tooltip", "Purifies a Vex into an Allay.");
 
         this.add("item.occultism.ritual_dummy.wild_husk", "Ritual: Summon The Wild Horde Husk");
         this.add("item.occultism.ritual_dummy.wild_husk.tooltip", "The Wild Horde Husk consists of a few Husks that drop items related to desert trails.");
@@ -2955,14 +2960,14 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.occultism.ritual_dummy.wild_creeper.tooltip", "The Wild Horde Creeper consists of a few charged Creepers that drop many disks.");
         this.add("item.occultism.ritual_dummy.wild_silverfish", "Ritual: Summon The Wild Horde Silverfish");
         this.add("item.occultism.ritual_dummy.wild_silverfish.tooltip", "The Wild Horde Silverfish consists of a few Silverfishs that drop items related to ruins trails.");
-        this.add("item.occultism.ritual_dummy.wild_weak_breeze", "Ritual: Summon Possessed Weak Breeze");
-        this.add("item.occultism.ritual_dummy.wild_weak_breeze.tooltip", "The possessed Weak Breeze will drop a Trial Key and trial chamber related items.");
-        this.add("item.occultism.ritual_dummy.wild_breeze", "Ritual: Summon Possessed Breeze");
-        this.add("item.occultism.ritual_dummy.wild_breeze.tooltip", "The possessed Breeze will drop a Ominous Trial Key and trial chamber related items.");
-        this.add("item.occultism.ritual_dummy.wild_strong_breeze", "Ritual: Summon Possessed Strong Breeze");
-        this.add("item.occultism.ritual_dummy.wild_strong_breeze.tooltip", "The possessed Strong Breeze will drop a Heavy Core and trial chamber related items.");
-        this.add("item.occultism.ritual_dummy.wild_horde_illager", "Ritual: Summon Possessed Evoker");
-        this.add("item.occultism.ritual_dummy.wild_horde_illager.tooltip", "Summon a possessed Evoker and his henchmen.");
+        this.add("item.occultism.ritual_dummy.wild_weak_breeze", "Ritual: Summon Wild Weak Breeze");
+        this.add("item.occultism.ritual_dummy.wild_weak_breeze.tooltip", "The Wild Weak Breeze will drop a Trial Key and trial chamber related items.");
+        this.add("item.occultism.ritual_dummy.wild_breeze", "Ritual: Summon Wild Breeze");
+        this.add("item.occultism.ritual_dummy.wild_breeze.tooltip", "The Wild Breeze will drop a Ominous Trial Key and trial chamber related items.");
+        this.add("item.occultism.ritual_dummy.wild_strong_breeze", "Ritual: Summon Wild Strong Breeze");
+        this.add("item.occultism.ritual_dummy.wild_strong_breeze.tooltip", "The Wild Strong Breeze will drop a Heavy Core and trial chamber related items.");
+        this.add("item.occultism.ritual_dummy.wild_horde_illager", "Ritual: Summon Wild Illagers");
+        this.add("item.occultism.ritual_dummy.wild_horde_illager.tooltip", "Summon a Wild Evoker and his henchmen.");
 
         this.add("item.occultism.ritual_dummy.craft_nature_paste", "Ritual: Craft Nature Paste");
         this.add("item.occultism.ritual_dummy.craft_nature_paste.tooltip", "A foliot will craft the nature paste mixing ingredients.");
@@ -2971,19 +2976,19 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.occultism.ritual_dummy.craft_research_fragment_dust", "Ritual: Craft Research Fragment Dust");
         this.add("item.occultism.ritual_dummy.craft_research_fragment_dust.tooltip", "A foliot will infuse experience in the emerald dust.");
         this.add("item.occultism.ritual_dummy.craft_witherite_dust", "Ritual: Craft Witherite Dust");
-        this.add("item.occultism.ritual_dummy.craft_witherite_dust.tooltip", "A afrit will infuse wither essence in the netherite dust.");
+        this.add("item.occultism.ritual_dummy.craft_witherite_dust.tooltip", "An afrit will infuse netherite dust with wither essence.");
         this.add("item.occultism.ritual_dummy.craft_dragonyst_dust", "Ritual: Craft Dragonyst Dust");
         this.add("item.occultism.ritual_dummy.craft_dragonyst_dust.tooltip", "A marid will infuse ender dragon essence in the amethyst dust.");
 
 
         this.add("item.occultism.ritual_dummy.repair_chalks", "Ritual: Repair Chalk");
-        this.add("item.occultism.ritual_dummy.repair_chalks.tooltip", "A djinni will repair your chalk.");
+        this.add("item.occultism.ritual_dummy.repair_chalks.tooltip", "Fully repair chalk by infusing it with a Djinni.");
         this.add("item.occultism.ritual_dummy.repair_tools", "Ritual: Repair Tool");
-        this.add("item.occultism.ritual_dummy.repair_tools.tooltip", "A afrit will repair your tool.");
+        this.add("item.occultism.ritual_dummy.repair_tools.tooltip", "Fully repair a tool by infusing it with an Afrit.");
         this.add("item.occultism.ritual_dummy.repair_armors", "Ritual: Repair Armor");
-        this.add("item.occultism.ritual_dummy.repair_armors.tooltip", "A afrit will repair your armor.");
+        this.add("item.occultism.ritual_dummy.repair_armors.tooltip", "Fully repair armor by infusing it with an Afrit.");
         this.add("item.occultism.ritual_dummy.repair_miners", "Ritual: Repair Miner");
-        this.add("item.occultism.ritual_dummy.repair_miners.tooltip", "A afrit will extend your miner contract.");
+        this.add("item.occultism.ritual_dummy.repair_miners.tooltip", "Extend a Miner's contract by striking a deal with an Afrit.");
 
         this.add(OccultismItems.RITUAL_DUMMY_SUMMON_DEMONIC_WIFE.get(), "Ritual: Summon Demonic Wife");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_DEMONIC_WIFE.get(), "Summons a Demonic Wife to support you: She will fight for you, help with cooking, and extend potion durations.");
@@ -3220,7 +3225,7 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider {
         this.addConfig("lightBlueChalkGlyphColor", "Light Blue Chalk Glyph Color");
         this.addConfig("blueChalkGlyphColor", "Blue Chalk Glyph Color");
         this.addConfig("magentaChalkGlyphColor", "Magenta Chalk Glyph Color");
-        this.addConfig("pinkChalkGlyphColor", "PinkChalk Glyph Color");
+        this.addConfig("pinkChalkGlyphColor", "Pink Chalk Glyph Color");
 
         this.addConfig("misc", "Misc Settings");
         this.addConfig("syncJeiSearch", "Sync JEI Search");

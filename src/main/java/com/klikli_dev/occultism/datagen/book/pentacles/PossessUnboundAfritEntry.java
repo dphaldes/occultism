@@ -46,7 +46,7 @@ public class PossessUnboundAfritEntry extends EntryProvider {
         );
         this.pageTitle("Uses");
         this.pageText("""
-                - [Possessed Pig](entry://possession_rituals/possess_zombie_piglin)
+                - [Possessed Zombified Piglin](entry://possession_rituals/possess_zombie_piglin)
                 """
         );
 
@@ -59,7 +59,7 @@ public class PossessUnboundAfritEntry extends EntryProvider {
 
     @Override
     protected String entryDescription() {
-        return "Possessing Unbound Afrit";
+        return "Unbound Afrit Possession";
     }
 
     @Override
