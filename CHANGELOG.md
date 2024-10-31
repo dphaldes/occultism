@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [release/v1.21.1-1.166.0] - 2024-10-31
+### :sparkles: New Features
+- [`e1d33ce`](https://github.com/klikli-dev/occultism/commit/e1d33ceb64460103c1158e07b1131d16a81ce68e) - Small update ([#1237](https://github.com/klikli-dev/occultism/pull/1237)) - thanks @Eqis-Edu *(commit by [@Eqis-Edu](https://github.com/Eqis-Edu))*
+
+### :wrench: Chores
+- [`ab3b885`](https://github.com/klikli-dev/occultism/commit/ab3b8851742de8a27ddc9b9154b182637725933e) - [ImgBot] Optimize images *(PR [#1244](https://github.com/klikli-dev/occultism/pull/1244) by [@imgbot[bot]](https://github.com/apps/imgbot))*
+
+
+## [release/v1.21.1-1.165.0] - 2024-10-30
+### :sparkles: New Features
+- [`0b6ec6c`](https://github.com/klikli-dev/occultism/commit/0b6ec6c4294b4c8cbce9e71a1f817c944d68ac00) - Update a Russian lang *(PR [#1242](https://github.com/klikli-dev/occultism/pull/1242) by [@Heimdallr-1](https://github.com/Heimdallr-1))*
+
+### :bug: Bug Fixes
+- [`b54fc79`](https://github.com/klikli-dev/occultism/commit/b54fc7909593ff52530c73bbafccefa0eee62ae9) - Texts *(PR [#1234](https://github.com/klikli-dev/occultism/pull/1234) by [@Eqis-Edu](https://github.com/Eqis-Edu))*
+- [`71d253c`](https://github.com/klikli-dev/occultism/commit/71d253c6006ab7e98554ebb258ce7d04a9cc11ae) - RURUProvider compiler issues *(commit by [@klikli-dev](https://github.com/klikli-dev))*
+
+
 ## [release/v1.21.1-1.164.0] - 2024-10-24
 ### :sparkles: New Features
 - [`2282acf`](https://github.com/klikli-dev/occultism/commit/2282acf96bf47d4bdeba75949b31825d074e7d65) - Update A Russian Translation *(PR [#1229](https://github.com/klikli-dev/occultism/pull/1229) by [@Heimdallr-1](https://github.com/Heimdallr-1))*
@@ -1825,3 +1842,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [release/v1.21.1-1.162.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.161.4...release/v1.21.1-1.162.0
 [release/v1.21.1-1.163.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.162.0...release/v1.21.1-1.163.0
 [release/v1.21.1-1.164.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.163.0...release/v1.21.1-1.164.0
+[release/v1.21.1-1.165.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.164.0...release/v1.21.1-1.165.0
+[release/v1.21.1-1.166.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.165.0...release/v1.21.1-1.166.0
