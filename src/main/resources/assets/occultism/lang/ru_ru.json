@@ -1,6 +1,6 @@
 {
 "_comment": "Updated by: Heimdallr-1",
-"_comment": "Update date 01.11.2024",
+"_comment": "Update date 03.11.2024",
 "_comment": "Не изменяйте перевод!",
 
 "advancements.occultism.chalks.black.description": "Для четвёртого основания пентакля.",
@@ -895,7 +895,7 @@
 "book.occultism.dictionary_of_spirits.possession_rituals.possess_weak_shulker.description.text": "В этом ритуале появляется [#](ad03fc)Шалкер[#](), при использовании жизненной энергии [#](ad03fc)кубического существа[#]() и почти сразу овладевается вызванным [#](ad03fc)Джинном[#](). При убийстве с [#](ad03fc)Одержимого слабого шалкера[#]() всегда выпадает минимум один [](item://minecraft:chorus_fruit), а с некоторым шансом может выпасть  [](item://minecraft:shulker_shell). Вы можете использовать ванильное размножение шалкеров для получения обычных шалкеров; но с них меньший шанс выпадения панцирей.\n",
 "book.occultism.dictionary_of_spirits.possession_rituals.possess_weak_shulker.entity.text": "**Добыча**: 1-3x [](item://minecraft:chorus_fruit),\nа с вероятностью 10% выпадает [](item://minecraft:shulker_shell).\n",
 "book.occultism.dictionary_of_spirits.possession_rituals.possess_weak_shulker.name": "Одержимый слабый шалкер",
-"book.occultism.dictionary_of_spirits.possession_rituals.possess_witch.description.text": "В этом ритуале  появляется [#](ad03fc)Ведьма[#](), при использовании редкой энергии из мёртвой [#](ad03fc)кошки[#](). С [#](ad03fc)Одержимой ведьмы[#]() может выпасть: [](item://minecraft:experience_bottle), [](item://minecraft:honey_bottle), [](item://minecraft:ominous_bottle) или никуда негодное несоздаваемое зелье.\n",
+"book.occultism.dictionary_of_spirits.possession_rituals.possess_witch.description.text": "В этом ритуале появляется [#](ad03fc)Ведьма[#](), при использовании редкой энергии из мёртвой [#](ad03fc)кошки[#](). С [#](ad03fc)Одержимой ведьмы[#]() может выпасть: [](item://minecraft:experience_bottle), [](item://minecraft:honey_bottle), [](item://minecraft:ominous_bottle) или бутылочка воды.\n",
 "book.occultism.dictionary_of_spirits.possession_rituals.possess_witch.entity.text": "**Добыча**: может выпасть: [](item://minecraft:experience_bottle) или другие бутылочки (ознакомьтесь со следующей страницей).\n",
 "book.occultism.dictionary_of_spirits.possession_rituals.possess_witch.name": "Одержимая ведьма",
 "book.occultism.dictionary_of_spirits.possession_rituals.possess_zombie_piglin.description.text": "В этом ритуале [#](ad03fc)Африт[#]() овладевает [#](ad03fc)Старым зомбифицированным пиглином[#](),\nобъединённой силой [#](ad03fc)незера[#](), силой [#](ad03fc)африта[#](),\n[#](ad03fc)свиным[#]() материалом, и концептом [#](ad03fc)розового[#]() цвета.\nИзвестно, что это единственный метод получения [](item://occultism:demonic_meat), однако свойства\nне позволяет приготовить его, но наделяют огнестойкостью всякому, кто съест его.\n",
@@ -928,7 +928,7 @@
 "book.occultism.dictionary_of_spirits.spirits.essence_decay.countermeasures.text": "Вызыватели могут замедлить, а то и остановить распад сущности, связав духа с предметом или, вызвав его в живое существо. Кроме того, используемый пентакль в какой-то степени может повлиять на воздействие распада сущности.\n",
 "book.occultism.dictionary_of_spirits.spirits.essence_decay.countermeasures.title": "Контрмеры",
 "book.occultism.dictionary_of_spirits.spirits.essence_decay.description": "Даже смертный не подвержен времени.",
-"book.occultism.dictionary_of_spirits.spirits.essence_decay.intro.text": "Когда духи проживают в нашей плоскости существования, они испытывают [#](ad03fc)распад сущности[#](), медленного гниения их \"тела\". Чем могущественнее дух, тем медленнее распад; но лишь самые могущественные могут полностью его остановить. При полном распаде они возвращаются в [#](ad03fc)Иное Место[#](), и только после полного восстановления их можно перевызвать.\n",
+"book.occultism.dictionary_of_spirits.spirits.essence_decay.intro.text": "Когда духи проживают в нашей плоскости существования, они испытывают [#](ad03fc)распад сущности[#](), медленного гниения их \"тела\". Чем могущественнее дух, тем медленнее распад; но лишь самые могущественные могут полностью его остановить. При полном распаде они возвращаются в [#](ad03fc)Иное Место[#](), и только после полного восстановления их можно повторно вызвать.\n",
 "book.occultism.dictionary_of_spirits.spirits.essence_decay.intro.title": "Распад сущности",
 "book.occultism.dictionary_of_spirits.spirits.essence_decay.name": "Распад сущности",
 "book.occultism.dictionary_of_spirits.spirits.name": "Духи",
