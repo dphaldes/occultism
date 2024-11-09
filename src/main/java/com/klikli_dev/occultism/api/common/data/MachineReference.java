@@ -42,6 +42,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.common.util.INBTSerializable;
 
+import java.util.Objects;
 import java.util.Optional;
 
 public class MachineReference implements INBTSerializable<CompoundTag> {
@@ -209,5 +210,40 @@ public class MachineReference implements INBTSerializable<CompoundTag> {
 
     public boolean isValidFor(Level level) {
         return this.getExtractBlockEntity(level) != null && this.getInsertBlockEntity(level) != null;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == this)
+            return true;
+
+        if (obj instanceof MachineReference) {
+            MachineReference other = (MachineReference) obj;
+            return this.extractGlobalPos.equals(other.extractGlobalPos) &&
+                    this.extractRegistryName.equals(other.extractRegistryName) &&
+                    this.extractChunkLoaded == other.extractChunkLoaded &&
+                    this.extractFacing == other.extractFacing &&
+                    this.insertGlobalPos.equals(other.insertGlobalPos) &&
+                    this.insertRegistryName.equals(other.insertRegistryName) &&
+                    this.insertChunkLoaded == other.insertChunkLoaded &&
+                    this.insertFacing == other.insertFacing &&
+                    this.customName.equals(other.customName);
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(
+                this.extractGlobalPos,
+                this.extractRegistryName,
+                this.extractChunkLoaded,
+                this.extractFacing,
+                this.insertGlobalPos,
+                this.insertRegistryName,
+                this.insertChunkLoaded,
+                this.insertFacing,
+                this.customName
+        );
     }
 }
