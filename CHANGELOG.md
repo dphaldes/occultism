@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [release/v1.21.1-1.166.1] - 2024-11-09
+### :bug: Bug Fixes
+- [`1131bb2`](https://github.com/klikli-dev/occultism/commit/1131bb2614d243b793a3f600d65318d39171af22) - machine references do not work as item components *(commit by [@klikli-dev](https://github.com/klikli-dev))*
+
+
 ## [release/v1.21.1-1.166.0] - 2024-10-31
 ### :sparkles: New Features
 - [`e1d33ce`](https://github.com/klikli-dev/occultism/commit/e1d33ceb64460103c1158e07b1131d16a81ce68e) - Small update ([#1237](https://github.com/klikli-dev/occultism/pull/1237)) - thanks @Eqis-Edu *(commit by [@Eqis-Edu](https://github.com/Eqis-Edu))*
@@ -1844,3 +1849,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [release/v1.21.1-1.164.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.163.0...release/v1.21.1-1.164.0
 [release/v1.21.1-1.165.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.164.0...release/v1.21.1-1.165.0
 [release/v1.21.1-1.166.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.165.0...release/v1.21.1-1.166.0
+[release/v1.21.1-1.166.1]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.166.0...release/v1.21.1-1.166.1
