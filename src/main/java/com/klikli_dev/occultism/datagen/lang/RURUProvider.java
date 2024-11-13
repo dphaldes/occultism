@@ -557,6 +557,10 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("job.occultism.crush_tier2", "Дробильщик");
         this.lang("ru_ru").add("job.occultism.crush_tier3", "Быстрый дробильщик");
         this.lang("ru_ru").add("job.occultism.crush_tier4", "Очень быстрый дробильщик");
+		this.lang("ru_ru").add("job.occultism.smelt_tier1", "Медленный плавильщик");
+        this.lang("ru_ru").add("job.occultism.smelt_tier2", "Плавильщик");
+        this.lang("ru_ru").add("job.occultism.smelt_tier3", "Быстрый плавильщик");
+        this.lang("ru_ru").add("job.occultism.smelt_tier4", "Очень быстрый плавильщик");
         this.lang("ru_ru").add("job.occultism.manage_machine", "Машинист");
         this.lang("ru_ru").add("job.occultism.transport_items", "Транспортировщик");
         this.lang("ru_ru").add("job.occultism.cleaner", "Дворник");
@@ -1064,6 +1068,31 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("ritual.occultism.summon_horde_illager.finished", "Нашествие диких обитателей успешно вызвано.");
         this.lang("ru_ru").add("ritual.occultism.summon_horde_illager.interrupted", "Вызов Нашествия диких обитателей прервано.");
 
+        this.add("ritual.occultism.wild_random_animal_common.conditions", "Удовлетворены не все требования для этого ритуала.");
+        this.add("ritual.occultism.wild_random_animal_common.started", "Начался вызов группы случайных обычных животных.");
+        this.add("ritual.occultism.wild_random_animal_common.finished", "Успешно вызвано.");
+        this.add("ritual.occultism.wild_random_animal_common.interrupted", "Вызов группы случайных обычных животных прерван.");
+        this.add("ritual.occultism.wild_random_animal_water.conditions", "Удовлетворены не все требования для этого ритуала.");
+        this.add("ritual.occultism.wild_random_animal_water.started", "Начался вызов группы случайных водяных животных.");
+        this.add("ritual.occultism.wild_random_animal_water.finished", "Успешно вызвано.");
+        this.add("ritual.occultism.wild_random_animal_water.interrupted", "Вызов группы случайных водяных животных прерван.");
+        this.add("ritual.occultism.wild_random_animal_small.conditions", "Удовлетворены не все требования для этого ритуала.");
+        this.add("ritual.occultism.wild_random_animal_small.started", "Начался вызов группы случайных малых животных.");
+        this.add("ritual.occultism.wild_random_animal_small.finished", "Успешно вызвано.");
+        this.add("ritual.occultism.wild_random_animal_small.interrupted", "Вызов группы случайных малых животных прерван.");
+        this.add("ritual.occultism.wild_random_animal_special.conditions", "Удовлетворены не все требования для этого ритуала.");
+        this.add("ritual.occultism.wild_random_animal_special.started", "Начался вызов группы случайных специальных животных.");
+        this.add("ritual.occultism.wild_random_animal_special.finished", "Успешно вызвано.");
+        this.add("ritual.occultism.wild_random_animal_special.interrupted", "Вызов группы случайных специальных животных прерван.");
+        this.add("ritual.occultism.wild_random_animal_rideable.conditions", "Удовлетворены не все требования для этого ритуала.");
+        this.add("ritual.occultism.wild_random_animal_rideable.started", "Начался вызов группы случайных ездовых животных.");
+        this.add("ritual.occultism.wild_random_animal_rideable.finished", "Успешно вызвано.");
+        this.add("ritual.occultism.wild_random_animal_rideable.interrupted", "Вызов группы случайных ездовых животных прерван.");
+        this.add("ritual.occultism.wild_villager.conditions", "Удовлетворены не все требования для этого ритуала.");
+        this.add("ritual.occultism.wild_villager.started", "Начался вызов группы из крестьян.");
+        this.add("ritual.occultism.wild_villager.finished", "Успешно вызвано.");
+        this.add("ritual.occultism.wild_villager.interrupted", "Вызов группы из крестьян прерван.");
+
         this.lang("ru_ru").add("ritual.occultism.craft_nature_paste.conditions", "Удовлетворены не все требования для этого ритуала.");
         this.lang("ru_ru").add("ritual.occultism.craft_nature_paste.started", "Началось наполнение Природной пасты.");
         this.lang("ru_ru").add("ritual.occultism.craft_nature_paste.finished", "Успешно наполнил Природную пасту.");
@@ -1096,6 +1125,23 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("ritual.occultism.repair_miners.started", "Началось восстановление рудокопа.");
         this.lang("ru_ru").add("ritual.occultism.repair_miners.finished", "Рудокоп успешно восстановлен.");
         this.lang("ru_ru").add("ritual.occultism.repair_miners.interrupted", "Восстановление рудокопа прервано.");
+
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER, "conditions", "Удовлетворены не все требования для этого ритуала.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER, "started", "Начался вызов Плавильщика-Фолиота.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER, "finished", "Плавильщик-Фолиот успешно вызван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER, "interrupted", "Вызов Плавильщика-Фолиота прерван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER, "conditions", "Удовлетворены не все требования для этого ритуала.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER, "started", "Начался вызов Плавильщика-Джинна.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER, "finished", "Плавильщик-Джинн успешно вызван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER, "interrupted", "Вызов Плавильщика-Джинна прерван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER, "conditions", "Удовлетворены не все требования для этого ритуала.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER, "started", "Начался вызов Плавильщика-Африта.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER, "finished", "Плавильщик-Африт успешно вызван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER, "interrupted", "Вызов Плавильщика-Африта прерван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER, "conditions", "Удовлетворены не все требования для этого ритуала.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER, "started", "Начался вызов Плавильщика-Марида.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER, "finished", "Плавильщик-Марид успешно вызван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER, "interrupted", "Вызов Плавильщика-Марида прерван.");
 
         this.addRitualMessage(OccultismRituals.RESURRECT_FAMILIAR, "conditions", "Удовлетворены не все требования для этого ритуала.");
         this.addRitualMessage(OccultismRituals.RESURRECT_FAMILIAR, "started", "Началось воскресение фамильяра.");
@@ -2968,6 +3014,15 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.occultism.ritual_dummy.repair_miners", "Ритуал: Восстановление рудокопа");
         this.add("item.occultism.ritual_dummy.repair_miners.tooltip", "Продлит договор, заключив сделку с Афритом.");
 
+        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER.get(), "Ритуал: Вызов Плавильщика-Фолиота");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER.get(), "Плавильщик — дух, вызываемый с целью создания рецептов печи без использования топлива.");
+        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER.get(), "Ритуал: Вызов Плавильщика-Джинна");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER.get(), "Плавильщик — дух, вызываемый с целью создания рецептов печи без использования топлива.");
+        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER.get(), "Ритуал: Вызов Плавильщика-Африта");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER.get(), "Плавильщик — дух, вызываемый с целью создания рецептов печи без использования топлива.");
+        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER.get(), "Ритуал: Вызов Плавильщика-Марида");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER.get(), "Плавильщик — дух, вызываемый с целью создания рецептов печи без использования топлива.");
+
         this.lang("ru_ru").add(OccultismItems.RITUAL_DUMMY_SUMMON_DEMONIC_WIFE.get(), "Ритуал: Вызов демонической жены");
         this.lang("ru_ru").addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_DEMONIC_WIFE.get(), "Вызывает демоническую жену для поддержки: она будет защищать Вас, помогать с готовкой, и продлит срок действия зелья.");
 
@@ -2981,7 +3036,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.add(OccultismItems.RITUAL_DUMMY_POSSESS_RANDOM_ANIMAL_SMALL.get(), "Ритуал: Вызов малого случайного животного");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_POSSESS_RANDOM_ANIMAL_SMALL.get(), "Вызывает случайное пассивное малое животное. (Варианты: тихоня, летучая мышь, пчела, попугай, кошка, оцелот, лиса и кролик.).");
         this.add(OccultismItems.RITUAL_DUMMY_POSSESS_RANDOM_ANIMAL_SPECIAL.get(), "Ритуал: Вызов специального случайного животного");
-        this.addTooltip(OccultismItems.RITUAL_DUMMY_POSSESS_RANDOM_ANIMAL_SPECIAL.get(), "Вызывает случайное пассивное специальное животное. (Варианты: броненосец, муушрум, панда, белый медведь и коза, железный голем и нюхач.).");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_POSSESS_RANDOM_ANIMAL_SPECIAL.get(), "Вызывает случайное пассивное специальное животное. (Варианты: броненосец, муушрум, панда, белый медведь и коза, железный голем.).");
         this.add(OccultismItems.RITUAL_DUMMY_POSSESS_RANDOM_ANIMAL_RIDEABLE.get(), "Ритуал: Вызов ездового случайного животного");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_POSSESS_RANDOM_ANIMAL_RIDEABLE.get(), "Вызывает случайное пассивное ездовое животное. (Варианты: свинья, верблюд, осёл, лошадь, скелет, зомби-лошадь, лама, лама торговца, мул и лавомерка.).");
         this.add(OccultismItems.RITUAL_DUMMY_POSSESS_VILLAGER.get(), "Ритуал: Вызов крестьянина");
@@ -3025,6 +3080,19 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
 
         this.add(OccultismItems.RITUAL_DUMMY_WILD_ILLAGER.get(), "Ритуал: Вызов диких разбойников");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_WILD_ILLAGER.get(), "Вызывает Дикого заклинателя и его приспешника.");
+
+        this.add(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_COMMON.get(), "Ритуал: Вызов группы случайных обычных животных");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_COMMON.get(), "Вызывает группу случайных пассивных обычных животных. (Все варианты: курица, корова, свинья, овца, спрут и волк.).");
+        this.add(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_WATER.get(), "Ритуал: Вызов группы случайных водяных животных");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_WATER.get(), "Вызывает группу случайных пассивных водяных животных. (Все варианты: аксолотль, лягушка, дельфин, треска, лосось, тропическая рыба, иглобрюх, спрут, светящийся спрут, головастик, черепаха и снежный голем.).");
+        this.add(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_SMALL.get(), "Ритуал: Вызов группы случайных малых животных");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_SMALL.get(), "Вызывает группу случайных пассивных малых животных. (Все варианты: тихоня, летучая мышь, пчела, попугай, кошка, оцелот, лиса и кролик.).");
+        this.add(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_SPECIAL.get(), "Ритуал: Вызов группы случайных специальных животных");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_SPECIAL.get(), "Вызывает группу случайных пассивных специальных животных. (Все варианты: броненосец, муушрум, панда, белый медведь, коза, железный голем.).");
+        this.add(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_RIDEABLE.get(), "Ритуал: Вызов группы случайных ездовых животных");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_RIDEABLE.get(), "Вызывает группу случайных пассивных ездовых животных. (Все варианты: свинья, верблюд, осёл, лошадь, лошадь-скелет, зомби-лошадь, лама, лама торговца, мул и лавомерка.).");
+        this.add(OccultismItems.RITUAL_DUMMY_WILD_VILLAGER.get(), "Ритуал: Вызов группы крестьян");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_WILD_VILLAGER.get(), "Вызывает группу из крестьян и странствующего торговца.");
 
         this.add(OccultismItems.RITUAL_DUMMY_FORGE_WILD_TRIM.get(), "Ритуал: Кузнечный шаблон");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_FORGE_WILD_TRIM.get(), "Дикие духи скуют Кузнечный шаблон.");
@@ -3276,6 +3344,11 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addConfig("tier3CrusherOutputMultiplier", "Коэффициент продукции для дробильщика 3-го уровня.");
         this.addConfig("tier4CrusherOutputMultiplier", "Коэффициент продукции для дробильщика 4-го уровня.");
         this.addConfig("crusherResultPickupDelay", "Задержка, прежде чем могут быть подобраны предметы из дробильщика.");
+        this.addConfig("tier1SmelterTimeMultiplier", "Временной коэффициент действий для Плавильщика 1-го уровня.");
+        this.addConfig("tier2SmelterTimeMultiplier", "Временной коэффициент действий для Плавильщика 2-го уровня.");
+        this.addConfig("tier3SmelterTimeMultiplier", "Временной коэффициент действий для Плавильщика 3-го уровня.");
+        this.addConfig("tier4SmelterTimeMultiplier", "Временной коэффициент действий для Плавильщика 4-го уровня.");
+        this.addConfig("smelterResultPickupDelay", "Задержка, прежде чем могут быть подобраны предметы из плавильщика.");
         this.addConfig("blacksmithFamiliarRepairChance", "Шанс, что Кузнец-фамильяр каждый такт будет чинить предмет.");
         this.addConfig("blacksmithFamiliarUpgradeCost", "Стоимость обновления предметов Кузнецом-фамильяром в уровнях опыта.");
         this.addConfig("blacksmithFamiliarUpgradeCooldown", "Перезарядка/в тактах, прежде чем Кузнец-фамильяр сможет снова обновить предметы.");
