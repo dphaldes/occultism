@@ -175,6 +175,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
                         Простая ритуальная наплечная сумка, способная поблочно помещать ритуальные круги.
                         Нажатие ПКМ по предосмотренному блоку, чтобы поместить его из наплечной сумки.
                         Нажатие Shift + ПКМ — открыть наплечную сумку и добавить ингредиенты для ритуала.
+						Если у предмета есть менее 40% прочности внутри сумки, эффект переливания прекратится.
                         """
         );
         this.addItem(OccultismItems.RITUAL_SATCHEL_T2, "Ремесленная ритуальная наплечная сумка");
@@ -184,6 +185,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
                         Нажатие ПКМ по любому предосмотренному блоку, чтобы поместить все блоки из наплечной сумки.
                         Нажатие Shift + ПКМ — открыть наплечную сумку и добавить ингредиенты для ритуала.
                         Нажатие ПКМ по золотой жертвенной миске — убрать ритуальный круг и собрать ингредиенты.
+						Если у предмета есть менее 40% прочности внутри сумки, эффект переливания прекратится.
                         """
         );
 
@@ -722,22 +724,6 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("ritual.occultism.summon_foliot_cleaner.started", "Начался вызов Дворника-Фолиота.");
         this.lang("ru_ru").add("ritual.occultism.summon_foliot_cleaner.finished", "Дворник-Фолиот успешно вызван.");
         this.lang("ru_ru").add("ritual.occultism.summon_foliot_cleaner.interrupted", "Вызов Дворника-Фолиота прерван.");
-        this.lang("ru_ru").add("ritual.occultism.summon_foliot_crusher.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.summon_foliot_crusher.started", "Начался вызов Фолиота-Дробильщика руды.");
-        this.lang("ru_ru").add("ritual.occultism.summon_foliot_crusher.finished", "Фолиот-Дробильщик руды успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.summon_foliot_crusher.interrupted", "Вызов Фолиота-Дробильщика руды прерван.");
-        this.lang("ru_ru").add("ritual.occultism.summon_djinni_crusher.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.summon_djinni_crusher.started", "Начался вызов Джинна-Дробильщика руды.");
-        this.lang("ru_ru").add("ritual.occultism.summon_djinni_crusher.finished", "Джинн-Дробильщик руды успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.summon_djinni_crusher.interrupted", "Вызов Джинна-Дробильщика руды прерван.");
-        this.lang("ru_ru").add("ritual.occultism.summon_afrit_crusher.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.summon_afrit_crusher.started", "Начался вызов Африта-Дробильщика руды.");
-        this.lang("ru_ru").add("ritual.occultism.summon_afrit_crusher.finished", "Африт-Дробильщика руды успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.summon_afrit_crusher.interrupted", "Вызов Африта-Дробильщика руды прерван.");
-        this.lang("ru_ru").add("ritual.occultism.summon_marid_crusher.conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.summon_marid_crusher.started", "Начался вызов Марида-Дробильщика руды.");
-        this.lang("ru_ru").add("ritual.occultism.summon_marid_crusher.finished", "Марида-Дробильщика руды успешно вызван.");
-        this.lang("ru_ru").add("ritual.occultism.summon_marid_crusher.interrupted", "Вызов Марида-Дробильщика руды прерван.");
         this.lang("ru_ru").add("ritual.occultism.summon_foliot_sapling_trader.conditions", "Удовлетворены не все требования для этого ритуала.");
         this.lang("ru_ru").add("ritual.occultism.summon_foliot_sapling_trader.started", "Начался вызов Торговца-Фолиота потусторонними саженцами.");
         this.lang("ru_ru").add("ritual.occultism.summon_foliot_sapling_trader.finished", "Торговец-Фолиот потусторонними саженцами успешно вызван.");
@@ -1125,6 +1111,23 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("ritual.occultism.repair_miners.started", "Началось восстановление рудокопа.");
         this.lang("ru_ru").add("ritual.occultism.repair_miners.finished", "Рудокоп успешно восстановлен.");
         this.lang("ru_ru").add("ritual.occultism.repair_miners.interrupted", "Восстановление рудокопа прервано.");
+
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_CRUSHER, "conditions", "Удовлетворены не все требования для этого ритуала.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_CRUSHER, "started", "Начался вызов Дробильщика-Фолиота.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_CRUSHER, "finished", "Дробильщик-Фолиот успешно вызван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_CRUSHER, "interrupted", "Вызов Дробильщика-Фолиота прерван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_CRUSHER, "conditions", "Удовлетворены не все требования для этого ритуала.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_CRUSHER, "started", "Начался вызов Дробильщика-Джинна.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_CRUSHER, "finished", "Дробильщик-Джинн успешно вызван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_CRUSHER, "interrupted", "Вызов Дробильщика-Джинна прерван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_CRUSHER, "conditions", "Удовлетворены не все требования для этого ритуала.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_CRUSHER, "started", "Начался вызов Дробильщика-Африта.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_CRUSHER, "finished", "Дробильщик-Африт успешно вызван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_CRUSHER, "interrupted", "Вызов Дробильщика-Африта прерван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_CRUSHER, "conditions", "Удовлетворены не все требования для этого ритуала.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_CRUSHER, "started", "Начался вызов Дробильщика-Марида.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_CRUSHER, "finished", "Дробильщик-Марид успешно вызван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_CRUSHER, "interrupted", "Вызов Дробильщика-Марида прерван.");
 
         this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER, "conditions", "Удовлетворены не все требования для этого ритуала.");
         this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER, "started", "Начался вызов Плавильщика-Фолиота.");
@@ -2965,14 +2968,6 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_djinni_manage_machine.tooltip", "Машинист автоматически перемещает предметы между системой пространственного хранилища и присоединёнными инвентарями, а также машинами.");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_djinni_night_time", "Ритуал: Вызов сумерек");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_djinni_night_time.tooltip", "Вызывает Джинна, устанавливающего время в сумерки.");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_foliot_crusher", "Ритуал: Вызов Дробильщика-Фолиота");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_foliot_crusher.tooltip", "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно удваивая металлопродукцию.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_djinni_crusher", "Ритуал: Вызов Дробильщика-Джинна");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_djinni_crusher.tooltip", "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно (гораздо), удваивая металлопродукцию.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_afrit_crusher", "Ритуал: Вызов Дробильщика-Африта");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_afrit_crusher.tooltip", "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно (гораздо), удваивая металлопродукцию.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_marid_crusher", "Ритуал: Вызов Дробильщика-Марида");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_marid_crusher.tooltip", "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно (гораздо), удваивая металлопродукцию.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_foliot_lumberjack", "Ритуал: Вызов Дровосека-Фолиота");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_foliot_lumberjack.tooltip", "Дровосек занимается заготовкой древесины на своём рабочем месте и кладёт выпавшие предметы в указанный сундук.");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.summon_foliot_otherstone_trader", "Ритуал: Вызов потустороннего торговца");
@@ -3004,7 +2999,6 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.occultism.ritual_dummy.craft_witherite_dust.tooltip", "Африт наполнит незеритовую пыль со сущностью визера.");
         this.add("item.occultism.ritual_dummy.craft_dragonyst_dust", "Ритуал: Создать драконистовую пыль");
         this.add("item.occultism.ritual_dummy.craft_dragonyst_dust.tooltip", "Марид наполнит Сущность Эндер-Дракона в аметистовую пыль.");
-
         this.add("item.occultism.ritual_dummy.repair_chalks", "Ритуал: Починка мела");
         this.add("item.occultism.ritual_dummy.repair_chalks.tooltip", "Полностью починит мел, вселив в него Джинна.");
         this.add("item.occultism.ritual_dummy.repair_tools", "Ритуал: Починка инструмента");
@@ -3013,6 +3007,15 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.occultism.ritual_dummy.repair_armors.tooltip", "Полностью починит броню, вселив в неё Африта.");
         this.add("item.occultism.ritual_dummy.repair_miners", "Ритуал: Восстановление рудокопа");
         this.add("item.occultism.ritual_dummy.repair_miners.tooltip", "Продлит договор, заключив сделку с Афритом.");
+
+        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_CRUSHER.get(), "Ритуал: Вызов Дробильщика-Фолиота");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_CRUSHER.get(), "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно удваивая металлопродукцию.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
+        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_CRUSHER.get(), "Ритуал: Вызов Дробильщика-Джинна");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_CRUSHER.get(), "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно (гораздо), удваивая металлопродукцию.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
+        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_CRUSHER.get(), "Ритуал: Вызов Дробильщика-Африта");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_CRUSHER.get(), "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно (гораздо), удваивая металлопродукцию.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
+        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_CRUSHER.get(), "Ритуал: Вызов Дробильщика-Марида");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_CRUSHER.get(), "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно (гораздо), удваивая металлопродукцию.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
 
         this.add(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER.get(), "Ритуал: Вызов Плавильщика-Фолиота");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER.get(), "Плавильщик — дух, вызываемый с целью создания рецептов печи без использования топлива.");
@@ -3036,7 +3039,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.add(OccultismItems.RITUAL_DUMMY_POSSESS_RANDOM_ANIMAL_SMALL.get(), "Ритуал: Вызов малого случайного животного");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_POSSESS_RANDOM_ANIMAL_SMALL.get(), "Вызывает случайное пассивное малое животное. (Варианты: тихоня, летучая мышь, пчела, попугай, кошка, оцелот, лиса и кролик.).");
         this.add(OccultismItems.RITUAL_DUMMY_POSSESS_RANDOM_ANIMAL_SPECIAL.get(), "Ритуал: Вызов специального случайного животного");
-        this.addTooltip(OccultismItems.RITUAL_DUMMY_POSSESS_RANDOM_ANIMAL_SPECIAL.get(), "Вызывает случайное пассивное специальное животное. (Варианты: броненосец, муушрум, панда, белый медведь и коза, железный голем.).");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_POSSESS_RANDOM_ANIMAL_SPECIAL.get(), "Вызывает случайное пассивное специальное животное. (Варианты: броненосец, муушрум, панда, белый медведь и коза, железный голем и нюхач.).");
         this.add(OccultismItems.RITUAL_DUMMY_POSSESS_RANDOM_ANIMAL_RIDEABLE.get(), "Ритуал: Вызов ездового случайного животного");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_POSSESS_RANDOM_ANIMAL_RIDEABLE.get(), "Вызывает случайное пассивное ездовое животное. (Варианты: свинья, верблюд, осёл, лошадь, скелет, зомби-лошадь, лама, лама торговца, мул и лавомерка.).");
         this.add(OccultismItems.RITUAL_DUMMY_POSSESS_VILLAGER.get(), "Ритуал: Вызов крестьянина");
@@ -3088,7 +3091,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.add(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_SMALL.get(), "Ритуал: Вызов группы случайных малых животных");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_SMALL.get(), "Вызывает группу случайных пассивных малых животных. (Все варианты: тихоня, летучая мышь, пчела, попугай, кошка, оцелот, лиса и кролик.).");
         this.add(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_SPECIAL.get(), "Ритуал: Вызов группы случайных специальных животных");
-        this.addTooltip(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_SPECIAL.get(), "Вызывает группу случайных пассивных специальных животных. (Все варианты: броненосец, муушрум, панда, белый медведь, коза, железный голем.).");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_SPECIAL.get(), "Вызывает группу случайных пассивных специальных животных. (Все варианты: броненосец, муушрум, панда, белый медведь, коза, железный голем и нюхач.).");
         this.add(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_RIDEABLE.get(), "Ритуал: Вызов группы случайных ездовых животных");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_WILD_RANDOM_ANIMAL_RIDEABLE.get(), "Вызывает группу случайных пассивных ездовых животных. (Все варианты: свинья, верблюд, осёл, лошадь, лошадь-скелет, зомби-лошадь, лама, лама торговца, мул и лавомерка.).");
         this.add(OccultismItems.RITUAL_DUMMY_WILD_VILLAGER.get(), "Ритуал: Вызов группы крестьян");
@@ -3190,6 +3193,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addItemTag(OccultismTags.Items.STORAGE_BLOCK_SILVER, "Хранилище серебряный блоков");
         this.addItemTag(OccultismTags.Items.STORAGE_BLOCK_RAW_IESNIUM, "Хранилище блоков рудного айзния");
         this.addItemTag(OccultismTags.Items.STORAGE_BLOCK_RAW_SILVER, "Хранилище блоков серебра");
+		this.addItemTag(OccultismTags.Items.MUSHROOM_BLOCKS, "Грибные блоки");
         this.addItemTag(OccultismTags.Items.TALLOW, "Жир");
         this.addItemTag(OccultismTags.Items.METAL_AXES, "Металлические топоры");
         this.addItemTag(OccultismTags.Items.MAGMA, "Магма");
