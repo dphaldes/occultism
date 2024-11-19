@@ -282,7 +282,7 @@ public class OccultismBookProvider extends BookProvider {
                         If you run into any trouble while playing Occultism, please join our Discord server and ask for help.
                         \\
                         \\
-                        [Join us at https://invite.gg/klikli](https://invite.gg/klikli)
+                        [Join us at https://discord.gg/trE4SHRXvb](https://discord.gg/trE4SHRXvb)
                         """);
 
         return BookEntryModel.create(this.modLoc(this.context().categoryId() + "/" + this.context().entryId()), this.context().entryName())

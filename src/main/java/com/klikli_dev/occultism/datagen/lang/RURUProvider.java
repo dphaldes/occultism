@@ -521,7 +521,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("ritual.occultism.pentacle_help.no_pentacle", "\u00a7lПентакль не найден!\u00a7r\nКажется, Вы не начертили пентакль, или в Вашем пентакле отсутствуют важные элементы. Обратитесь в раздел \"Ритуалы\" справочника душ, необходимый пентакль будет отображён как гиперссылка над рецептом ритуала в странице ритуала.");
         this.lang("ru_ru").add("ritual.occultism.ritual_help", "\u00a7lНедопустимый ритуал!\u00a7r\nВы было пытались выполнить ритуал:: \"%s\"? Отсутствуют предметы:\n%s");
         this.lang("ru_ru").add("ritual.occultism.disabled", "Ритуал недоступен на этом сервере.");
-        this.lang("ru_ru").add("ritual.occultism.does_not_exist", "\u00a7lНеизвестный ритуал\u00a7r. Убедитесь, что пентакли и ингредиенты расположены правильно. Если Вы до сих пор не достигли желаемого результата, присоединяйтесь к нашему Discord-серверу —> (https://invite.gg/klikli)");
+        this.lang("ru_ru").add("ritual.occultism.does_not_exist", "\u00a7lНеизвестный ритуал\u00a7r. Убедитесь, что пентакли и ингредиенты расположены правильно. Если Вы до сих пор не достигли желаемого результата, присоединяйтесь к нашему Discord-серверу —> (https://discord.gg/trE4SHRXvb)");
         this.lang("ru_ru").add("ritual.occultism.book_not_bound", "\u00a7lНесвязанная книга вызова\u00a7r. Перед началом ритуала, Вы должны создать эту книгу с помощью Справочника душ, для связки её с духом.");
 
         this.lang("ru_ru").add("ritual.occultism.unknown.conditions", "Удовлетворены не все требования для этого ритуала.");
