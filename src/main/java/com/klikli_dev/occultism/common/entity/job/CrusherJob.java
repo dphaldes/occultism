@@ -129,7 +129,7 @@ public class CrusherJob extends SpiritJob {
                 if (this.entity.level().getGameTime() % 10 == 0) {
                     Vec3 pos = this.entity.position();
                     ((ServerLevel) this.entity.level())
-                            .sendParticles(ParticleTypes.PORTAL, pos.x + this.entity.level().random.nextGaussian() / 3,
+                            .sendParticles(ParticleTypes.CRIT, pos.x + this.entity.level().random.nextGaussian() / 3,
                                     pos.y + 0.5, pos.z + this.entity.level().random.nextGaussian() / 3, 1, 0.0, 0.0, 0.0,
                                     0.0);
                 }
