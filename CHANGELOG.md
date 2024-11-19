@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [release/v1.20.1-1.140.2] - 2024-11-19
+### :wrench: Chores
+- [`786e8c4`](https://github.com/klikli-dev/occultism/commit/786e8c436af5f3d6f1fa217fd4d2a911a20d70cc) - update discord invite link *(commit by [@klikli-dev](https://github.com/klikli-dev))*
+
+
 ## [release/v1.20.1-1.140.1] - 2024-10-25
 ### :bug: Bug Fixes
 - [`2ad52fa`](https://github.com/klikli-dev/occultism/commit/2ad52fad3468c0ccde38933416bccc7f9628d73e) - 1.21 content in russian translation *(commit by [@klikli-dev](https://github.com/klikli-dev))*
@@ -1247,3 +1252,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [release/v1.20.1-1.139.0]: https://github.com/klikli-dev/occultism/compare/release/v1.20.1-1.138.0...release/v1.20.1-1.139.0
 [release/v1.20.1-1.139.1]: https://github.com/klikli-dev/occultism/compare/release/v1.20.1-1.139.0...release/v1.20.1-1.139.1
 [release/v1.20.1-1.140.1]: https://github.com/klikli-dev/occultism/compare/release/v1.20.1-1.140.0...release/v1.20.1-1.140.1
+[release/v1.20.1-1.140.2]: https://github.com/klikli-dev/occultism/compare/release/v1.20.1-1.140.1...release/v1.20.1-1.140.2
