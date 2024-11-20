@@ -75,11 +75,18 @@ public class OccultismServerConfig {
         public final DoubleValue tier2CrusherOutputMultiplier;
         public final DoubleValue tier3CrusherOutputMultiplier;
         public final DoubleValue tier4CrusherOutputMultiplier;
+        public final DoubleValue tier1SmelterTimeMultiplier;
+        public final DoubleValue tier2SmelterTimeMultiplier;
+        public final DoubleValue tier3SmelterTimeMultiplier;
+        public final DoubleValue tier4SmelterTimeMultiplier;
         public final IntValue drikwingFamiliarSlowFallingSeconds;
         public final IntValue crusherResultPickupDelay;
+        public final IntValue smelterResultPickupDelay;
         public final IntValue blacksmithFamiliarUpgradeCost;
         public final IntValue blacksmithFamiliarUpgradeCooldown;
         public final DoubleValue blacksmithFamiliarRepairChance;
+        public final IntValue greedySearchRange;
+        public final IntValue greedyVerticalSearchRange;
 
         public SpiritJobSettings(ModConfigSpec.Builder builder) {
             builder.comment("Spirit Job Settings").push("spirit_job");
@@ -98,11 +105,11 @@ public class OccultismServerConfig {
                             .defineInRange("tier2CrusherTimeMultiplier", 1.0, 0.0, Double.MAX_VALUE);
             this.tier3CrusherTimeMultiplier =
                     builder.comment(
-                                    "Currently unused. The multiplier to each crushing recipe's crushing_time for Tier 3 (Afrit) Crusher Spirits.")
+                                    "The multiplier to each crushing recipe's crushing_time for Tier 3 (Afrit) Crusher Spirits.")
                             .defineInRange("tier3CrusherTimeMultiplier", 0.5, 0.0, Double.MAX_VALUE);
             this.tier4CrusherTimeMultiplier =
                     builder.comment(
-                                    "Currently unused. The multiplier to each crushing recipe's crushing_time for Tier 4 (Marid) Crusher Spirits.")
+                                    "The multiplier to each crushing recipe's crushing_time for Tier 4 (Marid) Crusher Spirits.")
                             .defineInRange("tier4CrusherTimeMultiplier", 0.2, 0.0, Double.MAX_VALUE);
 
             this.tier1CrusherOutputMultiplier =
@@ -122,15 +129,37 @@ public class OccultismServerConfig {
                                     "The multiplier to each crushing recipe's output count for Tier 4 (Marid) Crusher Spirits.")
                             .defineInRange("tier4CrusherOutputMultiplier", 3.0, 0.0, Double.MAX_VALUE);
 
+            this.tier1SmelterTimeMultiplier =
+                    builder.comment(
+                                    "The multiplier to each smelting recipe's cooking_time for Tier 1 (Foliot) Smelter Spirits.")
+                            .defineInRange("tier1SmelterTimeMultiplier", 1.0, 0.0, Double.MAX_VALUE);
+            this.tier2SmelterTimeMultiplier =
+                    builder.comment(
+                                    "The multiplier to each smelting recipe's cooking_time for Tier 2 (Djinni) Smelter Spirits.")
+                            .defineInRange("tier2SmelterTimeMultiplier", 0.5, 0.0, Double.MAX_VALUE);
+            this.tier3SmelterTimeMultiplier =
+                    builder.comment(
+                                    "The multiplier to each smelting recipe's cooking_time for Tier 3 (Afrit) Smelter Spirits.")
+                            .defineInRange("tier3SmelterTimeMultiplier", 0.1, 0.0, Double.MAX_VALUE);
+            this.tier4SmelterTimeMultiplier =
+                    builder.comment(
+                                    "The multiplier to each smelting recipe's cooking_time for Tier 4 (Marid) Smelter Spirits.")
+                            .defineInRange("tier4SmelterTimeMultiplier", 0.01, 0.0, Double.MAX_VALUE);
+
             this.crusherResultPickupDelay =
                     builder.comment(
                                     "The minimum ticks before a crusher can pick up an item it dropped. Default is 3 Seconds = 3 * 20 Ticks.")
                             .defineInRange("crusherResultPickupDelay", 20 * 3, 0, Integer.MAX_VALUE);
 
+            this.smelterResultPickupDelay =
+                    builder.comment(
+                                    "The minimum ticks before a crusher can pick up an item it dropped. Default is 3 Seconds = 3 * 20 Ticks.")
+                            .defineInRange("smelterResultPickupDelay", 20 * 3, 0, Integer.MAX_VALUE);
+
             this.blacksmithFamiliarRepairChance =
                     builder.comment(
                                     "The chance for a blacksmith familiar to repair an item (by 2 durability) whenever stone is picked up. 1.0 = 100%, 0.0 = 0%.")
-                            .defineInRange("blacksmithFamiliarRepairChance", 0.05, 0.0, Double.MAX_VALUE);
+                            .defineInRange("blacksmithFamiliarRepairChance", 0.33, 0.0, Double.MAX_VALUE);
             this.blacksmithFamiliarUpgradeCost =
                     builder.comment(
                                     "The amount of iron required for a blacksmith familiar to upgrade another familiar.")
@@ -140,6 +169,15 @@ public class OccultismServerConfig {
                                     "The cooldown for a blacksmith familiar to upgrade another familiar.")
                             .defineInRange("blacksmithFamiliarUpgradeCooldown", 20 * 20, 0, Integer.MAX_VALUE);
 
+            this.greedySearchRange =
+                    builder.comment(
+                                    "The horizontal value that the upgraded greedy familiar will seek blocks. (Large distances can cause delays in finding)")
+                            .defineInRange("greedySearchRange", 32, 0, Integer.MAX_VALUE);
+
+            this.greedyVerticalSearchRange =
+                    builder.comment(
+                                    "The vertical value that the upgraded greedy familiar will seek blocks. (Large distances can cause delays in finding)")
+                            .defineInRange("greedyVerticalSearchRange", 16, 0, Integer.MAX_VALUE);
 
             builder.pop();
         }

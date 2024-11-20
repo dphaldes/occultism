@@ -614,13 +614,13 @@ public class OccultismBookProvider extends SingleBookSubProvider {
                 "______________________",
                 "__r_o_________________",
                 "______________________",
-                "_______1__e____a______",
+                "_______1_5__e__a______",
                 "______________________",
-                "_______2___f___m______",
+                "_______2_6_f_g_m______",
                 "______________________",
-                "_______3___g__________",
+                "_______3_7____________",
                 "______________________",
-                "_______4______________"
+                "_______4_8____________"
         );
 
         String summonFoliotID = this.modId() + ":" + PentaclesCategory.CATEGORY_ID + "/" + SummonFoliotEntry.ENTRY_ID;
@@ -647,6 +647,19 @@ public class OccultismBookProvider extends SingleBookSubProvider {
                 .withCondition(BookEntryReadConditionModel.create().withEntry(summonAfritID));
         var summonT4Crusher = this.makeSummonCrusherT4Entry(entryMap, '4');
         summonT4Crusher.withParent(BookEntryParentModel.create(summonT3Crusher.getId()))
+                .withCondition(BookEntryReadConditionModel.create().withEntry(summonMaridID));
+
+        var summonT1Smelter = this.makeSummonSmelterT1Entry(entryMap, '5');
+        summonT1Smelter.withParent(BookEntryParentModel.create(overview.getId()))
+                .withCondition(BookEntryReadConditionModel.create().withEntry(summonFoliotID));
+        var summonT2Smelter = this.makeSummonSmelterT2Entry(entryMap, '6');
+        summonT2Smelter.withParent(BookEntryParentModel.create(summonT1Smelter.getId()))
+                .withCondition(BookEntryReadConditionModel.create().withEntry(summonDjinniID));
+        var summonT3Smelter = this.makeSummonSmelterT3Entry(entryMap, '7');
+        summonT3Smelter.withParent(BookEntryParentModel.create(summonT2Smelter.getId()))
+                .withCondition(BookEntryReadConditionModel.create().withEntry(summonAfritID));
+        var summonT4Smelter = this.makeSummonSmelterT4Entry(entryMap, '8');
+        summonT4Smelter.withParent(BookEntryParentModel.create(summonT3Smelter.getId()))
                 .withCondition(BookEntryReadConditionModel.create().withEntry(summonMaridID));
 
         var summonLumberjack = this.makeSummonLumberjackEntry(entryMap, 'c');
@@ -698,6 +711,10 @@ public class OccultismBookProvider extends SingleBookSubProvider {
                         summonT2Crusher,
                         summonT3Crusher,
                         summonT4Crusher,
+                        summonT1Smelter,
+                        summonT2Smelter,
+                        summonT3Smelter,
+                        summonT4Smelter,
                         summonLumberjack,
                         summonManageMachine,
                         summonTransportItems,
@@ -780,7 +797,7 @@ public class OccultismBookProvider extends SingleBookSubProvider {
         this.lang().add(this.context().pageTitle(), "Crusher Spirits");
         this.lang().add(this.context().pageText(),
                 """
-                        Crusher spirits are summoned to crush ores into dusts, effectively multiplying the metal output. They will pick up appropriate ores and drop the resulting dusts into the world. A purple particle effect and a crushing sound indicate the crusher is at work.
+                        Crusher spirits are summoned to crush ores into dusts, effectively multiplying the metal output. They will pick up appropriate ores and drop the resulting dusts into the world. A spark particle effect and a crushing sound indicate the crusher is at work.
                           """);
 
         this.context().page("automation");
@@ -857,7 +874,7 @@ public class OccultismBookProvider extends SingleBookSubProvider {
                 .withRecipeId1(this.modLoc("ritual/summon_afrit_crusher"));
 
         return BookEntryModel.create(this.modLoc(this.context().categoryId() + "/" + this.context().entryId()), this.context().entryName())
-                .withIcon(OccultismItems.SILVER_DUST.get())
+                .withIcon(OccultismItems.GOLD_DUST.get())
                 .withLocation(entryMap.get(icon))
                 .withPages(
                         intro,
@@ -878,7 +895,141 @@ public class OccultismBookProvider extends SingleBookSubProvider {
                 .withRecipeId1(this.modLoc("ritual/summon_marid_crusher"));
 
         return BookEntryModel.create(this.modLoc(this.context().categoryId() + "/" + this.context().entryId()), this.context().entryName())
-                .withIcon(OccultismItems.GOLD_DUST.get())
+                .withIcon(OccultismItems.IESNIUM_DUST.get())
+                .withLocation(entryMap.get(icon))
+                .withPages(
+                        intro,
+                        ritual
+                );
+    }
+    private BookEntryModel makeSummonSmelterT1Entry(CategoryEntryMap entryMap, char icon) {
+        this.context().entry("summon_smelter_t1");
+        this.lang().add(this.context().entryName(), "Summon Foliot Smelter");
+
+        this.context().page("about_smelters");
+        var aboutSmelters = BookTextPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText());
+        this.lang().add(this.context().pageTitle(), "Smelter Spirits");
+        this.lang().add(this.context().pageText(),
+                """
+                        Smelter spirits are summoned to do furnace process, without using fuel. They will pick up appropriate items and drop the resulting into the world. A fire particle effect and a flame sound indicate the smelter is at work.
+                          """);
+
+        this.context().page("automation");
+        var automation = BookTextPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText());
+        this.lang().add(this.context().pageTitle(), "Automation");
+        this.lang().add(this.context().pageText(),
+                """
+                        To ease automation, try summoning a [Transporter Spirit](entry://occultism:dictionary_of_spirits/summoning_rituals/summon_transport_items)
+                        to place items from chests in the smelter's inventory, and a [Janitor Spirit](entry://occultism:dictionary_of_spirits/summoning_rituals/summon_cleaner) to collect the processed items.
+                         """);
+
+        this.context().page("intro");
+        var intro = BookTextPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText());
+        this.lang().add(this.context().pageTitle(), "Foliot Smelter");
+        this.lang().add(this.context().pageText(),
+                """
+                        The foliot smelter is the most basic smelter spirit.
+                        \\
+                        \\
+                        It will smelt an item at the same speed as the furnace.
+                         """);
+
+        this.context().page("ritual");
+        var ritual = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/summon_foliot_smelter"));
+        //no text
+
+        return BookEntryModel.create(this.modLoc(this.context().categoryId() + "/" + this.context().entryId()), this.context().entryName())
+                .withIcon(Items.COPPER_INGOT)
+                .withLocation(entryMap.get(icon))
+                .withPages(
+                        aboutSmelters,
+                        automation,
+                        intro,
+                        ritual
+                );
+    }
+
+    private BookEntryModel makeSummonSmelterT2Entry(CategoryEntryMap entryMap, char icon) {
+        this.context().entry("summon_smelter_t2");
+        this.lang().add(this.context().entryName(), "Summon Djinni Smelter");
+
+        this.context().page("intro");
+        var intro = BookTextPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText());
+        this.lang().add(this.context().pageTitle(), "Djinni Smelter");
+        this.lang().add(this.context().pageText(),
+                """
+                        The djinni smelter is faster, doubling the speed of processing.
+                          """);
+
+        this.context().page("ritual");
+        var ritual = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/summon_djinni_smelter"));
+
+        return BookEntryModel.create(this.modLoc(this.context().categoryId() + "/" + this.context().entryId()), this.context().entryName())
+                .withIcon(Items.IRON_INGOT)
+                .withLocation(entryMap.get(icon))
+                .withPages(
+                        intro,
+                        ritual
+                );
+    }
+
+    private BookEntryModel makeSummonSmelterT3Entry(CategoryEntryMap entryMap, char icon) {
+        this.context().entry("summon_smelter_t3");
+        this.lang().add(this.context().entryName(), "Summon Afrit Smelter");
+
+        this.context().page("intro");
+        var intro = BookTextPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText());
+        this.lang().add(this.context().pageTitle(), "Afrit Smelter");
+        this.lang().add(this.context().pageText(),
+                """
+                        The afrit smelter is more faster, doing the process in a tenth of the time.
+                          """);
+
+        this.context().page("ritual");
+        var ritual = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/summon_afrit_smelter"));
+
+        return BookEntryModel.create(this.modLoc(this.context().categoryId() + "/" + this.context().entryId()), this.context().entryName())
+                .withIcon(Items.GOLD_INGOT)
+                .withLocation(entryMap.get(icon))
+                .withPages(
+                        intro,
+                        ritual
+                );
+    }
+
+    private BookEntryModel makeSummonSmelterT4Entry(CategoryEntryMap entryMap, char icon) {
+        this.context().entry("summon_smelter_t4");
+        this.lang().add(this.context().entryName(), "Summon Marid Smelter");
+
+        this.context().page("intro");
+        var intro = BookTextPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText());
+        this.lang().add(this.context().pageTitle(), "Marid Smelter");
+        this.lang().add(this.context().pageText(),
+                """
+                        The marid smelter is extremely faster, doing the process in one percent of the time.
+                          """);
+
+        this.context().page("ritual");
+        var ritual = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/summon_marid_smelter"));
+
+        return BookEntryModel.create(this.modLoc(this.context().categoryId() + "/" + this.context().entryId()), this.context().entryName())
+                .withIcon(OccultismItems.IESNIUM_INGOT.get())
                 .withLocation(entryMap.get(icon))
                 .withPages(
                         intro,
@@ -1001,7 +1152,7 @@ public class OccultismBookProvider extends SingleBookSubProvider {
         this.lang().add(this.context().pageTitle(), "Spirit Inventories");
         this.lang().add(this.context().pageText(),
                 """
-                        The Transporter can also interact with the inventories of other spirits. This is especially useful to automatically supply a [Crusher spirit](entry://summoning_rituals/summon_crusher_t1) with items to crush.
+                        The Transporter can also interact with the inventories of other spirits. This is especially useful to automatically supply a [Crusher spirit](entry://summoning_rituals/summon_crusher_t1) with items to crush or a [Smelter spirit](entry://summoning_rituals/summon_smelter_t1) with items to smelt.
                            """);
 
         this.context().page("item_filters");
@@ -1289,15 +1440,15 @@ public class OccultismBookProvider extends SingleBookSubProvider {
 
         var entryMap = ModonomiconAPI.get().getEntryMap();
         entryMap.setMap(
-                "________I_A_B_J_P_N_C______", //The Places follow the tier progression
+                "________I_A_B_J_M_N_C______", //The Places follow the tier progression
                 "___________________________",
-                "_______D_G_E_F_M_L_K_______",
+                "_______D_G_E_F_P_L_K_______",
                 "___________________________",
                 "___r_o_____________________",
                 "___________________________",
                 "_______H_W_Y__S___p_a______", //Down part is wild
                 "___________________________",
-                "________V_X_Z_T___d________",
+                "________V_X_Z_T___d_b______",
                 "___________________________",
                 "______________U____________"
         );
@@ -1339,12 +1490,12 @@ public class OccultismBookProvider extends SingleBookSubProvider {
         var possessWeakShulker = this.makePossessWeakShulkerEntry(entryMap, 'J');
         possessWeakShulker.withParent(BookEntryParentModel.create(overview.getId()))
                 .withCondition(BookEntryReadConditionModel.create().withEntry(possessDjinniID));
-        var possessWarden = this.makePossessWardenEntry(entryMap, 'M');
-        possessWarden.withParent(BookEntryParentModel.create(overview.getId()))
-                .withCondition(BookEntryReadConditionModel.create().withEntry(possessDjinniID));
         var possessZombiePiglin = this.makePossessZombiePiglinEntry(entryMap, 'P');
         possessZombiePiglin.withParent(BookEntryParentModel.create(overview.getId()))
                 .withCondition(BookEntryReadConditionModel.create().withEntry(possessUnboundAfritID));
+        var possessWarden = this.makePossessWardenEntry(entryMap, 'M');
+        possessWarden.withParent(BookEntryParentModel.create(overview.getId()))
+                .withCondition(BookEntryReadConditionModel.create().withEntry(possessAfritID));
         var possessElderGuardian = this.makePossessElderGuardianEntry(entryMap, 'L');
         possessElderGuardian.withParent(BookEntryParentModel.create(overview.getId()))
                 .withCondition(BookEntryReadConditionModel.create().withEntry(possessAfritID));
@@ -1397,6 +1548,10 @@ public class OccultismBookProvider extends SingleBookSubProvider {
         possessRandomAnimal.withParent(BookEntryParentModel.create(overview.getId()))
                 .withCondition(BookEntryReadConditionModel.create().withEntry(possessFoliotID));
 
+        var wildRandomAnimal = this.makeWildRandomAnimalEntry(entryMap, 'b');
+        wildRandomAnimal.withParent(BookEntryParentModel.create(possessRandomAnimal.getId()))
+                .withCondition(BookEntryReadConditionModel.create().withEntry(possessWildID));
+
         this.context().category("possession_rituals");
 
         return BookCategoryModel.create(this.modLoc(this.context().categoryId()), this.context().categoryName())
@@ -1430,7 +1585,8 @@ public class OccultismBookProvider extends SingleBookSubProvider {
                         possessBee,
                         possessUnboundOtherworldBird,
                         possessUnboundParrot,
-                        possessRandomAnimal
+                        possessRandomAnimal,
+                        wildRandomAnimal
                 );
     }
 
@@ -1758,7 +1914,7 @@ public class OccultismBookProvider extends SingleBookSubProvider {
                 .withText(this.context().pageText());
         this.lang().add(this.context().pageText(),
                 """
-                        In this ritual a [#](%1$s)Warden[#]() is spawned using the life energy of a [#](%1$s)Axolotl[#]() and immediately possessed by the summoned [#](%1$s)Djinni[#](). The [#](%1$s)Possessed Warden[#]() will always drop at least six [](item://minecraft:echo_shard) when killed and as a chance to drop [](item://minecraft:disc_fragment_5), [](item://minecraft:music_disc_otherside), [](item://minecraft:silence_armor_trim_smithing_template), [](item://minecraft:ward_armor_trim_smithing_template). If you try to escape, this possessed Warden will go to the floor like a normal warden.
+                        In this ritual a [#](%1$s)Warden[#]() is spawned using the life energy of a [#](%1$s)Axolotl[#]() and immediately possessed by the summoned [#](%1$s)Afrit[#](). The [#](%1$s)Possessed Warden[#]() will always drop at least six [](item://minecraft:echo_shard) when killed and as a chance to drop [](item://minecraft:disc_fragment_5), [](item://minecraft:music_disc_otherside), [](item://minecraft:silence_armor_trim_smithing_template), [](item://minecraft:ward_armor_trim_smithing_template). If you try to escape, this possessed Warden will go to the floor like a normal warden.
                         """.formatted(COLOR_PURPLE));
 
         return BookEntryModel.create(this.modLoc(this.context().categoryId() + "/" + this.context().entryId()), this.context().entryName())
@@ -1830,7 +1986,7 @@ public class OccultismBookProvider extends SingleBookSubProvider {
                 .withText(this.context().pageText());
         this.lang().add(this.context().pageText(),
                 """
-                        In this ritual a [#](%1$s)Witch[#]() is spawned using the rage energy from the [#](%1$s)Cat[#]() death. The [#](%1$s)Possessed Witch[#]() can drop a [](item://minecraft:experience_bottle), [](item://minecraft:honey_bottle), [](item://minecraft:ominous_bottle) or a useless uncraftable potion.
+                        In this ritual a [#](%1$s)Witch[#]() is spawned using the rage energy from the [#](%1$s)Cat[#]() death. The [#](%1$s)Possessed Witch[#]() can drop a [](item://minecraft:experience_bottle), [](item://minecraft:honey_bottle), [](item://minecraft:ominous_bottle) or a simple water bottle.
                         """.formatted(COLOR_PURPLE));
 
         return BookEntryModel.create(this.modLoc(this.context().categoryId() + "/" + this.context().entryId()), this.context().entryName())
@@ -2199,7 +2355,7 @@ public class OccultismBookProvider extends SingleBookSubProvider {
                 .withText(this.context().pageText());
         this.lang().add(this.context().pageText(),
                 """
-                        The Wild Breeze has intrinsic Ominous Essence causing a drop of [](item://minecraft:ominous_trial_key). The [](item://minecraft:breeze_rod) form this enemy can survive after the battle and the extra loot is: [](item://minecraft:bolt_armor_trim_smithing_template), [](item://minecraft:guster_banner_pattern) and [](item://minecraft:music_disc_precipice).
+                        The Wild Breeze has intrinsic Ominous Essence causing a drop of [](item://minecraft:ominous_trial_key). The [](item://minecraft:breeze_rod) from this enemy can survive after the battle and the extra loot is: [](item://minecraft:bolt_armor_trim_smithing_template), [](item://minecraft:guster_banner_pattern) and [](item://minecraft:music_disc_precipice).
                         """.formatted(COLOR_PURPLE));
 
         return BookEntryModel.create(this.modLoc(this.context().categoryId() + "/" + this.context().entryId()), this.context().entryName())
@@ -2284,43 +2440,122 @@ public class OccultismBookProvider extends SingleBookSubProvider {
         this.context().entry("possess_random_animal");
         this.add(this.context().entryName(), "Possessed Random Animal");
 
-        this.context().page("entity");
-        var entity = BookEntityPageModel.create()
-                .withEntityId("minecraft:cow")
-                .withEntityName(this.context().pageTitle())
+        this.context().page("description");
+        var description = BookTextPageModel.create()
+                .withTitle(this.context().pageTitle())
                 .withText(this.context().pageText());
-
         this.add(this.context().pageTitle(), "Summon Random Animal");
         this.add(this.context().pageText(),
                 """
-                    **Provides**: A random animal
-                    """
-        );
-
-        this.context().page("ritual");
-        var ritual = BookRitualRecipePageModel.create()
-                .withRecipeId1(this.modLoc("ritual/possess_random_animal"));
-        //no text
-
-        this.context().page("description");
-        var description = BookTextPageModel.create()
-                .withText(this.context().pageText());
-        this.add(this.context().pageText(),
-                """
-                        In this ritual a [#](%1$s)Foliot[#]() is summoned **as an untamed spirit** to take the shape of a random animal.
-                        \\
+                        In this type of ritual, a [#](%1$s)Spirit[#]() is summoned **as an untamed creature** to take the shape of a random animal.
+                        Different rituals can be performed, each with their own respective animals, check in the ritual dummy or in the recipe output the possibilities.
                         \\
                         The animal can be interacted with as it's natural counterpart, including taming, breeding and loot.
                         """.formatted(COLOR_PURPLE));
 
+        this.context().page("ritual_common");
+        var ritualCommon = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/possess_random_animal_common"));
+        //no text
+
+        this.context().page("ritual_water");
+        var ritualWater = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/possess_random_animal_water"));
+        //no text
+
+        this.context().page("ritual_small");
+        var ritualSmall = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/possess_random_animal_small"));
+        //no text
+
+        this.context().page("ritual_rideable");
+        var ritualRideable = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/possess_random_animal_rideable"));
+        //no text
+
+        this.context().page("ritual_villager");
+        var ritualVillager = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/possess_villager"));
+        //no text
+
+        this.context().page("ritual_special");
+        var ritualSpecial = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/possess_random_animal_special"));
+        //no text
+
 
         return BookEntryModel.create(this.modLoc(this.context().categoryId() + "/" + this.context().entryId()), this.context().entryName())
-                .withIcon(Items.COW_SPAWN_EGG)
+                .withIcon(OccultismItems.MYSTERIOUS_EGG_ICON)
                 .withLocation(entryMap.get(icon))
                 .withPages(
-                        entity,
-                        ritual,
-                        description
+                        description,
+                        ritualCommon,
+                        ritualWater,
+                        ritualSmall,
+                        ritualRideable,
+                        ritualVillager,
+                        ritualSpecial
+                );
+    }
+
+    private BookEntryModel makeWildRandomAnimalEntry(CategoryEntryMap entryMap, char icon) {
+        this.context().entry("wild_random_animal");
+        this.add(this.context().entryName(), "Group of Random Animal");
+
+        this.context().page("description");
+        var description = BookTextPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText());
+        this.add(this.context().pageTitle(), "Summon Group of Random Animal");
+        this.add(this.context().pageText(),
+                """
+                        You have learned how to attract groups of random animals by changing
+                         the pentacle to [#](%1$s)Osorin's Wild Calling[#]() and using a
+                         [](item://occultism:spirit_attuned_gem) instead of a bound book of binding.
+                        """.formatted(COLOR_PURPLE));
+
+        this.context().page("ritual_common");
+        var ritualCommon = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/wild_random_animal_common"));
+        //no text
+
+        this.context().page("ritual_water");
+        var ritualWater = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/wild_random_animal_water"));
+        //no text
+
+        this.context().page("ritual_small");
+        var ritualSmall = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/wild_random_animal_small"));
+        //no text
+
+        this.context().page("ritual_rideable");
+        var ritualRideable = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/wild_random_animal_rideable"));
+        //no text
+
+        this.context().page("ritual_villager");
+        var ritualVillager = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/wild_villager"));
+        //no text
+
+        this.context().page("ritual_special");
+        var ritualSpecial = BookRitualRecipePageModel.create()
+                .withRecipeId1(this.modLoc("ritual/wild_random_animal_special"));
+        //no text
+
+
+        return BookEntryModel.create(this.modLoc(this.context().categoryId() + "/" + this.context().entryId()), this.context().entryName())
+                .withIcon(OccultismItems.MYSTERIOUS_EGG_ICON)
+                .withLocation(entryMap.get(icon))
+                .withPages(
+                        description,
+                        ritualCommon,
+                        ritualWater,
+                        ritualSmall,
+                        ritualRideable,
+                        ritualVillager,
+                        ritualSpecial
                 );
     }
 

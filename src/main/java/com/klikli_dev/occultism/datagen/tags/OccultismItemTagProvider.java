@@ -70,6 +70,11 @@ public class OccultismItemTagProvider extends ItemTagsProvider {
 
         this.tag(this.cTag("dusts/dark_gem"))
                 .addOptional(this.loc("evilcraft:dark_gem_crushed"));
+        this.tag(this.cTag("ores/black_quartz")).addOptional(this.loc("actuallyadditions:black_quartz_ore"));
+        this.tag(this.cTag("gems/black_quartz")).addOptional(this.loc("actuallyadditions:black_quartz"));
+        this.tag(this.cTag("dusts/certus_quartz")).addOptional(this.loc("ae2:certus_quartz_dust"));
+        this.tag(this.cTag("dusts/fluix")).addOptional(this.loc("ae2:fluix_dust"));
+        this.tag(this.cTag("gems/fluix")).addOptional(this.loc("ae2:fluix_crystal"));
     }
 
     private void addCuriosTags(HolderLookup.Provider provider) {
@@ -308,6 +313,7 @@ public class OccultismItemTagProvider extends ItemTagsProvider {
         this.copy(OccultismTags.Blocks.STORAGE_BLOCKS_RAW_SILVER, OccultismTags.Items.STORAGE_BLOCK_RAW_SILVER);
         this.tag(Tags.Items.STORAGE_BLOCKS).addTags(OccultismTags.Items.STORAGE_BLOCK_IESNIUM, OccultismTags.Items.STORAGE_BLOCK_SILVER,
                 OccultismTags.Items.STORAGE_BLOCK_RAW_IESNIUM, OccultismTags.Items.STORAGE_BLOCK_RAW_SILVER).replace(false);
+        this.copy(OccultismTags.Blocks.MUSHROOM_BLOCKS, OccultismTags.Items.MUSHROOM_BLOCKS);
 
         // Metal Axes Tag
         this.tag(OccultismTags.Items.METAL_AXES).add(Items.IRON_AXE, Items.GOLDEN_AXE, Items.DIAMOND_AXE, Items.NETHERITE_AXE).replace(false);
