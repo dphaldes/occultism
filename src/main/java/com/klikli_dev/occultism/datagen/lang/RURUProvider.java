@@ -175,7 +175,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
                         Простая ритуальная наплечная сумка, способная поблочно помещать ритуальные круги.
                         Нажатие ПКМ по предосмотренному блоку, чтобы поместить его из наплечной сумки.
                         Нажатие Shift + ПКМ — открыть наплечную сумку и добавить ингредиенты для ритуала.
-						Если у предмета есть менее 40% прочности внутри сумки, эффект переливания прекратится.
+						Если в сумке предмет с менее 40% прочности, эффект переливания прекратится.
                         """
         );
         this.addItem(OccultismItems.RITUAL_SATCHEL_T2, "Ремесленная ритуальная наплечная сумка");
@@ -185,7 +185,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
                         Нажатие ПКМ по любому предосмотренному блоку, чтобы поместить все блоки из наплечной сумки.
                         Нажатие Shift + ПКМ — открыть наплечную сумку и добавить ингредиенты для ритуала.
                         Нажатие ПКМ по золотой жертвенной миске — убрать ритуальный круг и собрать ингредиенты.
-						Если у предмета есть менее 40% прочности внутри сумки, эффект переливания прекратится.
+						Если в сумке предмет с менее 40% прочности, эффект переливания прекратится.
                         """
         );
 
@@ -559,10 +559,10 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("job.occultism.crush_tier2", "Дробильщик");
         this.lang("ru_ru").add("job.occultism.crush_tier3", "Быстрый дробильщик");
         this.lang("ru_ru").add("job.occultism.crush_tier4", "Очень быстрый дробильщик");
-		this.lang("ru_ru").add("job.occultism.smelt_tier1", "Медленный плавильщик");
-        this.lang("ru_ru").add("job.occultism.smelt_tier2", "Плавильщик");
-        this.lang("ru_ru").add("job.occultism.smelt_tier3", "Быстрый плавильщик");
-        this.lang("ru_ru").add("job.occultism.smelt_tier4", "Очень быстрый плавильщик");
+		this.lang("ru_ru").add("job.occultism.smelt_tier1", "Медленный литейщик");
+        this.lang("ru_ru").add("job.occultism.smelt_tier2", "Литейщик");
+        this.lang("ru_ru").add("job.occultism.smelt_tier3", "Быстрый литейщик");
+        this.lang("ru_ru").add("job.occultism.smelt_tier4", "Очень быстрый литейщик");
         this.lang("ru_ru").add("job.occultism.manage_machine", "Машинист");
         this.lang("ru_ru").add("job.occultism.transport_items", "Транспортировщик");
         this.lang("ru_ru").add("job.occultism.cleaner", "Дворник");
@@ -698,9 +698,9 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("ritual.occultism.pentacle_help", "\u00a7lНедопустимый пентакль!\u00a7r\nВы было пытаетесь создать пентакль: %s? Отсутствуют:\n%s");
         this.lang("ru_ru").add("ritual.occultism.pentacle_help_at_glue", " на позиции ");
         this.lang("ru_ru").add("ritual.occultism.pentacle_help.no_pentacle", "\u00a7lПентакль не найден!\u00a7r\nКажется, Вы не начертили пентакль, или в Вашем пентакле отсутствуют важные элементы. Обратитесь в раздел \"Ритуалы\" справочника душ, необходимый пентакль будет отображён как гиперссылка над рецептом ритуала в странице ритуала.");
-        this.lang("ru_ru").add("ritual.occultism.ritual_help", "\u00a7lНедопустимый ритуал!\u00a7r\nВы было пытались выполнить ритуал:: \"%s\"? Отсутствуют предметы:\n%s");
+        this.lang("ru_ru").add("ritual.occultism.ritual_help", "\u00a7lНедопустимый ритуал!\u00a7r\nВы было пытались выполнить ритуал: \"%s\"? Отсутствуют предметы:\n%s");
         this.lang("ru_ru").add("ritual.occultism.disabled", "Ритуал недоступен на этом сервере.");
-        this.lang("ru_ru").add("ritual.occultism.does_not_exist", "\u00a7lНеизвестный ритуал\u00a7r. Убедитесь, что пентакли и ингредиенты расположены правильно. Если Вы до сих пор не достигли желаемого результата, присоединяйтесь к нашему Discord-серверу —> (https://invite.gg/klikli)");
+        this.lang("ru_ru").add("ritual.occultism.does_not_exist", "\u00a7lНеизвестный ритуал\u00a7r. Убедитесь, что пентакли и ингредиенты расположены правильно. Если Вы до сих пор не достигли желаемого результата, присоединяйтесь к нашему Discord-серверу —> https://discord.gg/trE4SHRXvb");
         this.lang("ru_ru").add("ritual.occultism.book_not_bound", "\u00a7lНесвязанная книга вызова\u00a7r. Перед началом ритуала, Вы должны создать эту книгу с помощью Справочника душ, для связки её с духом.");
 
         this.lang("ru_ru").add("ritual.occultism.unknown.conditions", "Удовлетворены не все требования для этого ритуала.");
@@ -1130,21 +1130,21 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_CRUSHER, "interrupted", "Вызов Дробильщика-Марида прерван.");
 
         this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER, "conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER, "started", "Начался вызов Плавильщика-Фолиота.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER, "finished", "Плавильщик-Фолиот успешно вызван.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER, "interrupted", "Вызов Плавильщика-Фолиота прерван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER, "started", "Начался вызов Литейщика-Фолиота.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER, "finished", "Литейщик-Фолиот успешно вызван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER, "interrupted", "Вызов Литейщика-Фолиота прерван.");
         this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER, "conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER, "started", "Начался вызов Плавильщика-Джинна.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER, "finished", "Плавильщик-Джинн успешно вызван.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER, "interrupted", "Вызов Плавильщика-Джинна прерван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER, "started", "Начался вызов Литейщика-Джинна.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER, "finished", "Литейщик-Джинн успешно вызван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER, "interrupted", "Вызов Литейщика-Джинна прерван.");
         this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER, "conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER, "started", "Начался вызов Плавильщика-Африта.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER, "finished", "Плавильщик-Африт успешно вызван.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER, "interrupted", "Вызов Плавильщика-Африта прерван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER, "started", "Начался вызов Литейщика-Африта.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER, "finished", "Литейщик-Африт успешно вызван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER, "interrupted", "Вызов Литейщика-Африта прерван.");
         this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER, "conditions", "Удовлетворены не все требования для этого ритуала.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER, "started", "Начался вызов Плавильщика-Марида.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER, "finished", "Плавильщик-Марид успешно вызван.");
-        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER, "interrupted", "Вызов Плавильщика-Марида прерван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER, "started", "Начался вызов Литейщика-Марида.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER, "finished", "Литейщик-Марид успешно вызван.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER, "interrupted", "Вызов Литейщика-Марида прерван.");
 
         this.addRitualMessage(OccultismRituals.RESURRECT_FAMILIAR, "conditions", "Удовлетворены не все требования для этого ритуала.");
         this.addRitualMessage(OccultismRituals.RESURRECT_FAMILIAR, "started", "Началось воскресение фамильяра.");
@@ -2752,7 +2752,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("occultism.jei.pentacle", "Пентакль");
 
         this.lang("ru_ru").add(TranslationKeys.JEI_CRUSHING_RECIPE_MIN_TIER, "Мин. уровень дробильщика: %d");
-        this.lang("ru_ru").add(TranslationKeys.JEI_CRUSHING_RECIPE_MAX_TIER, "Макс. уровень дробильщика:: %d");
+        this.lang("ru_ru").add(TranslationKeys.JEI_CRUSHING_RECIPE_MAX_TIER, "Макс. уровень дробильщика: %d");
         this.lang("ru_ru").add("jei.occultism.ingredient.tallow.description", "Для получения жира убивайте таких животных, как: \u00a72свиньи\u00a7r, \u00a72коровы\u00a7r, \u00a72овцы\u00a7r, \u00a72лошади\u00a7r и \u00a72ламы\u00a7r с помощью ножа мясника.");
         this.lang("ru_ru").add("jei.occultism.ingredient.otherstone.description", "Преимущественно встречается в Потусторонних Рощах. Виден только во время активного состояния \u00a76Третьего глаза\u00a7r. Обратитесь в \u00a76Справочник душ\u00a7r для получения дополнительной информации.");
         this.lang("ru_ru").add("jei.occultism.ingredient.otherworld_log.description", "Преимущественно встречается в Потусторонних Рощах. Виден только во время \u00a76Третьего глаза\u00a7r. Обратитесь в \u00a76Справочник душ\u00a7r для получения дополнительной информации.");
@@ -3017,14 +3017,14 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.add(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_CRUSHER.get(), "Ритуал: Вызов Дробильщика-Марида");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_CRUSHER.get(), "Дробильщик — дух, вызываемый с целью размельчения руды в пыль, эффективно (гораздо), удваивая металлопродукцию.\n" + ChatFormatting.GRAY + ChatFormatting.ITALIC + "Примечание: некоторые рецепты могут требовать высокий уровень дробильщиков или низкий.");
 
-        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER.get(), "Ритуал: Вызов Плавильщика-Фолиота");
-        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER.get(), "Плавильщик — дух, вызываемый с целью создания рецептов печи без использования топлива.");
-        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER.get(), "Ритуал: Вызов Плавильщика-Джинна");
-        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER.get(), "Плавильщик — дух, вызываемый с целью создания рецептов печи без использования топлива.");
-        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER.get(), "Ритуал: Вызов Плавильщика-Африта");
-        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER.get(), "Плавильщик — дух, вызываемый с целью создания рецептов печи без использования топлива.");
-        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER.get(), "Ритуал: Вызов Плавильщика-Марида");
-        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER.get(), "Плавильщик — дух, вызываемый с целью создания рецептов печи без использования топлива.");
+        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER.get(), "Ритуал: Вызов Литейщика-Фолиота");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_FOLIOT_SMELTER.get(), "Литейщик — дух, вызываемый с целью создания рецептов печи без использования топлива.");
+        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER.get(), "Ритуал: Вызов Литейщика-Джинна");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_DJINNI_SMELTER.get(), "Литейщик — дух, вызываемый с целью создания рецептов печи без использования топлива.");
+        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER.get(), "Ритуал: Вызов Литейщика-Африта");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_AFRIT_SMELTER.get(), "Литейщик — дух, вызываемый с целью создания рецептов печи без использования топлива.");
+        this.add(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER.get(), "Ритуал: Вызов Литейщика-Марида");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_MARID_SMELTER.get(), "Литейщик — дух, вызываемый с целью создания рецептов печи без использования топлива.");
 
         this.lang("ru_ru").add(OccultismItems.RITUAL_DUMMY_SUMMON_DEMONIC_WIFE.get(), "Ритуал: Вызов демонической жены");
         this.lang("ru_ru").addTooltip(OccultismItems.RITUAL_DUMMY_SUMMON_DEMONIC_WIFE.get(), "Вызывает демоническую жену для поддержки: она будет защищать Вас, помогать с готовкой, и продлит срок действия зелья.");
@@ -3348,11 +3348,11 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addConfig("tier3CrusherOutputMultiplier", "Коэффициент продукции для дробильщика 3-го уровня.");
         this.addConfig("tier4CrusherOutputMultiplier", "Коэффициент продукции для дробильщика 4-го уровня.");
         this.addConfig("crusherResultPickupDelay", "Задержка, прежде чем могут быть подобраны предметы из дробильщика.");
-        this.addConfig("tier1SmelterTimeMultiplier", "Временной коэффициент действий для Плавильщика 1-го уровня.");
-        this.addConfig("tier2SmelterTimeMultiplier", "Временной коэффициент действий для Плавильщика 2-го уровня.");
-        this.addConfig("tier3SmelterTimeMultiplier", "Временной коэффициент действий для Плавильщика 3-го уровня.");
-        this.addConfig("tier4SmelterTimeMultiplier", "Временной коэффициент действий для Плавильщика 4-го уровня.");
-        this.addConfig("smelterResultPickupDelay", "Задержка, прежде чем могут быть подобраны предметы из плавильщика.");
+        this.addConfig("tier1SmelterTimeMultiplier", "Временной коэффициент действий для Литейщика 1-го уровня.");
+        this.addConfig("tier2SmelterTimeMultiplier", "Временной коэффициент действий для Литейщика 2-го уровня.");
+        this.addConfig("tier3SmelterTimeMultiplier", "Временной коэффициент действий для Литейщика 3-го уровня.");
+        this.addConfig("tier4SmelterTimeMultiplier", "Временной коэффициент действий для Литейщика 4-го уровня.");
+        this.addConfig("smelterResultPickupDelay", "Задержка, прежде чем могут быть подобраны предметы из литейщика.");
         this.addConfig("blacksmithFamiliarRepairChance", "Шанс, что Кузнец-фамильяр каждый такт будет чинить предмет.");
         this.addConfig("blacksmithFamiliarUpgradeCost", "Стоимость обновления предметов Кузнецом-фамильяром в уровнях опыта.");
         this.addConfig("blacksmithFamiliarUpgradeCooldown", "Перезарядка/в тактах, прежде чем Кузнец-фамильяр сможет снова обновить предметы.");
