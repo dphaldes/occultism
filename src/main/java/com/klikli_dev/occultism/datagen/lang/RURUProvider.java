@@ -85,7 +85,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add(OccultismItems.DIVINATION_ROD.get().getDescriptionId() + ".message.no_linked_block", "Жезл прорицания не настроен на какой-либо материал.");
         this.lang("ru_ru").add(OccultismItems.DIVINATION_ROD.get().getDescriptionId() + ".message.linked_block", "Жезл прорицания настроен на %s");
         this.lang("ru_ru").add(OccultismItems.DIVINATION_ROD.get().getDescriptionId() + ".message.no_link_found", "Нет резонанса с этим блоком.");
-        this.lang("ru_ru").add(OccultismItems.SOUL_GEM_ITEM.get().getDescriptionId() + ".message.entity_type_denied", "Камень души не может удерживать этот тип существа.");
+        this.lang("ru_ru").add(OccultismItems.SOUL_GEM_ITEM.get().getDescriptionId() + ".message.entity_type_denied", "Камень душ не может удерживать этот тип существа.");
     }
 
     public void addItemTooltips() {
@@ -294,8 +294,8 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addItem(OccultismItems.MINER_MARID_MASTER, "Мастер Рудокоп-Марид");
 		this.addItem(OccultismItems.MINER_ANCIENT_ELDRITCH, "Сверхъестественный древний рудокоп");
         this.addItem(OccultismItems.MINING_DIMENSION_CORE_PIECE, "Часть ядра шахтёрского измерения");
-        this.addItem(OccultismItems.SOUL_GEM_ITEM, "Камень души");
-        this.lang("ru_ru").add(OccultismItems.SOUL_GEM_ITEM.get().getDescriptionId() + "_empty", "Пустой камень души");
+        this.addItem(OccultismItems.SOUL_GEM_ITEM, "Камень душ");
+        this.lang("ru_ru").add(OccultismItems.SOUL_GEM_ITEM.get().getDescriptionId() + "_empty", "Пустой камень душ");
         this.addItem(OccultismItems.SOUL_SHARD_ITEM, "Осколок души");
         this.addItem(OccultismItems.SATCHEL, "Необычайно большая сумка");
         this.addItem(OccultismItems.FAMILIAR_RING, "Кольцо для фамильяра");
@@ -341,7 +341,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addItem(OccultismItems.SPAWN_EGG_PARROT_FAMILIAR, "Яйцо призыва Попугая-фамильяра");
         this.addItem(OccultismItems.SPAWN_EGG_DEMONIC_WIFE, "Яйцо призыва Демонической жены");
         this.addItem(OccultismItems.SPAWN_EGG_DEMONIC_HUSBAND, "Яйцо призыва Демонического мужа");
-		this.addItem(OccultismItems.SPAWN_EGG_IESNIUM_GOLEM, "Яйцо Голема из айзния");
+		this.addItem(OccultismItems.SPAWN_EGG_IESNIUM_GOLEM, "Яйцо призыва Голема из айзния");
 		this.addItem(OccultismItems.SPAWN_EGG_WILD_HORDE_HUSK, "Яйцо призыва Орды диких кадавров");
         this.addItem(OccultismItems.SPAWN_EGG_WILD_HORDE_DROWNED, "Яйцо призыва Орды диких утопленников");
         this.addItem(OccultismItems.SPAWN_EGG_WILD_HORDE_CREEPER, "Яйцо призыва Орды диких криперов");
@@ -854,8 +854,8 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("ritual.occultism.craft_satchel.finished", "Успешное заточение Фолиота в сумку.");
         this.lang("ru_ru").add("ritual.occultism.craft_satchel.interrupted", "Заточение Фолиота прервано.");
         this.lang("ru_ru").add("ritual.occultism.craft_soul_gem.conditions", "Для выполнения этого ритуала не удовлетворены все необходимые требования.");
-        this.lang("ru_ru").add("ritual.occultism.craft_soul_gem.started", "Началось заточение Джинна в камень души.");
-        this.lang("ru_ru").add("ritual.occultism.craft_soul_gem.finished", "Успешное заточение Джинна в камень души.");
+        this.lang("ru_ru").add("ritual.occultism.craft_soul_gem.started", "Началось заточение Джинна в камень душ.");
+        this.lang("ru_ru").add("ritual.occultism.craft_soul_gem.finished", "Успешное заточение Джинна в камень душ.");
         this.lang("ru_ru").add("ritual.occultism.craft_soul_gem.interrupted", "Заточение Джинна прервано.");
         this.lang("ru_ru").add("ritual.occultism.craft_familiar_ring.conditions", "Для выполнения этого ритуала не удовлетворены все необходимые требования.");
         this.lang("ru_ru").add("ritual.occultism.craft_familiar_ring.started", "Началось заточение Джинна в Кольцо для фамильяра.");
@@ -1952,12 +1952,12 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         //текст отсутствует
 
         helper.entry("craft_soul_gem");
-        this.lang("ru_ru").add(helper.entryName(), "Камень души");
+        this.lang("ru_ru").add(helper.entryName(), "Камень душ");
 
         helper.page("spotlight");
         this.lang("ru_ru").add(helper.pageText(),
                 """
-                        Камень души — алмаз, что устанавливается в драгоценные металлы, а потом заселяется [#](%1$s)Джинном[#](). Дух создаёт небольшое измерение, что позволяет временно захватывать живых существ. Тем не менее существ огромной силы нельзя захватывать.
+                        Камень душ — алмаз, что устанавливается в драгоценные металлы, а потом заселяется [#](%1$s)Джинном[#](). Дух создаёт небольшое измерение, что позволяет временно захватывать живых существ. Тем не менее существ огромной силы нельзя захватывать.
                         """.formatted(COLOR_PURPLE));
 
         helper.page("usage");
@@ -2917,8 +2917,8 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
 
         this.lang("ru_ru").add("item.occultism.ritual_dummy.craft_satchel", "Ритуал: Создать необычайно большую сумку");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.craft_satchel.tooltip", "Эта сумка позволяет хранить больше предметов, чем указывают её размеры, что делает её практичным спутником путешественника.");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.craft_soul_gem", "Ритуал: Создать камень души");
-        this.lang("ru_ru").add("item.occultism.ritual_dummy.craft_soul_gem.tooltip", "Камень души позволяет временно хранить живых существ.");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.craft_soul_gem", "Ритуал: Создать камень душ");
+        this.lang("ru_ru").add("item.occultism.ritual_dummy.craft_soul_gem.tooltip", "Камень душ позволяет временно хранить живых существ.");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.craft_familiar_ring", "Ритуал: Создать кольцо для фамильяра");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.craft_familiar_ring.tooltip", "Кольцо для фамильяра позволяет заточить фамильяров. Кольцо будет накладывать эффект фамильяра на владельца.");
         this.lang("ru_ru").add("item.occultism.ritual_dummy.craft_stabilizer_tier1", "Ритуал: Создать стабилизатор хранилища 1-го уровня");
@@ -3083,7 +3083,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addTooltip(OccultismItems.RITUAL_DUMMY_POSSESS_RANDOM_ANIMAL_RIDEABLE.get(), "Вызывает случайное пассивное ездовое животное. (Варианты: свинья, верблюд, осёл, лошадь, скелет, зомби-лошадь, лама, лама торговца, мул и лавомерка.).");
         this.add(OccultismItems.RITUAL_DUMMY_POSSESS_VILLAGER.get(), "Ритуал: Вызов крестьянина");
 		this.add(OccultismItems.RITUAL_DUMMY_POSSESS_IESNIUM_GOLEM.get(), "Ритуал: Вызов голема из айзния");
-        this.addTooltip(OccultismItems.RITUAL_DUMMY_POSSESS_IESNIUM_GOLEM.get(), "Summons the strong and invulnerable iesnium golem to defend a region.");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_POSSESS_IESNIUM_GOLEM.get(), "Вызывает сильного и неуязвимого голема из айзния для защиты местности.");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_POSSESS_VILLAGER.get(), "Вызывает Крестьянина или Странствующего торговца.");
         this.add(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T1.get(), "Ритуал: Создать ритуальную наплечную сумку подмастерья");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T1.get(), "Связывает Джинна в сумку для пошаговой постройки пентаклей в пользу вызывателя.");
@@ -3091,10 +3091,10 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.add(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T2.get(), "Ритуал: Создать ремесленную ритуальную наплечную сумку");
 
         this.add(OccultismItems.RITUAL_DUMMY_CRAFT_IESNIUM_SACRIFICIAL_BOWL.get(), "Ритуал: Создать жертвенную миску из айзния");
-        this.addTooltip(OccultismItems.RITUAL_DUMMY_CRAFT_IESNIUM_SACRIFICIAL_BOWL.get(), "The Iesnium Sacrificial Bowl performs any ritual in only a quarter of the normal time. All other things will works like the Golden Sacrificial Bowl.");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_CRAFT_IESNIUM_SACRIFICIAL_BOWL.get(), "Жертвенная миска из айзния выполняет любой ритуал за черверть расчётного времени. Остальные особенности действуют аналогично Золотой жертвенной миски.");
 
-        this.add(OccultismItems.RITUAL_DUMMY_CRAFT_IESNIUM_ANVIL.get(), "Ritual: Craft Iesnium Anvil");
-        this.addTooltip(OccultismItems.RITUAL_DUMMY_CRAFT_IESNIUM_ANVIL.get(), "The iesnium anvil is an improvement on the common anvil, see all the advantages in the dictionary.");
+        this.add(OccultismItems.RITUAL_DUMMY_CRAFT_IESNIUM_ANVIL.get(), "Ритуал: Создать наковальню из айзния");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_CRAFT_IESNIUM_ANVIL.get(), "Наковальня из айзния — достижение по сравнению с обычной наковальней. См. все преимущества в Справочнике душ.");
 
         this.addTooltip(OccultismItems.RITUAL_DUMMY_CRAFT_RITUAL_SATCHEL_T2.get(), "Связывает Африта в сумку для мгновенной постройки пентаклей в пользу вызывателя.");
 
@@ -3158,10 +3158,10 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addTooltip(OccultismItems.RITUAL_DUMMY_FORGE_MINER_ANCIENT_ELDRITCH.get(), "Вызывайте сверхъестественного древнего рудокопа в магическую лампу.");
 
         this.add(OccultismItems.RITUAL_DUMMY_FORGE_ELDRITCH_CHALICE.get(), "Ритуал: Ковка сверхъестественного потира");
-        this.addTooltip(OccultismItems.RITUAL_DUMMY_FORGE_ELDRITCH_CHALICE.get(), "Eldritch Spirits will forge an Eldritch Chalice, that performs any ritual instantly. Here is your trophy.");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_FORGE_ELDRITCH_CHALICE.get(), "Сверхъестественные духи скуют Сверхъестественный потир, мгновенно выполняющий любые ритуалы. Вот твой трофей!");
 
-        this.add(OccultismItems.RITUAL_DUMMY_FORGE_STABILIZED_STORAGE.get(), "Ritual: Forge Stabilized Dimensional Storage Actuator");
-        this.addTooltip(OccultismItems.RITUAL_DUMMY_FORGE_STABILIZED_STORAGE.get(), "Eldritch Spirits will forge a Stabilized Dimensional Storage Actuator, works as an actuator with maximum stabilizers in only one block.");
+        this.add(OccultismItems.RITUAL_DUMMY_FORGE_STABILIZED_STORAGE.get(), "Ритуал: Ковка актуатора стабилизатора пространственного хранилища");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_FORGE_STABILIZED_STORAGE.get(), "Сверхъестественные духи скуют Актуатор стабилизатора пространственного хранилища. Действует как актуатор с максимальным количеством стабилизаторов. Занимает только один блок.");
     }
 
     public void addTooltip(ItemLike key, String value) {
