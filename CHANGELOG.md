@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [release/v1.21.1-1.168.0] - 2024-11-25
+### :sparkles: New Features
+- [`16524c2`](https://github.com/klikli-dev/occultism/commit/16524c2ec5a003ebcdb33e2ac60b023e4e74e44b) - new demonic husband model - thanks Aldahel, [@Aldael on X](https://x.com/_Aldael_) *(commit by [@klikli-dev](https://github.com/klikli-dev))*
+
+
 ## [release/v1.21.1-1.167.0] - 2024-11-19
 ### :sparkles: New Features
 - [`e5819c2`](https://github.com/klikli-dev/occultism/commit/e5819c2f3fda47dc1debee10aa21dba8f7506195) - Random Animals, Smelter Spirit, Familiars checkup, Achievements Optimizer compatibility and other things *(PR [#1246](https://github.com/klikli-dev/occultism/pull/1246) by [@Eqis-Edu](https://github.com/Eqis-Edu))*
@@ -1859,3 +1864,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [release/v1.21.1-1.166.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.165.0...release/v1.21.1-1.166.0
 [release/v1.21.1-1.166.1]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.166.0...release/v1.21.1-1.166.1
 [release/v1.21.1-1.167.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.166.1...release/v1.21.1-1.167.0
+[release/v1.21.1-1.168.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.167.0...release/v1.21.1-1.168.0
