@@ -181,6 +181,7 @@ All resources not explicitly listed below are available under the terms of the l
 - Large parts of the textures have been created by [ridanisaurus](https://www.curseforge.com/members/ridanisaurus/followers).
 - Most familiar models (and their textures and animations) have been created by Vemerion.
 - Some of the spirit and familiar models (and their textures and animations) have been created by feellian.
+- The demonic husband model (and its textures and animations) have been created by Aldahel, _[@Aldael](https://x.com/_Aldael_)_ on X.
 
 
 ### Images
