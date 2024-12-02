@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [release/v1.21.1-1.169.0] - 2024-12-02
+### :sparkles: New Features
+- [`de5b0f9`](https://github.com/klikli-dev/occultism/commit/de5b0f9ab6450029ee686afb84fc8913ad8f0e0e) - Updating a Russian language *(PR [#1245](https://github.com/klikli-dev/occultism/pull/1245) by [@Heimdallr-1](https://github.com/Heimdallr-1))*
+- [`007f9bc`](https://github.com/klikli-dev/occultism/commit/007f9bc5e17554a689b46b5e5bc7dfbf18f94659) - use "entry read" unlocks instead of "advancement" unlocks until modonomicon offers better usability for advancement unlocks *(commit by [@klikli-dev](https://github.com/klikli-dev))*
+
+### :wrench: Chores
+- [`9480b02`](https://github.com/klikli-dev/occultism/commit/9480b02d35eb705563c9dd0d189d8a40332b0ba2) - update to latest modonomicon *(commit by [@klikli-dev](https://github.com/klikli-dev))*
+
+
 ## [release/v1.21.1-1.168.0] - 2024-11-25
 ### :sparkles: New Features
 - [`16524c2`](https://github.com/klikli-dev/occultism/commit/16524c2ec5a003ebcdb33e2ac60b023e4e74e44b) - new demonic husband model - thanks Aldahel, [@Aldael on X](https://x.com/_Aldael_) *(commit by [@klikli-dev](https://github.com/klikli-dev))*
@@ -1865,3 +1874,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [release/v1.21.1-1.166.1]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.166.0...release/v1.21.1-1.166.1
 [release/v1.21.1-1.167.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.166.1...release/v1.21.1-1.167.0
 [release/v1.21.1-1.168.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.167.0...release/v1.21.1-1.168.0
+[release/v1.21.1-1.169.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.168.0...release/v1.21.1-1.169.0
