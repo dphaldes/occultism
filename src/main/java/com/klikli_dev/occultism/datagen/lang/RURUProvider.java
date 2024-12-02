@@ -54,7 +54,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         super(gen, Occultism.MODID, "ru_ru");
     }
 
-    public AbstractModonomiconLanguageProvider lang(String lang) {
+    public RURUProvider lang(String lang) {
         return this;
     }
 
