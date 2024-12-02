@@ -64,7 +64,9 @@ public class PentaclesCategory extends CategoryProvider {
 
         var summonFoliot = this.add(new SummonFoliotEntry(this).generate('a'));
         summonFoliot.withParent(BookEntryParentModel.create(didacticsEntry.getId()))
-                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/white"));
+                .withCondition(BookEntryReadConditionModel.create().withEntry(whiteChalkEntry.getId()));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+//                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/white"));
 
         var lightGrayChalkEntry = this.add(new LightGrayChalkEntry(this).generate('S'));
         lightGrayChalkEntry.withParent(BookEntryParentModel.create(whiteChalkEntry.getId()))
@@ -79,7 +81,9 @@ public class PentaclesCategory extends CategoryProvider {
 
         var possessFoliot = this.add(new PossessFoliotEntry(this).generate('f'));
         possessFoliot.withParent(BookEntryParentModel.create(yellowChalkEntry.getId()))
-                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/yellow"));
+                .withCondition(BookEntryReadConditionModel.create().withEntry(yellowChalkEntry.getId()));
+                //TODO: enable advancement condition once modonomicon supports skipping them
+//                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/yellow"));
 
         var purpleChalkEntry = this.add(new PurpleChalkEntry(this).generate('X'));
         purpleChalkEntry.withParent(BookEntryParentModel.create(yellowChalkEntry.getId()))
@@ -87,7 +91,9 @@ public class PentaclesCategory extends CategoryProvider {
 
         var craftFoliot = this.add(new CraftFoliotEntry(this).generate('l'));
         craftFoliot.withParent(BookEntryParentModel.create(purpleChalkEntry.getId()))
-                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/purple"));
+                .withCondition(BookEntryReadConditionModel.create().withEntry(purpleChalkEntry.getId()));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+//                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/purple"));
 
         var limeChalkEntry = this.add(new LimeChalkEntry(this).generate('L'));
         limeChalkEntry.withParent(BookEntryParentModel.create(purpleChalkEntry.getId()).withLineReversed(true))
@@ -104,9 +110,16 @@ public class PentaclesCategory extends CategoryProvider {
         //Tier Djinni
         var summonDjinni = this.add(new SummonDjinniEntry(this).generate('b'));
         summonDjinni.withParent(BookEntryParentModel.create(summonFoliot.getId()))
-                .withCondition(BookAndConditionModel.create().withChildren(
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/light_gray"),
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/lime")));
+                .withCondition(
+                        this.condition().and(
+                                this.condition().entryRead(lightGrayChalkEntry),
+                                this.condition().entryRead(limeChalkEntry)
+                        ));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+//                        BookAndConditionModel.create().withChildren(
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/light_gray"),
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/lime"))
+//                    );
 
         var lightBlueChalkEntry = this.add(new LightBlueChalkEntry(this).generate('A'));
         lightBlueChalkEntry.withParent(BookEntryParentModel.create(summonDjinni.getId()).withLineEnabled(false))
@@ -114,9 +127,15 @@ public class PentaclesCategory extends CategoryProvider {
 
         var possessDjinni = this.add(new PossessDjinniEntry(this).generate('g'));
         possessDjinni.withParent(BookEntryParentModel.create(possessFoliot.getId()))
-                .withCondition(BookAndConditionModel.create().withChildren(
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/light_gray"),
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/lime")));
+                .withCondition(
+                        this.condition().and(
+                                this.condition().entryRead(lightGrayChalkEntry),
+                                this.condition().entryRead(limeChalkEntry)
+                        ));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+//                .withCondition(BookAndConditionModel.create().withChildren(
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/light_gray"),
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/lime")));
 
         var orangeChalkEntry = this.add(new OrangeChalkEntry(this).generate('O'));
         orangeChalkEntry.withParent(BookEntryParentModel.create(limeChalkEntry.getId()))
@@ -124,9 +143,15 @@ public class PentaclesCategory extends CategoryProvider {
 
         var craftDjinni = this.add(new CraftDjinniEntry(this).generate('m'));
         craftDjinni.withParent(BookEntryParentModel.create(craftFoliot.getId()))
-                .withCondition(BookAndConditionModel.create().withChildren(
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/light_gray"),
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/lime")));
+                .withCondition(
+                        this.condition().and(
+                                this.condition().entryRead(lightGrayChalkEntry),
+                                this.condition().entryRead(limeChalkEntry)
+                        ));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+//                .withCondition(BookAndConditionModel.create().withChildren(
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/light_gray"),
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/lime")));
 
         var grayChalkEntry = this.add(new GrayChalkEntry(this).generate('G'));
         grayChalkEntry.withParent(BookEntryParentModel.create(lightGrayChalkEntry.getId()))
@@ -135,9 +160,15 @@ public class PentaclesCategory extends CategoryProvider {
         //Tier Unbound Afrit
         var summonUnboundAfrit = this.add(new SummonUnboundAfritEntry(this).generate('c'));
         summonUnboundAfrit.withParent(BookEntryParentModel.create(summonDjinni.getId()))
-                .withCondition(BookAndConditionModel.create().withChildren(
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/gray"),
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/orange")));
+                .withCondition(
+                        this.condition().and(
+                                this.condition().entryRead(grayChalkEntry),
+                                this.condition().entryRead(orangeChalkEntry)
+                        ));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+//                .withCondition(BookAndConditionModel.create().withChildren(
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/gray"),
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/orange")));
 
         var redChalkEntry = this.add(new RedChalkEntry(this).generate('R'));
         redChalkEntry.withParent(BookEntryParentModel.create(orangeChalkEntry.getId()))
@@ -145,9 +176,15 @@ public class PentaclesCategory extends CategoryProvider {
 
         var possessUnboundAfrit = this.add(new PossessUnboundAfritEntry(this).generate('h'));
         possessUnboundAfrit.withParent(BookEntryParentModel.create(possessDjinni.getId()))
-                .withCondition(BookAndConditionModel.create().withChildren(
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/gray"),
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/orange")));
+                .withCondition(
+                        this.condition().and(
+                                this.condition().entryRead(grayChalkEntry),
+                                this.condition().entryRead(orangeChalkEntry)
+                        ));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+//                .withCondition(BookAndConditionModel.create().withChildren(
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/gray"),
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/orange")));
 
         var pinkChalkEntry = this.add(new PinkChalkEntry(this).generate('P'));
         pinkChalkEntry.withParent(BookEntryParentModel.create(possessUnboundAfrit.getId()).withLineEnabled(false));
@@ -158,23 +195,37 @@ public class PentaclesCategory extends CategoryProvider {
                         BookEntryParentModel.create(pinkChalkEntry.getId()).withLineReversed(true),
                         BookEntryParentModel.create(greenChalkEntry.getId()).withLineReversed(true),
                         BookEntryParentModel.create(lightBlueChalkEntry.getId()))
-                .withCondition(BookAndConditionModel.create().withChildren(
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/pink"),
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/green"),
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/light_blue")));
+                .withCondition(
+                        this.condition().and(
+                                this.condition().entryRead(pinkChalkEntry),
+                                this.condition().entryRead(greenChalkEntry),
+                                this.condition().entryRead(lightBlueChalkEntry)
+                        ));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+
+//                .withCondition(BookAndConditionModel.create().withChildren(
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/pink"),
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/green"),
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/light_blue")));
 
         //Tier Afrit
         var summonAfrit = this.add(new SummonAfritEntry(this).generate('d'));
         summonAfrit.withParent(BookEntryParentModel.create(summonUnboundAfrit.getId()))
-                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/red"));
+                .withCondition(this.condition().entryRead(redChalkEntry));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+//                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/red"));
 
         var possessAfrit = this.add(new PossessAfritEntry(this).generate('i'));
         possessAfrit.withParent(BookEntryParentModel.create(possessUnboundAfrit.getId()))
-                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/red"));
+                .withCondition(this.condition().entryRead(redChalkEntry));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+//                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/red"));
 
         var craftAfrit = this.add(new CraftAfritEntry(this).generate('n'));
         craftAfrit.withParent(BookEntryParentModel.create(craftDjinni.getId()))
-                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/red"));
+                .withCondition(this.condition().entryRead(redChalkEntry));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+//                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/red"));
 
         var blackChalkEntry = this.add(new BlackChalkEntry(this).generate('K'));
         blackChalkEntry.withParent(BookEntryParentModel.create(grayChalkEntry.getId()))
@@ -183,7 +234,9 @@ public class PentaclesCategory extends CategoryProvider {
         //Tier Marid
         var summonUnboundMarid = this.add(new SummonUnboundMaridEntry(this).generate('u'));
         summonUnboundMarid.withParent(BookEntryParentModel.create(summonAfrit.getId()))
-                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/black"));
+                .withCondition(this.condition().entryRead(blackChalkEntry));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+//                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/black"));
 
         var blueChalkEntry = this.add(new BlueChalkEntry(this).generate('U'));
         blueChalkEntry.withParent(BookEntryParentModel.create(redChalkEntry.getId()))
@@ -191,21 +244,27 @@ public class PentaclesCategory extends CategoryProvider {
 
         var summonMarid = this.add(new SummonMaridEntry(this).generate('e'));
         summonMarid.withParent(BookEntryParentModel.create(summonUnboundMarid.getId()))
-                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/blue"));
+                .withCondition(this.condition().entryRead(blueChalkEntry));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+//                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/blue"));
 
         var cyanChalkEntry = this.add(new CyanChalkEntry(this).generate('C'));
         cyanChalkEntry.withParent(BookEntryParentModel.create(summonMarid.getId()).withLineEnabled(false));
 
         var possessMarid = this.add(new PossessMaridEntry(this).generate('j'));
         possessMarid.withParent(BookEntryParentModel.create(possessAfrit.getId()))
-                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/blue"));
+                .withCondition(this.condition().entryRead(blueChalkEntry));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+//                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/blue"));
 
         var brownChalkEntry = this.add(new BrownChalkEntry(this).generate('B'));
         brownChalkEntry.withParent(BookEntryParentModel.create(possessMarid.getId()).withLineEnabled(false));
 
         var craftMarid = this.add(new CraftMaridEntry(this).generate('o'));
         craftMarid.withParent(BookEntryParentModel.create(craftAfrit.getId()))
-                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/blue"));
+                .withCondition(this.condition().entryRead(blueChalkEntry));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+//                .withCondition(BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/blue"));
 
         var magentaChalkEntry = this.add(new MagentaChalkEntry(this).generate('M'));
         magentaChalkEntry.withParent(BookEntryParentModel.create(craftMarid.getId()).withLineEnabled(false));
@@ -216,9 +275,15 @@ public class PentaclesCategory extends CategoryProvider {
                         BookEntryParentModel.create(magentaChalkEntry.getId()).withLineReversed(true),
                         BookEntryParentModel.create(brownChalkEntry.getId()),
                         BookEntryParentModel.create(cyanChalkEntry.getId()).withLineReversed(true))
-                .withCondition(BookAndConditionModel.create().withChildren(
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/magenta"),
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/brown"),
-                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/cyan")));
+                .withCondition(this.condition().and(
+                            this.condition().entryRead(magentaChalkEntry),
+                            this.condition().entryRead(brownChalkEntry),
+                            this.condition().entryRead(cyanChalkEntry)
+                        ));
+        //TODO: enable advancement condition once modonomicon supports skipping them
+//                .withCondition(BookAndConditionModel.create().withChildren(
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/magenta"),
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/brown"),
+//                        BookAdvancementConditionModel.create().withAdvancementId("occultism:chalks/cyan")));
     }
 }
