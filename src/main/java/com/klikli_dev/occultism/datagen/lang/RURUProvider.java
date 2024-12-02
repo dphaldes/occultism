@@ -54,7 +54,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         super(gen, Occultism.MODID, "ru_ru");
     }
 
-    public AbstractModonomiconLanguageProvider lang(String lang) {
+    public RURUProvider lang(String lang) {
         return this;
     }
 
@@ -3313,7 +3313,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
 
 	private void addConditionMessages() {
         this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_TYPE_NOT_FULFILLED, "Выполните ритуал в измерении «%s»! Он был выполнен в %s.");
-		this.lang("ru_ru").add("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_TYPE_DESCRIPTION, "Должен выполняться в измерении «%s».");
+		this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_TYPE_DESCRIPTION, "Должен выполняться в измерении «%s».");
 		
 		this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_NOT_FULFILLED, "Выполните ритуал в измерении «%s»! Он был выполнен в %s.");
         this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_DESCRIPTION, "Должен выполняться в измерении «%s».");
