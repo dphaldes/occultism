@@ -133,6 +133,8 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
 		this.lang("ru_ru").add(OccultismItems.MINER_ANCIENT_ELDRITCH.get().getDescriptionId() + ".tooltip", "Нечто будет добывать разные рудные блоки, редкие руды и самоцветные блоки в шахтёрском измерении.");
         this.lang("ru_ru").add(OccultismItems.SOUL_GEM_ITEM.get().getDescriptionId() + ".tooltip_filled", "Содержит пойманного %s.");
         this.lang("ru_ru").add(OccultismItems.SOUL_GEM_ITEM.get().getDescriptionId() + ".tooltip_empty", "Используйте по существу для поимки.");
+        this.add(OccultismItems.TRINITY_GEM_ITEM.get().getDescriptionId() + ".tooltip_filled", "Содержит пойманного %s.");
+        this.add(OccultismItems.TRINITY_GEM_ITEM.get().getDescriptionId() + ".tooltip_empty", "Используйте по существу для поимки.");
         this.lang("ru_ru").add(OccultismItems.SATCHEL.get().getDescriptionId() + ".tooltip", "%s связан с этой сумкой.");
 		this.lang("ru_ru").add(OccultismItems.RITUAL_SATCHEL_T1.get().getDescriptionId() + ".tooltip", "%s связан с этой сумкой.");
         this.lang("ru_ru").add(OccultismItems.RITUAL_SATCHEL_T2.get().getDescriptionId() + ".tooltip", "%s связан с этой сумкой.");
@@ -209,6 +211,8 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addItem(OccultismItems.CHALK_BLUE, "Синий мел");
         this.addItem(OccultismItems.CHALK_MAGENTA, "Фиолетовый мел");
         this.addItem(OccultismItems.CHALK_PINK, "Розовый мел");
+		this.addItem(OccultismItems.CHALK_RAINBOW, "Радужный мел");
+        this.addItem(OccultismItems.CHALK_VOID, "Пустотный мел");
         this.addItem(OccultismItems.CHALK_YELLOW_IMPURE, "Осквернённый жёлтый мел");
         this.addItem(OccultismItems.CHALK_PURPLE_IMPURE, "Осквернённый пурпурный мел");
         this.addItem(OccultismItems.CHALK_RED_IMPURE, "Осквернённый красный мел");
@@ -296,6 +300,9 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addItem(OccultismItems.MINING_DIMENSION_CORE_PIECE, "Часть ядра шахтёрского измерения");
         this.addItem(OccultismItems.SOUL_GEM_ITEM, "Камень душ");
         this.lang("ru_ru").add(OccultismItems.SOUL_GEM_ITEM.get().getDescriptionId() + "_empty", "Пустой камень душ");
+		this.addItem(OccultismItems.TRINITY_GEM_ITEM, "Камень Троицы");
+        this.add(OccultismItems.TRINITY_GEM_ITEM.get().getDescriptionId() + "_empty", "Пустой камень Троицы");
+		this.add(OccultismItems.TRINITY_GEM_ITEM.get().getDescriptionId() + ".message.entity_type_denied", "Камни Троицы не могут заточить такой тип существа.");
         this.addItem(OccultismItems.SOUL_SHARD_ITEM, "Осколок души");
         this.addItem(OccultismItems.SATCHEL, "Необычайно большая сумка");
         this.addItem(OccultismItems.FAMILIAR_RING, "Кольцо для фамильяра");
@@ -419,6 +426,8 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addBlock(OccultismBlocks.CHALK_GLYPH_BLUE, "Синий меловой глиф");
         this.addBlock(OccultismBlocks.CHALK_GLYPH_MAGENTA, "Фиолетовый меловой глиф");
         this.addBlock(OccultismBlocks.CHALK_GLYPH_PINK, "Розовый меловой глиф");
+        this.addBlock(OccultismBlocks.CHALK_GLYPH_RAINBOW, "Радужный меловой глиф");
+        this.addBlock(OccultismBlocks.CHALK_GLYPH_VOID, "Пустотный меловой глиф");
         this.addBlock(OccultismBlocks.STORAGE_CONTROLLER, "Актуатор пространственного хранилища");
 		this.addBlock(OccultismBlocks.STORAGE_CONTROLLER_STABILIZED, "Актуатор стабилизатора пространственного хранилища");
         this.addBlock(OccultismBlocks.STORAGE_CONTROLLER_BASE, "Основа актуатора хранилища");
@@ -448,6 +457,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addBlock(OccultismBlocks.OTHERPLANKS_SIGN, "Табличка из потусторонних досок");
         this.addBlock(OccultismBlocks.OTHERPLANKS_HANGING_SIGN, "Навесная табличка из потусторонних досок");
 
+		this.addBlock(OccultismBlocks.TALLOW_BLOCK, "Блок жира");
         this.addBlock(OccultismBlocks.SPIRIT_FIRE, "Духовный огонь");
         this.addBlock(OccultismBlocks.SPIRIT_ATTUNED_CRYSTAL, "Кристалл, настроенный на духа");
 		this.addBlock(OccultismBlocks.LARGE_CANDLE, "Большая свеча");
@@ -561,7 +571,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add(TranslationKeys.HUD_NO_PENTACLE_FOUND, "Допустимый пентакль не найден.");
         this.lang("ru_ru").add(TranslationKeys.HUD_PENTACLE_FOUND, "Текущий пентакль: %s");
 
-        this.lang("ru_ru").add(TranslationKeys.MESSAGE_CONTAINER_ALREADY_OPEN, "Этот контейнер уже открыт другим игроком, ждите пока он его не закроет.");
+        this.lang("ru_ru").add(TranslationKeys.MESSAGE_CONTAINER_ALREADY_OPEN, "Этот контейнер уже открыт другим игроком, ждите пока он его закроет.");
 
         //Должности
         this.lang("ru_ru").add("job.occultism.lumberjack", "Дровосек");
@@ -612,6 +622,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         //Жертвы для ритуала
         this.lang("ru_ru").add("ritual.occultism.sacrifice.cows", "Корова");
         this.lang("ru_ru").add("ritual.occultism.sacrifice.bats", "Летучая мышь");
+		this.lang("ru_ru").add("ritual.occultism.sacrifice.bees", "Пчела");
         this.lang("ru_ru").add("ritual.occultism.sacrifice.zombies", "Зомби");
         this.lang("ru_ru").add("ritual.occultism.sacrifice.parrots", "Попугай");
         this.lang("ru_ru").add("ritual.occultism.sacrifice.chicken", "Курица");
@@ -621,6 +632,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("ritual.occultism.sacrifice.horses", "Лошадь");
         this.lang("ru_ru").add("ritual.occultism.sacrifice.sheep", "Овца");
         this.lang("ru_ru").add("ritual.occultism.sacrifice.llamas", "Лама");
+		this.lang("ru_ru").add("ritual.occultism.sacrifice.goats", "Коза");
         this.lang("ru_ru").add("ritual.occultism.sacrifice.snow_golem", "Снежный голем");
         this.lang("ru_ru").add("ritual.occultism.sacrifice.iron_golem", "Железный голем");
         this.lang("ru_ru").add("ritual.occultism.sacrifice.spiders", "Паук");
@@ -1206,9 +1218,34 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_STABILIZED_STORAGE, "finished", "Успешно сковал актуатор стабилизатора пространственного хранилища.");
         this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_STABILIZED_STORAGE, "interrupted", "Ковка актуатор стабилизатора пространственного хранилища прервана.");
 
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_CHALK_RAINBOW, "conditions", "Для выполнения этого ритуала не удовлетворены все необходимые требования.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_CHALK_RAINBOW, "started", "Началась ковка радужного мела.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_CHALK_RAINBOW, "finished", "Успешно сковал радужный мел.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_CHALK_RAINBOW, "interrupted", "Ковка радужного мела прервана.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_CHALK_VOID, "conditions", "Для выполнения этого ритуала не удовлетворены все необходимые требования.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_CHALK_VOID, "started", "Началась ковка пустотного мела.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_CHALK_VOID, "finished", "Успешно сковал пустотный мел.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_CHALK_VOID, "interrupted", "Ковка пустотного мела прервана.");
+
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_TRINITY_GEM, "conditions", "Для выполнения этого ритуала не удовлетворены все необходимые требования.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_TRINITY_GEM, "started", "Началась ковка камня Троицы.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_TRINITY_GEM, "finished", "Успешно сковал камень Троицы.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_TRINITY_GEM, "interrupted", "Ковка камня Троицы прервана.");
+
         this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_REINFORCED_DEEPSLATE, "started", "Началась ковка укреплённого глубинного сланца.");
         this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_REINFORCED_DEEPSLATE, "finished", "Успешно сковал укреплённый глубинный сланец.");
         this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_REINFORCED_DEEPSLATE, "interrupted", "Ковка укреплённого глубинного сланца прервана.");
+
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_BEE_NEST, "conditions", "Для выполнения этого ритуала не удовлетворены все необходимые требования.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_BEE_NEST, "started", "Началась ковка пчелиного гнезда.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_BEE_NEST, "finished", "Успешно сковал пчелиное гнездо.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_BEE_NEST, "interrupted", "Ковка пчелиного гнезда прервана.");
+
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_BELL, "conditions", "Для выполнения этого ритуала не удовлетворены все необходимые требования.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_BELL, "started", "Началась ковка колокольчика.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_BELL, "finished", "Успешно сковал колокольчик.");
+        this.addRitualMessage(OccultismItems.RITUAL_DUMMY_FORGE_BELL, "interrupted", "Ковка колокольчика прервана.");
+
     }
 
     public void addRitualMessage(DeferredHolder<RitualFactory, RitualFactory> ritual, String key, String message) {
@@ -2002,7 +2039,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         helper.page("spotlight");
         this.lang("ru_ru").add(helper.pageText(),
                 """
-                        В отличие от других ритуалов, создание [](item://minecraft:wild_armor_trim_smithing_template) — услуга, оказываемая Дикими духами и не связывает какого-либо духа с последним объектом. Вы жертвуете предметами, а Дикие духи используют свои силы, чтобы сковать предмет для Вас.
+                        В отличие от других ритуалов, создание [](item://minecraft:wild_armor_trim_smithing_template) представляет собой услугу, оказываемую Дикими духами и не связывает какого-либо духа с последним объектом. Вы жертвуете предметами, а Дикие духи используют свои силы, чтобы сковать предмет для Вас.
                         """.formatted(COLOR_PURPLE));
 
         helper.page("ritual");
@@ -2014,7 +2051,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         helper.page("spotlight");
         this.add(helper.pageText(),
                 """
-                        В оличие от других ритуалов, создание [](item://minecraft:budding_amethyst) — услуга, оказываемая Дикими духами и не связывает какого-либо духа с последним объектом. Вы жертвуете предметами, а Дикие духи используют свои силы, чтобы сковать предмет для Вас.
+                        В оличие от других ритуалов, создание [](item://minecraft:budding_amethyst) представляет собой услугу, оказываемую Дикими духами и не связывает какого-либо духа с последним объектом. Вы жертвуете предметами, а Дикие духи используют свои силы, чтобы сковать предмет для Вас.
                         """.formatted(COLOR_PURPLE));
 
         helper.page("ritual");
@@ -2026,7 +2063,9 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         helper.page("spotlight");
         this.add(helper.pageText(),
                 """
-                        В отличие от других ритуалов, создание [](item://minecraft:reinforced_deepslate) — услуга, оказываемая Дикими духами и не связывает какого-либо духа с последним объектом. Вы жертвуете предметами, а Дикие духи используют свои силы, чтобы сковать предмет для Вас.
+                        В отличие от других ритуалов, создание [](item://minecraft:reinforced_deepslate) представляет собой услугу, оказываемую Дикими духами и не связывает какого-либо духа с последним объектом. Вы жертвуете предметами, а Дикие духи используют свои силы, чтобы сковать предмет для Вас.\\
+						\\
+						Эти блоки можно добыть при помощи наполненной или кирки из айзния.
                         """.formatted(COLOR_PURPLE));
 
         helper.page("ritual");
@@ -2757,6 +2796,10 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.advancementDescr("chalks.magenta", "Мощь дракона");
         this.advancementTitle("chalks.pink", "Применение розового мела");
         this.advancementDescr("chalks.pink", "Сила дикой природы.");
+        this.advancementTitle("chalks.rainbow", "Применение радужного мела");
+        this.advancementDescr("chalks.rainbow", "Зачем столько мелков?");
+        this.advancementTitle("chalks.void", "Применение пустотного мела");
+        this.advancementDescr("chalks.void", "...");
     }
 
     private void addKeybinds() {
@@ -3154,6 +3197,12 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.add(OccultismItems.RITUAL_DUMMY_FORGE_REINFORCED_DEEPSLATE.get(), "Ритуал: Ковка укреплённого глубинного сланца");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_FORGE_REINFORCED_DEEPSLATE.get(), "Дикие духи скуют укреплённый глубинный сланец.");
 
+        this.add(OccultismItems.RITUAL_DUMMY_FORGE_BEE_NEST.get(), "Ритуал: Ковка пчелиного гнезда");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_FORGE_BEE_NEST.get(), "Дикие духи скуют пчелиное гнездо, более естетичнее пчелиного улья.");
+
+        this.add(OccultismItems.RITUAL_DUMMY_FORGE_BELL.get(), "Ритуал: Ковка колокольчика");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_FORGE_BELL.get(), "Дикие духи скуют колокольчик.");
+
         this.add(OccultismItems.RITUAL_DUMMY_FORGE_MINER_ANCIENT_ELDRITCH.get(), "Ритуал: Вызов сверхъестественного древнего рудокопа");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_FORGE_MINER_ANCIENT_ELDRITCH.get(), "Вызывайте сверхъестественного древнего рудокопа в магическую лампу.");
 
@@ -3162,6 +3211,13 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
 
         this.add(OccultismItems.RITUAL_DUMMY_FORGE_STABILIZED_STORAGE.get(), "Ритуал: Ковка актуатора стабилизатора пространственного хранилища");
         this.addTooltip(OccultismItems.RITUAL_DUMMY_FORGE_STABILIZED_STORAGE.get(), "Сверхъестественные духи скуют Актуатор стабилизатора пространственного хранилища. Действует как актуатор с максимальным количеством стабилизаторов. Занимает только один блок.");
+		
+        this.add(OccultismItems.RITUAL_DUMMY_FORGE_CHALK_RAINBOW.get(), "Ритуал: Ковка радужного мела");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_FORGE_CHALK_RAINBOW.get(), "Сверхъестественные духи скуют радужный мел, используемый вместо любого цветного мела.");
+        this.add(OccultismItems.RITUAL_DUMMY_FORGE_CHALK_VOID.get(), "Ритуал: Ковка пустотного мела");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_FORGE_CHALK_VOID.get(), "Сверхъестественные духи скуют радужный мел, используемый вместо любого мела.");
+		this.add(OccultismItems.RITUAL_DUMMY_FORGE_TRINITY_GEM.get(), "Ритуал: Ковка камня Троицы");
+        this.addTooltip(OccultismItems.RITUAL_DUMMY_FORGE_TRINITY_GEM.get(), "Сверхъестественные духи скуют камень Троицы, усовершенствуя Камень душ.");
     }
 
     public void addTooltip(ItemLike key, String value) {
@@ -3313,7 +3369,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
 
 	private void addConditionMessages() {
         this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_TYPE_NOT_FULFILLED, "Выполните ритуал в измерении «%s»! Он был выполнен в %s.");
-		this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_TYPE_DESCRIPTION, "Должен выполняться в измерении «%s».");
+		this.lang("ru_ru").add("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_TYPE_DESCRIPTION, "Должен выполняться в измерении «%s».");
 		
 		this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_NOT_FULFILLED, "Выполните ритуал в измерении «%s»! Он был выполнен в %s.");
         this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_DESCRIPTION, "Должен выполняться в измерении «%s».");
@@ -3389,6 +3445,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.addConfig("stabilizerTier4AdditionalMaxTotalItemCount", "Макс. доп. общего количества предметов в стабилизаторе 4-го уровня");
         this.addConfig("controllerMaxItemTypes", "Макс. типов предметов в регуляторе");
         this.addConfig("controllerMaxTotalItemCount", "Макс. общее количество предмета в регуляторе");
+		this.addConfig("stabilizedControllerStabilizers", "Stabilized Controller Built-in Stabilizers");
         this.addConfig("unlinkWormholeOnBreak", "Отвязывать Червоточину при разрушении");
 
         this.addConfig("spirit_job", "Настройки занятия духа");
