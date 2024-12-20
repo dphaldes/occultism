@@ -2920,7 +2920,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
 		this.addPentacle("craft_afrit", "Пожизненное заточение Севиры");
         this.addPentacle("craft_marid", "Перевёрнутая башня Юфиксеса");
 		this.addPentacle("resurrect_spirit", "Простой круг Саджи");
-        this.addPentacle("contact_wild_spirit", "Вызов дикого Осорина");
+        this.addPentacle("contact_wild_spirit", "Вызов несвязанного Осорина");
         this.addPentacle("contact_eldritch_spirit", "Связь Роназа");
     }
 
