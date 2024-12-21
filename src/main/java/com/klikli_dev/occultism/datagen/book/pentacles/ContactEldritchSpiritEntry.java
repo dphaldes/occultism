@@ -29,7 +29,8 @@ public class ContactEldritchSpiritEntry extends EntryProvider {
         this.pageText("""
                 **Purpose:** Contact {0}\\
                 \\
-                This is a very strange pentacle that you dont understand for now.
+                This strange pentacle uses forbidden knowledge, bringing together paraphernalia from ancient traditions.\\
+                The level of power that can be achieved almost cheats the common reality.
                 """,
                 this.color("Eldritch", ChatFormatting.DARK_PURPLE)
         );
@@ -43,7 +44,10 @@ public class ContactEldritchSpiritEntry extends EntryProvider {
         this.pageTitle("Uses");
         this.pageText("""
                 - [Eldritch Ancient Miner](entry://crafting_rituals/craft_ancient_miner)
-                - [Reinforced Deepslate](entry://crafting_rituals/craft_reinforced_deepslate)
+                - [Stabilized Storage](entry://crafting_rituals/craft_stabilized_storage)
+                - [Eldritch Chalice](entry://crafting_rituals/craft_eldritch_chalice)
+                - [Mastery Chalks](entry://crafting_rituals/craft_master_chalks)
+                - [Trinity Gem](entry://crafting_rituals/trinity_gem)
                 """
         );
 

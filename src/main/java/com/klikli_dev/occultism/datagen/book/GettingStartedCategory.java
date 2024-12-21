@@ -406,6 +406,15 @@ public class GettingStartedCategory extends CategoryProvider {
                 .withRecipeId1(this.modLoc("spirit_fire/spirit_attuned_gem"));
         //no text
 
+        this.context().page("otherflower_recipe");
+        var otherflowerRecipe = BookSpiritFireRecipePageModel.create()
+                .withRecipeId1(this.modLoc("spirit_fire/otherflower"))
+                .withText(this.context().pageText());
+        this.lang().add(this.context().pageText(),
+                """
+                        An easier way to clone any dye, mix this flower and the target color. You can also make ~~suspicious~~ delicious stews.
+                              """);
+
 
         return BookEntryModel.create(this.modLoc(this.context().categoryId() + "/" + this.context().entryId()), this.context().entryName())
                 .withDescription(this.context().entryDescription())
@@ -418,7 +427,8 @@ public class GettingStartedCategory extends CategoryProvider {
                         otherstoneRecipe,
                         otherworldSaplingNaturalRecipe,
                         otherworldAshesRecipe,
-                        gemRecipe
+                        gemRecipe,
+                        otherflowerRecipe
                 );
     }
 
@@ -945,8 +955,12 @@ public class GettingStartedCategory extends CategoryProvider {
 
         this.context().page("sacrificial_bowl_recipe");
         var sacrificialBowlRecipe = BookCraftingRecipePageModel.create()
-                .withRecipeId1(this.modLoc("crafting/sacrificial_bowl"));
-        //no text
+                .withRecipeId1(this.modLoc("crafting/sacrificial_bowl"))
+                .withText(this.context().pageText());
+        this.lang().add(this.context().pageText(),
+                """
+                        You can mix a sacrificial bowl with a copper or silver ingot to create variations with the same functionality.
+                        """);
 
 
         this.context().page("golden_sacrificial_bowl");
@@ -1668,6 +1682,16 @@ public class GettingStartedCategory extends CategoryProvider {
                         Iesnium can be used to craft an improved pickaxe, spirit lamps, and other powerful items. Follow the progress in this book to learn more about it.
                              """.formatted(COLOR_PURPLE));
 
+        this.context().page("otherglass");
+        var otherglass = BookCraftingRecipePageModel.create()
+                .withRecipeId1(this.modLoc("crafting/otherglass"))
+                .withText(this.context().pageText());
+        this.lang().add(this.context().pageText(),
+                """
+                One of the uses of iesnium is the creation of Otherglass, this block hides from common eyes and is revealed only to those who see the other world. To collect this you need an infused or iesnium pickaxe.
+                 """.formatted(COLOR_PURPLE));
+
+
         return BookEntryModel.create(this.modLoc(this.context().categoryId() + "/" + this.context().entryId()), this.context().entryName())
                 .withDescription(this.context().entryDescription())
                 .withIcon(OccultismBlocks.IESNIUM_ORE.get())
@@ -1677,7 +1701,8 @@ public class GettingStartedCategory extends CategoryProvider {
                         where,
                         how,
                         processing,
-                        uses
+                        uses,
+                        otherglass
                 );
     }
 

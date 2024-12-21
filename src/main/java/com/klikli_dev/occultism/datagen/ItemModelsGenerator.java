@@ -160,6 +160,8 @@ public class ItemModelsGenerator extends ItemModelProvider {
                 this.name(OccultismItems.CHALK_RED_IMPURE.get()),
                 this.name(OccultismItems.CHALK_WHITE.get()),
                 this.name(OccultismItems.CHALK_WHITE_IMPURE.get()),
+                this.name(OccultismItems.CHALK_RAINBOW.get()),
+                this.name(OccultismItems.CHALK_VOID.get()),
                 this.name(OccultismItems.COPPER_DUST.get()),
                 this.name(OccultismItems.CRUELTY_ESSENCE.get()),
                 this.name(OccultismItems.CRUSHED_BLACKSTONE.get()),
@@ -243,10 +245,13 @@ public class ItemModelsGenerator extends ItemModelProvider {
         String[] items = {
                 this.name(OccultismBlocks.CHISELED_OTHERSTONE_BRICKS.asItem()),
                 this.name(OccultismBlocks.CRACKED_OTHERSTONE_BRICKS.asItem()),
+                this.name(OccultismBlocks.COPPER_SACRIFICIAL_BOWL.asItem()),
                 this.name(OccultismBlocks.DIMENSIONAL_MINESHAFT.asItem()),
+                this.name(OccultismBlocks.ELDRITCH_CHALICE.asItem()),
                 this.name(OccultismBlocks.GOLDEN_SACRIFICIAL_BOWL.asItem()),
                 this.name(OccultismBlocks.IESNIUM_BLOCK.asItem()),
                 this.name(OccultismBlocks.IESNIUM_ORE.asItem()),
+                this.name(OccultismBlocks.IESNIUM_SACRIFICIAL_BOWL.asItem()),
                 this.name(OccultismBlocks.LARGE_CANDLE.asItem()),
                 this.name(OccultismBlocks.LARGE_CANDLE_WHITE.asItem()),
                 this.name(OccultismBlocks.LARGE_CANDLE_LIGHT_GRAY.asItem()),
@@ -267,6 +272,7 @@ public class ItemModelsGenerator extends ItemModelProvider {
                 this.name(OccultismBlocks.OTHERCOBBLESTONE.asItem()),
                 this.name(OccultismBlocks.OTHERCOBBLESTONE_SLAB.asItem()),
                 this.name(OccultismBlocks.OTHERCOBBLESTONE_STAIRS.asItem()),
+                this.name(OccultismBlocks.OTHERGLASS_NATURAL.asItem()),
                 this.name(OccultismBlocks.OTHERPLANKS.asItem()),
                 this.name(OccultismBlocks.OTHERPLANKS_FENCE_GATE.asItem()),
                 this.name(OccultismBlocks.OTHERPLANKS_PRESSURE_PLATE.asItem()),
@@ -277,6 +283,7 @@ public class ItemModelsGenerator extends ItemModelProvider {
                 this.name(OccultismBlocks.OTHERSTONE_BRICKS_SLAB.asItem()),
                 this.name(OccultismBlocks.OTHERSTONE_BRICKS_STAIRS.asItem()),
                 this.name(OccultismBlocks.OTHERSTONE_PEDESTAL.asItem()),
+                this.name(OccultismBlocks.OTHERSTONE_PEDESTAL_SILVER.asItem()),
                 this.name(OccultismBlocks.OTHERSTONE_PRESSURE_PLATE.asItem()),
                 this.name(OccultismBlocks.OTHERSTONE_SLAB.asItem()),
                 this.name(OccultismBlocks.OTHERSTONE_STAIRS.asItem()),
@@ -292,13 +299,16 @@ public class ItemModelsGenerator extends ItemModelProvider {
                 this.name(OccultismBlocks.SILVER_BLOCK.asItem()),
                 this.name(OccultismBlocks.SILVER_ORE.asItem()),
                 this.name(OccultismBlocks.SILVER_ORE_DEEPSLATE.asItem()),
+                this.name(OccultismBlocks.SILVER_SACRIFICIAL_BOWL.asItem()),
                 this.name(OccultismBlocks.SPIRIT_ATTUNED_CRYSTAL.asItem()),
+                this.name(OccultismBlocks.STORAGE_STABILIZER_TIER0.asItem()),
                 this.name(OccultismBlocks.STORAGE_STABILIZER_TIER1.asItem()),
                 this.name(OccultismBlocks.STORAGE_STABILIZER_TIER2.asItem()),
                 this.name(OccultismBlocks.STORAGE_STABILIZER_TIER3.asItem()),
                 this.name(OccultismBlocks.STORAGE_STABILIZER_TIER4.asItem()),
                 this.name(OccultismBlocks.STRIPPED_OTHERWORLD_LOG.asItem()),
-                this.name(OccultismBlocks.STRIPPED_OTHERWORLD_WOOD.asItem())
+                this.name(OccultismBlocks.STRIPPED_OTHERWORLD_WOOD.asItem()),
+                this.name(OccultismBlocks.TALLOW_BLOCK.asItem())
         };
         for (String item : items){
             this.getBuilder(item)

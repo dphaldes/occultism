@@ -108,7 +108,13 @@ public class OccultismBlockLoot extends BlockLootSubProvider {
                 OccultismDataComponents.CRAFTING_MATRIX.get(),
                 OccultismDataComponents.ORDER_STACK.get()
         );
-
+        this.dropSelfWithComponents(OccultismBlocks.STORAGE_CONTROLLER_STABILIZED.get(),
+                OccultismDataComponents.STORAGE_CONTROLLER_CONTENTS.get(),
+                OccultismDataComponents.SORT_DIRECTION.get(),
+                OccultismDataComponents.SORT_TYPE.get(),
+                OccultismDataComponents.CRAFTING_MATRIX.get(),
+                OccultismDataComponents.ORDER_STACK.get()
+        );
 
         this.dropSelfWithComponents(OccultismBlocks.STABLE_WORMHOLE.get(),
                 OccultismDataComponents.LINKED_STORAGE_CONTROLLER.get(),
@@ -128,6 +134,7 @@ public class OccultismBlockLoot extends BlockLootSubProvider {
         this.add(OccultismBlocks.OTHERPLANKS_WALL_SIGN.get(), item -> createSingleItemTable(OccultismItems.OTHERPLANKS_SIGN));
         this.add(OccultismBlocks.OTHERPLANKS_HANGING_SIGN.get(), item -> createSingleItemTable(OccultismItems.OTHERPLANKS_HANGING_SIGN));
         this.add(OccultismBlocks.OTHERPLANKS_WALL_HANGING_SIGN.get(), item -> createSingleItemTable(OccultismItems.OTHERPLANKS_HANGING_SIGN));
+        this.add(OccultismBlocks.POTTED_OTHERFLOWER.get(), createPotFlowerItemTable(OccultismBlocks.OTHERFLOWER.get()));
     }
 
     protected void registerOtherworldBlockTable(Block block) {

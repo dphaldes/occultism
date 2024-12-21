@@ -43,9 +43,32 @@ public class OccultismTags {
 
         public static final TagKey<Block> NETHERRACK = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "netherrack"));
         public static final TagKey<Block> CANDLES = makeBlockTag(ResourceLocation.fromNamespaceAndPath("minecraft", "candles"));
+        public static final TagKey<Block> CENTER_SACRIFICIAL_BOWL = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "center_sacrificial_bowl"));
         public static final TagKey<Block> FOUNDATION_GLYPHS_ANY = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "foundation_glyphs_any"));
         public static final TagKey<Block> FOUNDATION_GLYPHS_NO_WHITE = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "foundation_glyphs_no_white"));
         public static final TagKey<Block> FOUNDATION_GLYPHS_DARK = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "foundation_glyphs_dark"));
+        public static final TagKey<Block> GLYPHS_BLACK = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "glyphs_black"));
+        public static final TagKey<Block> GLYPHS_RED = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "glyphs_red"));
+
+        public static final TagKey<Block> GLYPHS_BROWN = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "glyphs_brown"));
+
+        public static final TagKey<Block> GLYPHS_ORANGE = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "glyphs_orange"));
+
+        public static final TagKey<Block> GLYPHS_YELLOW = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "glyphs_yellow"));
+
+        public static final TagKey<Block> GLYPHS_LIME = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "glyphs_lime"));
+
+        public static final TagKey<Block> GLYPHS_GREEN = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "glyphs_green"));
+
+        public static final TagKey<Block> GLYPHS_CYAN = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "glyphs_cyan"));
+
+        public static final TagKey<Block> GLYPHS_BLUE = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "glyphs_blue"));
+
+        public static final TagKey<Block> GLYPHS_LIGHT_BLUE = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "glyphs_light_blue"));
+
+        public static final TagKey<Block> GLYPHS_PINK = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "glyphs_pink"));
+        public static final TagKey<Block> GLYPHS_MAGENTA = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "glyphs_magenta"));
+        public static final TagKey<Block> GLYPHS_PURPLE = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "glyphs_purple"));
         public static final TagKey<Block> CHALK_GLYPHS = makeBlockTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "chalk_glyphs"));
         public static final TagKey<Block> IESNIUM_ORE = makeBlockTag(ResourceLocation.fromNamespaceAndPath("c", "ores/iesnium"));
         public static final TagKey<Block> SILVER_ORE = makeBlockTag(ResourceLocation.fromNamespaceAndPath("c", "ores/silver"));
@@ -169,6 +192,7 @@ public class OccultismTags {
         public static final TagKey<EntityType<?>> VILLAGERS = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath("c", "villagers"));
         public static final TagKey<EntityType<?>> ZOMBIES = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath("c", "zombies"));
         public static final TagKey<EntityType<?>> BATS = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath("c", "bats"));
+        public static final TagKey<EntityType<?>> BEES = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath("c", "bees"));
         public static final TagKey<EntityType<?>> SNOW_GOLEM=makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath("c", "golems/snow"));
         public static final TagKey<EntityType<?>> IRON_GOLEM=makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath("c", "golems/iron"));
         public static final TagKey<EntityType<?>> DONKEYS = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath("c", "donkeys"));
@@ -189,10 +213,12 @@ public class OccultismTags {
         public static final TagKey<EntityType<?>> OCELOT = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath("c", "ocelots"));
         public static final TagKey<EntityType<?>> CATS = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath("c", "cats"));
         public static final TagKey<EntityType<?>> WARDEN = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath("c", "wardens"));
+        public static final TagKey<EntityType<?>> RAVAGER = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath("c", "ravagers"));
         public static final TagKey<EntityType<?>> VEX = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath("c", "vex"));
         public static final TagKey<EntityType<?>> ALLAY = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath("c", "allay"));
         //Entity Tags
         public static final TagKey<EntityType<?>> SOUL_GEM_DENY_LIST = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "soul_gem_deny_list"));
+        public static final TagKey<EntityType<?>> TRINITY_GEM_DENY_LIST = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "trinity_gem_deny_list"));
         public static final TagKey<EntityType<?>> AFRIT_ALLIES = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "afrit_allies"));
         public static final TagKey<EntityType<?>> WILD_HUNT = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "wild_hunt"));
         public static final TagKey<EntityType<?>> WILD_TRIAL = makeEntityTypeTag(ResourceLocation.fromNamespaceAndPath(Occultism.MODID, "wild_trial"));

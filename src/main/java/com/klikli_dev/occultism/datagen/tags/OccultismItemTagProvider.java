@@ -154,6 +154,8 @@ public class OccultismItemTagProvider extends ItemTagsProvider {
                 .add(OccultismItems.CHALK_BLUE.get())
                 .add(OccultismItems.CHALK_MAGENTA.get())
                 .add(OccultismItems.CHALK_PINK.get())
+                .add(OccultismItems.CHALK_RAINBOW.get())
+                .add(OccultismItems.CHALK_VOID.get())
                 .replace(false);
 
         this.copy(OccultismTags.Blocks.OTHERWORLD_SAPLINGS, OccultismTags.Items.OTHERWORLD_SAPLINGS);
@@ -248,6 +250,7 @@ public class OccultismItemTagProvider extends ItemTagsProvider {
                 .add(OccultismItems.BOOK_OF_CALLING_FOLIOT_LUMBERJACK.get())
                 .add(OccultismItems.BOOK_OF_CALLING_FOLIOT_TRANSPORT_ITEMS.get());
 
+        this.tag(ItemTags.SMALL_FLOWERS).add(OccultismBlocks.OTHERFLOWER.asItem()).add(OccultismBlocks.OTHERFLOWER_NATURAL.asItem()).replace(false);
     }
 
     private void addCommonTags(HolderLookup.Provider provider) {
