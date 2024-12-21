@@ -692,7 +692,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
         this.lang("ru_ru").add("gui.occultism.spirit.transporter.filter_mode", "Режим фильтра");
         this.lang("ru_ru").add("gui.occultism.spirit.transporter.filter_mode.blacklist", "Чёрный список");
         this.lang("ru_ru").add("gui.occultism.spirit.transporter.filter_mode.whitelist", "Белый список");
-        this.lang("ru_ru").add("gui.occultism.spirit.transporter.tag_filter": "Введите теги для фильтрации по символам разделения \";\".\nНапр.: \"forge:ores;*брёвна*\".\nИспользуйте \"*\" для соответствия любого символа, напр.: \"*руда*\" для соответствия тегов руд из любого мода. Для фильтрации предметов, префикс с идентификатором предмета \"item:\", напр.: \"item:minecraft:chest\".");
+        this.lang("ru_ru").add("gui.occultism.spirit.transporter.tag_filter", "Введите теги для фильтрации по символам разделения \";\".\nНапр.: \"forge:ores;*брёвна*\".\nИспользуйте \"*\" для соответствия любого символа, напр.: \"*руда*\" для соответствия тегов руд из любого мода. Для фильтрации предметов, префикс с идентификатором предмета \"item:\", напр.: \"item:minecraft:chest\".");
 
         // Storage Controller GUI
         this.lang("ru_ru").add("gui.occultism.storage_controller.space_info_label", "%d/%d");
@@ -3369,7 +3369,7 @@ public class RURUProvider extends AbstractModonomiconLanguageProvider {
 
 	private void addConditionMessages() {
         this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_TYPE_NOT_FULFILLED, "Выполните ритуал в измерении «%s»! Он был выполнен в %s.");
-		this.lang("ru_ru").add("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_TYPE_DESCRIPTION, "Должен выполняться в измерении «%s».");
+		this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_TYPE_DESCRIPTION, "Должен выполняться в измерении «%s».");
 		
 		this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_NOT_FULFILLED, "Выполните ритуал в измерении «%s»! Он был выполнен в %s.");
         this.lang("ru_ru").add(TranslationKeys.Condition.Ritual.IS_IN_DIMENSION_DESCRIPTION, "Должен выполняться в измерении «%s».");
