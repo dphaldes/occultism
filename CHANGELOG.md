@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [release/v1.21.1-1.170.0] - 2024-12-21
+### :sparkles: New Features
+- [`ae186be`](https://github.com/klikli-dev/occultism/commit/ae186bed7d93179ebc2ac63bdbbe4d66ac770193) - Speed Up our rituals, iesnium and eldritch upgrades and otherthings ([#1257](https://github.com/klikli-dev/occultism/pull/1257)) - thanks @Eqis-Edu *(commit by [@Eqis-Edu](https://github.com/Eqis-Edu))*
+- [`a9ecf49`](https://github.com/klikli-dev/occultism/commit/a9ecf497c494f381a19ddfb1005102b9c51414f8) - Update a Russian language ([#1267](https://github.com/klikli-dev/occultism/pull/1267)) - thanks @Heimdallr-1 *(commit by [@Heimdallr-1](https://github.com/Heimdallr-1))*
+
+### :bug: Bug Fixes
+- [`6cbc62b`](https://github.com/klikli-dev/occultism/commit/6cbc62bb8acc879878a1a133348951433ec94c01) - update weather ritual to match natural rain clearing behavior ([#1265](https://github.com/klikli-dev/occultism/pull/1265)) - thanks @xZa-k *(commit by [@xZa-k](https://github.com/xZa-k))*
+- [`95bdf0a`](https://github.com/klikli-dev/occultism/commit/95bdf0a1fd59ec6014da1f060da886dd718c1d9f) - minor syntax errors in ruruprovider *(commit by [@klikli-dev](https://github.com/klikli-dev))*
+
+### :wrench: Chores
+- [`ffb23b3`](https://github.com/klikli-dev/occultism/commit/ffb23b3e571b0234a2a48b29ef39f7460ed4155f) - update deprecated call *(commit by [@klikli-dev](https://github.com/klikli-dev))*
+
+
 ## [release/v1.21.1-1.169.0] - 2024-12-02
 ### :sparkles: New Features
 - [`de5b0f9`](https://github.com/klikli-dev/occultism/commit/de5b0f9ab6450029ee686afb84fc8913ad8f0e0e) - Updating a Russian language *(PR [#1245](https://github.com/klikli-dev/occultism/pull/1245) by [@Heimdallr-1](https://github.com/Heimdallr-1))*
@@ -1875,3 +1888,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [release/v1.21.1-1.167.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.166.1...release/v1.21.1-1.167.0
 [release/v1.21.1-1.168.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.167.0...release/v1.21.1-1.168.0
 [release/v1.21.1-1.169.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.168.0...release/v1.21.1-1.169.0
+[release/v1.21.1-1.170.0]: https://github.com/klikli-dev/occultism/compare/release/v1.21.1-1.169.0...release/v1.21.1-1.170.0
