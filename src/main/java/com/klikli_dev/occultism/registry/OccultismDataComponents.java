@@ -1,6 +1,5 @@
 package com.klikli_dev.occultism.registry;
 
-import com.klikli_dev.modonomicon.util.Codecs;
 import com.klikli_dev.occultism.Occultism;
 import com.klikli_dev.occultism.api.common.data.*;
 import com.klikli_dev.occultism.util.OccultismExtraCodecs;
@@ -22,7 +21,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.UUID;
 
 public class OccultismDataComponents {
-    public static final DeferredRegister.DataComponents DATA_COMPONENTS = DeferredRegister.createDataComponents(Occultism.MODID);
+    public static final DeferredRegister.DataComponents DATA_COMPONENTS = DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, Occultism.MODID);
 
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> MAX_MINING_TIME = DATA_COMPONENTS.registerComponentType("max_mining_time", builder -> builder
             .persistent(Codec.INT)
