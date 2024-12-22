@@ -32,10 +32,13 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.EntityEvent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -137,9 +140,13 @@ public class SmelterJob extends SpiritJob {
                     handHeld.shrink(1);
 
                     this.onSmelt(inputCopy, result);
-                    ItemEntity droppedItem = this.entity.spawnAtLocation(result);
-                    if (droppedItem != null) {
-                        droppedItem.addTag(DROPPED_BY_SMELTER);
+                    var event = new SmelterJobEvent(this.entity, inputCopy, result);
+                    NeoForge.EVENT_BUS.post(event);
+                    if(!event.getResult().isEmpty()) {
+                        ItemEntity droppedItem = this.entity.spawnAtLocation(event.getResult());
+                        if (droppedItem != null) {
+                            droppedItem.addTag(DROPPED_BY_SMELTER);
+                        }
                     }
                     //Don't reset recipe here, keep it cached
                 }
@@ -183,5 +190,31 @@ public class SmelterJob extends SpiritJob {
      */
     public void onSmelt(ItemStack input, ItemStack output) {
 
+    }
+
+    public static class SmelterJobEvent extends EntityEvent {
+        private ItemStack input;
+        private ItemStack result;
+        public SmelterJobEvent(Entity entity, ItemStack input, ItemStack result) {
+            super(entity);
+            this.input = input;
+            this.result = result;
+        }
+
+        public ItemStack getInput() {
+            return input;
+        }
+
+        public void setInput(ItemStack input) {
+            this.input = input;
+        }
+
+        public ItemStack getResult() {
+            return result;
+        }
+
+        public void setResult(ItemStack result) {
+            this.result = result;
+        }
     }
 }
