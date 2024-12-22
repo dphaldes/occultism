@@ -59,18 +59,18 @@ public class MachineReference implements INBTSerializable<CompoundTag> {
     ).apply(instance, MachineReference::new));
 
     public static final StreamCodec<RegistryFriendlyByteBuf, MachineReference> STREAM_CODEC = OccultismExtraStreamCodecs.composite(
-            GlobalBlockPos.STREAM_CODEC,
-            (m) -> m.extractGlobalPos,
-            ResourceLocation.STREAM_CODEC,
-            (m) -> m.extractRegistryName,
+            ByteBufCodecs.optional(GlobalBlockPos.STREAM_CODEC),
+            (m) -> Optional.ofNullable(m.extractGlobalPos),
+            ByteBufCodecs.optional(ResourceLocation.STREAM_CODEC),
+            (m) -> Optional.ofNullable(m.extractRegistryName),
             ByteBufCodecs.BOOL,
             (m) -> m.extractChunkLoaded,
             Direction.STREAM_CODEC,
             (m) -> m.extractFacing,
-            GlobalBlockPos.STREAM_CODEC,
-            (m) -> m.insertGlobalPos,
-            ResourceLocation.STREAM_CODEC,
-            (m) -> m.insertRegistryName,
+            ByteBufCodecs.optional(GlobalBlockPos.STREAM_CODEC),
+            (m) -> Optional.ofNullable(m.insertGlobalPos),
+            ByteBufCodecs.optional(ResourceLocation.STREAM_CODEC),
+            (m) -> Optional.ofNullable(m.insertRegistryName),
             ByteBufCodecs.BOOL,
             (m) -> m.insertChunkLoaded,
             Direction.STREAM_CODEC,
@@ -214,11 +214,10 @@ public class MachineReference implements INBTSerializable<CompoundTag> {
 
     @Override
     public boolean equals(Object obj) {
-        if(obj == this)
+        if (obj == this)
             return true;
 
-        if (obj instanceof MachineReference) {
-            MachineReference other = (MachineReference) obj;
+        if (obj instanceof MachineReference other) {
             return this.extractGlobalPos.equals(other.extractGlobalPos) &&
                     this.extractRegistryName.equals(other.extractRegistryName) &&
                     this.extractChunkLoaded == other.extractChunkLoaded &&
